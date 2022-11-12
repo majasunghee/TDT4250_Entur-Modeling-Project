@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="transportModel">
+  <eClassifiers xsi:type="ecore:EClass" name="transportOrg">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasOperator" eType="#//operator"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="operator">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasLines" lowerBound="1"
+        upperBound="-1" eType="#//lines" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="lines">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasSpecificLine" lowerBound="1"
+        upperBound="-1" eType="#//specificLine" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="transportMode" eType="#//TransportModeType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="bikesAllowed" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="specificLine">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasRoute" lowerBound="1"
+        upperBound="-1" eType="#//route" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasJourneyPatterns" lowerBound="1"
+        upperBound="-1" eType="#//journeyPatterns" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="route">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasStopPlace" lowerBound="1"
+        upperBound="-1" eType="#//stopPlace" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="journeyPatterns">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasStopPlace" lowerBound="1"
+        upperBound="-1" eType="#//stopPlace" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="direction" eType="#//DirectionType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="stopPlace">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="TransportModeType">
+    <eLiterals name="Bus"/>
+    <eLiterals name="Air" value="1"/>
+    <eLiterals name="Water" value="2"/>
+    <eLiterals name="Rail" value="3"/>
+    <eLiterals name="Lift" value="4"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="DirectionType">
+    <eLiterals name="Inbound"/>
+    <eLiterals name="Outbound" value="1"/>
+  </eClassifiers>
+</ecore:EPackage>
