@@ -4,8 +4,8 @@
       "id": "ATB:Line:2_311",
       "journeyPatterns": [
         {
-          "name": "0311 1 06_E6Øst",
           "id": "ATB:JourneyPattern:311_Outbound_220228123492601_220228123478113",
+          "name": "0311 1 06_E6Øst",
           "line": {
             "quays": [
               {
