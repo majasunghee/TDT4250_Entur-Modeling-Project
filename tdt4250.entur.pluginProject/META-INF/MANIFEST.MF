@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: PluginProject
+Bundle-SymbolicName: tdt4250.entur.pluginProject
+Bundle-Version: 1.0.0.qualifier
+Automatic-Module-Name: tdt4250.entur.pluginProject
+Bundle-RequiredExecutionEnvironment: JavaSE-17
+Require-Bundle: tdt4250.entur.model;bundle-version="0.1.0",
+ org.eclipse.emf.ecore;bundle-version="2.27.0",
+ org.eclipse.emfcloud.emfjson-jackson;bundle-version="2.1.0"
