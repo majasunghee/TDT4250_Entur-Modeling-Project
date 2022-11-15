@@ -912,10 +912,6 @@
         "url": null,
         "lines": [
           {
-            "id": "VYG:Line:41B",
-            "name": null
-          },
-          {
             "id": "VYG:Line:43",
             "name": "Bergen-Arna"
           },
@@ -926,10 +922,6 @@
           {
             "id": "VYG:Line:45",
             "name": "Bergen-Voss-Myrdal-Ål"
-          },
-          {
-            "id": "VYG:Line:45B",
-            "name": null
           }
         ]
       },
@@ -3687,10 +3679,6 @@
           {
             "id": "FLB:Line:42",
             "name": "Myrdal-Flåm"
-          },
-          {
-            "id": "FLB:Line:42B",
-            "name": null
           }
         ]
       },
@@ -4131,6 +4119,50 @@
         ]
       },
       {
+        "id": "MOR:Operator:VE257",
+        "name": "Veøy Buss",
+        "phone": "+4771227000",
+        "url": "https://www.veoy.no/veoy-buss",
+        "lines": [
+          {
+            "id": "MOR:Line:420",
+            "name": "Molde - Åndalsnes"
+          },
+          {
+            "id": "MOR:Line:423",
+            "name": "Åndalsnes-Isfjorden"
+          },
+          {
+            "id": "MOR:Line:424",
+            "name": "Åndalsnes - Sogge - Brønnslett"
+          },
+          {
+            "id": "MOR:Line:428",
+            "name": "Åfarnes - Vistdal"
+          },
+          {
+            "id": "MOR:Line:429",
+            "name": "Lerheim - Rødven"
+          },
+          {
+            "id": "MOR:Line:483",
+            "name": "Åndalsnes - Bjorli"
+          },
+          {
+            "id": "MOR:Line:487",
+            "name": "Skålasenteret - Kortgarden"
+          },
+          {
+            "id": "MOR:Line:245",
+            "name": "Rekdal-Furneset-Vestnes"
+          },
+          {
+            "id": "MOR:Line:247",
+            "name": "Vikebukt-Tresfjord-Vestnes-Fur"
+          }
+        ]
+      },
+      {
         "id": "MOR:Operator:TID247",
         "name": "Tide Buss",
         "phone": "+4755238700",
@@ -4227,50 +4259,6 @@
           {
             "id": "MOR:Line:832",
             "name": "Hopen-Dyrnes-Edøya (Vestsida)"
-          }
-        ]
-      },
-      {
-        "id": "MOR:Operator:VE257",
-        "name": "Veøy Buss",
-        "phone": "+4771227000",
-        "url": "https://www.veoy.no/veoy-buss",
-        "lines": [
-          {
-            "id": "MOR:Line:420",
-            "name": "Molde - Åndalsnes"
-          },
-          {
-            "id": "MOR:Line:423",
-            "name": "Åndalsnes-Isfjorden"
-          },
-          {
-            "id": "MOR:Line:424",
-            "name": "Åndalsnes - Sogge - Brønnslett"
-          },
-          {
-            "id": "MOR:Line:428",
-            "name": "Åfarnes - Vistdal"
-          },
-          {
-            "id": "MOR:Line:429",
-            "name": "Lerheim - Rødven"
-          },
-          {
-            "id": "MOR:Line:483",
-            "name": "Åndalsnes - Bjorli"
-          },
-          {
-            "id": "MOR:Line:487",
-            "name": "Skålasenteret - Kortgarden"
-          },
-          {
-            "id": "MOR:Line:245",
-            "name": "Rekdal-Furneset-Vestnes"
-          },
-          {
-            "id": "MOR:Line:247",
-            "name": "Vikebukt-Tresfjord-Vestnes-Fur"
           }
         ]
       },
@@ -15211,10 +15199,6 @@
             "name": "Unn - Uit - Åsgård - Myreng"
           },
           {
-            "id": "TRO:Line:1_37",
-            "name": "Sentrum - Muséet - sentrum"
-          },
-          {
             "id": "TRO:Line:1_20",
             "name": "Skattøra - sentrum - Kroken"
           },
@@ -16348,7 +16332,7 @@
           },
           {
             "id": "NSB:Line:R10",
-            "name": "Drammen-Lillehammer"
+            "name": "Drammen-Oslo S-Lillehammer"
           },
           {
             "id": "NSB:Line:R11",
