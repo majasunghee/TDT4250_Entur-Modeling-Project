@@ -47,15 +47,15 @@ public class OperatorClass {
 		this.lines = jsonNode;
 	}
 
-	@Override
-	public String toString(){
-		StringBuilder sb = new StringBuilder();
-		sb.append("***** Operator *****\n");
-		sb.append("ID = "+getId()+"\n");
-		sb.append("Name = "+getName()+"\n");
-		sb.append("Phone = "+getNumber()+"\n");
-		sb.append("Url = "+getUrl()+"\n");
-		sb.append("Lines = "+getLines()+"\n");
-		return sb.toString();
-	}
+//	@Override
+//	public String toString(){
+//		StringBuilder sb = new StringBuilder();
+//		sb.append("***** Operator *****\n");
+//		sb.append("ID = "+getId()+"\n");
+//		sb.append("Name = "+getName()+"\n");
+//		sb.append("Phone = "+getNumber()+"\n");
+//		sb.append("Url = "+getUrl()+"\n");
+//		sb.append("Lines = "+getLines()+"\n");
+//		return sb.toString();
+//	}
 }
