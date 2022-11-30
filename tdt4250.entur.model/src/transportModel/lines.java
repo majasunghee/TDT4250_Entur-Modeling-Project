@@ -101,12 +101,12 @@ public interface lines extends EObject {
 	 * Sets the value of the '{@link transportModel.lines#getTransportMode <em>Transport Mode</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Transport Mode</em>' attribute.
+	 * @param integer the new value of the '<em>Transport Mode</em>' attribute.
 	 * @see transportModel.TransportModeType
 	 * @see #getTransportMode()
 	 * @generated
 	 */
-	void setTransportMode(TransportModeType value);
+	void setTransportMode(Integer integer);
 
 	/**
 	 * Returns the value of the '<em><b>Bikes Allowed</b></em>' attribute.

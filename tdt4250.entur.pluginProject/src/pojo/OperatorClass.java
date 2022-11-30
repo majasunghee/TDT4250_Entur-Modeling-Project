@@ -1,5 +1,6 @@
 package pojo;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -46,6 +47,7 @@ public class OperatorClass {
 		this.lines = jsonNode;
 	}
 
+//  Remove comment to see formatted data in console when running Mapping.data.
 //	@Override
 //	public String toString(){
 //		StringBuilder sb = new StringBuilder();

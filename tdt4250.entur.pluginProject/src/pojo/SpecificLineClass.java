@@ -4,11 +4,14 @@ import java.util.ArrayList;
 
 public class SpecificLineClass {
 	
+//	Since the dataset for Specific lines has two lists called journeypatterns, 
+//	we differentiate between them by referring to routes, and journeypatterns for a specific route
+	
 	public String specificLineId;
 	public String routeId;
 	public String routeName;
 	ArrayList<String> stopPlaces = new ArrayList<>();
-	ArrayList<String> journeyPatterns = new ArrayList<>();
+	ArrayList<ArrayList<String>> journeyPatterns = new ArrayList<>();
 	
 	public String getSpecificLineId() {
 		return specificLineId;
@@ -34,11 +37,11 @@ public class SpecificLineClass {
 	public void setStopPlaces(ArrayList<String> stopPlaces) {
 		this.stopPlaces = stopPlaces;
 	}
-	public ArrayList<String> getJourneyPatterns() {
+	public ArrayList<ArrayList<String>> getJourneyPatterns() {
 		return journeyPatterns;
 	}
-	public void setJourneyPatterns(ArrayList<String> journeyPatterns) {
-		this.journeyPatterns = journeyPatterns;
+	public void setJourneyPatterns(ArrayList<ArrayList<String>> routes) {
+		this.journeyPatterns = routes;
 	}
 
 
@@ -46,7 +49,7 @@ public class SpecificLineClass {
 	@Override
 	public String toString(){
 		StringBuilder sb = new StringBuilder();
-		sb.append("***** Specific Line *****\n");
+		sb.append("***** Route *****\n");
 		sb.append("ID of line = "+getSpecificLineId()+"\n");
 		sb.append("ID of route = "+getRouteId()+"\n");
 		sb.append("Name of route = "+getRouteName()+"\n");

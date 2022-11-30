@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 
 import com.fasterxml.jackson.databind.JsonNode;
 
+import pojo.LinesClass;
 import pojo.OperatorClass;
 import transportModel.DirectionType;
 import transportModel.journeyPatterns;
@@ -31,14 +32,13 @@ import tdt4250.entur.pluginProject.Mapper;
 
 
 public class Mapping {
-	//private static String jsonpath = "../tdt4250.entur.pluginProject/src/data/OperatorsData.json";
-	//private static String xmiPath = "/tdt4250.entur.model/model/transportOrg.xmi";
 	public static String xmiPath =  "../tdt4250.entur.pluginProject/src/data/transportOrg.xmi";
 	public static final TransportModelFactory FACTORY = TransportModelFactory.eINSTANCE;
 
 	public static void main(String[] args) throws IOException {
 		updateModel();
 		test(null);
+		mapLines(null);
 	}
 	
 	public static List<OperatorClass> test(transportOrg organization) throws IOException {
@@ -50,11 +50,25 @@ public class Mapping {
 			op.setName(operator.getName());
 			//System.out.println(operator.name);
 			mappedOperators.add(operator);
+			//System.out.println(mappedOperators);
 			//Fikse modell? transport org har ikke liste med operatører. hasOperator() er en boolean som sier om transport org har operatøer eller ikke.
 		});
 		return mappedOperators;
-
-
+	}
+	
+	public static List<LinesClass> mapLines(transportOrg organization) throws IOException {
+		List<LinesClass> linesList = Mapper.instantiateLines();
+		List<LinesClass> mappedLines = new ArrayList<LinesClass>();
+		linesList.forEach(lines -> {
+			lines line= FACTORY.createlines();
+			line.setId(lines.getId());
+			line.setName(lines.getName());
+			line.setTransportMode(lines.getTransportMode());
+			line.setBikesAllowed(lines.getBikesAllowed());
+			mappedLines.add(lines);
+			//System.out.println(mappedLines);
+		});
+		return mappedLines;
 	}
 	
 	//set data to model
@@ -67,6 +81,7 @@ public class Mapping {
 		organization.setName("Entur");	
 		
 		List<OperatorClass> mappedOperators = test(organization);
+		//List<OperatorClass> mappedLines = test(organization);
 		
 		// Register the XMI resource factory for the .xmi extension
 		Resource.Factory.Registry registry = Resource.Factory.Registry.INSTANCE;
