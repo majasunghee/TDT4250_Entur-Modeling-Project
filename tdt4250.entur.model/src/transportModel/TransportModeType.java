@@ -14,7 +14,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * and utility methods for working with them.
  * <!-- end-user-doc -->
  * @see transportModel.TransportModelPackage#getTransportModeType()
- * @model
+ * @model instanceClass="transportModel.TransportModeType"
  * @generated
  */
 public enum TransportModeType implements Enumerator {

@@ -40,7 +40,8 @@ public class Mapping {
 		updateModel();
 	}
 	
-	public static List<operator> createOperator(transportOrg organization) throws IOException {
+	// Sets operator data to model
+	public static List<operator> createOperator(transportOrg organization, List<lines> inputLines) throws IOException {
 		List<OperatorClass> operatorList = Mapper.instantiateOperators();
 		List<operator> mappedOperators = new ArrayList<operator>();
 		operatorList.forEach(operator -> {
@@ -49,28 +50,33 @@ public class Mapping {
 			op.setName(operator.getName());
 			op.setPhone(operator.getNumber());
 			op.setUrl(operator.getUrl());
+			operator.getLines().forEach(opLine -> {
+				inputLines.forEach(dataLine -> {
+					if (opLine.findValues("id").get(0).toString().equals('"' + dataLine.getId().toString() + '"')) {
+						op.getHasLines().add(dataLine);
+					}
+				});
+			});
 			mappedOperators.add(op);
-			//System.out.println(mappedOperators);
 		});
 		return mappedOperators;
 	}
 	
-//	public static List<lines> createLines(transportOrg organization) throws IOException {
-//		List<LinesClass> linesList = Mapper.instantiateLines();
-//		List<lines> mappedLines = new ArrayList<lines>();
-//		linesList.forEach(lines -> {
-//			lines line= FACTORY.createlines();
-//			line.setId(lines.getId());
-//			line.setName(lines.getName());
-//			line.setTransportMode(lines.getTransportMode());
-//			line.setBikesAllowed(lines.getBikesAllowed());
-//			mappedLines.add(line);
-//			//System.out.println(mappedLines);
-//		});
-//		return mappedLines;
-//	}
+	//Sets line data to model
+	public static List<lines> createLines(transportOrg organization) throws IOException {
+		List<LinesClass> linesList = Mapper.instantiateLines();
+		List<lines> mappedLines = new ArrayList<lines>();
+		linesList.forEach(lines -> {
+			lines line= FACTORY.createlines();
+			line.setId(lines.getId());
+			line.setName(lines.getName());
+			line.setTransportMode(lines.getTransportMode());
+			line.setBikesAllowed(lines.getBikesAllowed());
+			mappedLines.add(line);
+		});
+		return mappedLines;
+	}
 	
-	//set data to model
 	public static void updateModel() throws IOException {
 		
 		//initializing package
@@ -79,9 +85,9 @@ public class Mapping {
 		transportOrg organization = FACTORY.createtransportOrg();
 		organization.setName("Entur");	
 		
-		//List<lines> mappedLines = createLines(organization);
+		List<lines> mappedLines = createLines(organization);
 		
-		List<operator> mappedOperators = createOperator(organization);
+		List<operator> mappedOperators = createOperator(organization, mappedLines);
 		organization.getHasOperator().addAll(mappedOperators);
 		//System.out.println(mappedOperators);
 		

@@ -18,6 +18,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import pojo.LinesClass;
 import pojo.OperatorClass;
 import pojo.SpecificLineClass;
+import transportModel.TransportModeType;
 
 public class Mapper {
 	
@@ -93,23 +94,23 @@ public class Mapper {
 		return linesList;
 	}
 	
-	public static int checkTransportMode(String transportMode) {
-		int mode = 0;		
+	public static TransportModeType checkTransportMode(String transportMode) {
+		TransportModeType mode = null;		
 		switch(transportMode) {
 		  case "bus":
-			  mode = 0;
+			  mode = TransportModeType.BUS;
 		    break;
 		  case "air":
-			  mode = 1;
+			  mode = TransportModeType.AIR;
 			break;
 		  case "water":
-			  mode = 2;
+			  mode = TransportModeType.WATER;
 			break;
 		  case "rail":
-			  mode = 3;
+			  mode = TransportModeType.RAIL;
 			break;  
 		  case "lift":
-			  mode = 4;
+			  mode = TransportModeType.LIFT;
 			break;
 		}
 		return mode;

@@ -54,7 +54,7 @@
         iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="TransportModeType">
+  <eClassifiers xsi:type="ecore:EEnum" name="TransportModeType" instanceTypeName="EString">
     <eLiterals name="Bus"/>
     <eLiterals name="Air" value="1"/>
     <eLiterals name="Water" value="2"/>

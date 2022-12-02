@@ -4,11 +4,11 @@ import com.fasterxml.jackson.databind.JsonNode;
 
 import transportModel.TransportModeType;
 
-public class LinesClass {
+public class LinesClass<TransportMode> {
 
 	public String id;
 	public String name;
-	public Integer transportMode;
+	public TransportModeType transportMode;
 	public Boolean bikesAllowed; 
 	
 	public String getId() {
@@ -27,11 +27,11 @@ public class LinesClass {
 		this.name = name;
 	}
 
-	public Integer getTransportMode() {
+	public TransportModeType getTransportMode() {
 		return transportMode;
 	}
 
-	public void setTransportMode(Integer transportMode) {
+	public void setTransportMode(TransportModeType transportMode) {
 		this.transportMode = transportMode;
 	}
 
@@ -55,4 +55,5 @@ public class LinesClass {
 		sb.append("Bikes allowed = "+getBikesAllowed()+"\n");
 		return sb.toString();
 	}
+
 }

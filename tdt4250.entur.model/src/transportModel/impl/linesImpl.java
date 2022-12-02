@@ -92,16 +92,6 @@ public class linesImpl extends MinimalEObjectImpl.Container implements lines {
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getTransportMode() <em>Transport Mode</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTransportMode()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final TransportModeType TRANSPORT_MODE_EDEFAULT = TransportModeType.BUS;
-
-	/**
 	 * The cached value of the '{@link #getTransportMode() <em>Transport Mode</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -109,7 +99,7 @@ public class linesImpl extends MinimalEObjectImpl.Container implements lines {
 	 * @generated
 	 * @ordered
 	 */
-	protected TransportModeType transportMode = TRANSPORT_MODE_EDEFAULT;
+	protected TransportModeType transportMode;
 
 	/**
 	 * The default value of the '{@link #getBikesAllowed() <em>Bikes Allowed</em>}' attribute.
@@ -220,7 +210,7 @@ public class linesImpl extends MinimalEObjectImpl.Container implements lines {
 	 */
 	public void setTransportMode(TransportModeType newTransportMode) {
 		TransportModeType oldTransportMode = transportMode;
-		transportMode = newTransportMode == null ? TRANSPORT_MODE_EDEFAULT : newTransportMode;
+		transportMode = newTransportMode == null ? null : newTransportMode;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, TransportModelPackage.LINES__TRANSPORT_MODE, oldTransportMode, transportMode));
 	}
@@ -302,7 +292,7 @@ public class linesImpl extends MinimalEObjectImpl.Container implements lines {
 				setName((String)newValue);
 				return;
 			case TransportModelPackage.LINES__TRANSPORT_MODE:
-				setTransportMode((TransportModeType)newValue);
+				setTransportMode(newValue);
 				return;
 			case TransportModelPackage.LINES__BIKES_ALLOWED:
 				setBikesAllowed((Boolean)newValue);
@@ -329,7 +319,7 @@ public class linesImpl extends MinimalEObjectImpl.Container implements lines {
 				setName(NAME_EDEFAULT);
 				return;
 			case TransportModelPackage.LINES__TRANSPORT_MODE:
-				setTransportMode(TRANSPORT_MODE_EDEFAULT);
+				setTransportMode((TransportModeType)null);
 				return;
 			case TransportModelPackage.LINES__BIKES_ALLOWED:
 				setBikesAllowed(BIKES_ALLOWED_EDEFAULT);
@@ -353,7 +343,7 @@ public class linesImpl extends MinimalEObjectImpl.Container implements lines {
 			case TransportModelPackage.LINES__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case TransportModelPackage.LINES__TRANSPORT_MODE:
-				return transportMode != TRANSPORT_MODE_EDEFAULT;
+				return transportMode != null;
 			case TransportModelPackage.LINES__BIKES_ALLOWED:
 				return BIKES_ALLOWED_EDEFAULT == null ? bikesAllowed != null : !BIKES_ALLOWED_EDEFAULT.equals(bikesAllowed);
 		}
