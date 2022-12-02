@@ -1,2 +1,251 @@
 <?xml version="1.0" encoding="ASCII"?>
-<transportModel:transportOrg xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:transportModel="platform:/plugin/tdt4250.entur.model/model/transportModel.ecore" name="Entur"/>
+<transportModel:transportOrg xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:transportModel="platform:/plugin/tdt4250.entur.model/model/transportModel.ecore" name="Entur">
+  <hasOperator id="SKY:Operator:OF" name="Oster&#xf8;y Ferjeselskap AS"/>
+  <hasOperator id="BRA:Operator:20" name="Flybuss H&#xf8;nefoss" url="https://askeladden.net/flybuss/"/>
+  <hasOperator id="INN:Operator:60" name="Snertingdal Auto AS" phone="+4761184335" url="https://snertingdal-auto.no/"/>
+  <hasOperator id="NOR:Operator:52" name="Sj&#xf8;tind AS" url="https://www.sjotind.no"/>
+  <hasOperator id="FIN:Operator:290" name="Nils Rune Eira" phone="+4775771888" url="https://www.snelandia.no"/>
+  <hasOperator id="FIN:Operator:291" name="Odd Henrik H&#xe6;tta" phone="+4775771888" url="https://www.snelandia.no"/>
+  <hasOperator id="INN:Operator:59" name="Ringebu Bilruter AS" phone="+4748866066" url="https://www.ringebubilruter.no/"/>
+  <hasOperator id="SKY:Operator:N_BUSN" name="Nettbuss AS"/>
+  <hasOperator id="INN:Operator:52" name="AS Torpa Bilruter" phone="+4761112600" url="https://www.torpabilruter.no"/>
+  <hasOperator id="NWY:Operator:ffbddf3d-5c8f-43bf-925c-c55ca97ec955" name="Konkurrenten.no AS" phone="+47 37 93 15 15" url="konkurrenten.no"/>
+  <hasOperator id="INN:Operator:53" name="Etnedal Bilruter AS" phone="+4761121400" url="https://etnedal-bilruter.no"/>
+  <hasOperator id="INN:Operator:56" name="Lesja Bilruter AS" phone="+4761245410" url="https://lesjabil.no"/>
+  <hasOperator id="INN:Operator:57" name="Vy Buss Gj&#xf8;vik" phone="+4745210700" url="https://www.vybuss.no"/>
+  <hasOperator id="RUT:Operator:120" name="Nobina Norge AS" url="https://ruter.no/fa-hjelp/kontakt-oss/kontaktskjema/"/>
+  <hasOperator id="VYG:Operator:VYT" name="Vy"/>
+  <hasOperator id="SKY:Operator:TID_39" name="Tide Buss AS"/>
+  <hasOperator id="SKY:Operator:Boreal" name="Boreal"/>
+  <hasOperator id="SKY:Operator:TID_38" name="Tide Buss AS"/>
+  <hasOperator id="BRA:Operator:1" name="Brakar" phone="" url="https://www.brakar.no/"/>
+  <hasOperator id="SKY:Operator:SKY" name="Skyss" url="https://www.skyss.no/"/>
+  <hasOperator id="SKY:Operator:FJORD1" name="Fjord1"/>
+  <hasOperator id="INN:Operator:41" name="Tr&#xf8;nderbilene Elverum/&#xd8;sterdalen" phone="+4795890239" url="https://www.tronderbilene.no"/>
+  <hasOperator id="SKY:Operator:F1P" name="Keolis"/>
+  <hasOperator id="SKY:Operator:TID_31" name="Tide Buss AS"/>
+  <hasOperator id="NOR:Operator:69" name="Vidar Hop Skyssb&#xe5;ter AS" url="https://www.vidarhop.no"/>
+  <hasOperator id="RUT:Operator:350" name="Norled" url="https://ruter.no/fa-hjelp/kontakt-oss/kontaktskjema/"/>
+  <hasOperator id="SKY:Operator:TID_30" name="Tide Buss AS"/>
+  <hasOperator id="INN:Operator:44" name="Vy Buss Hedemarken/Gl&#xe5;mdal" phone="+4740705070" url="https://www.vybuss.no"/>
+  <hasOperator id="NWY:Operator:3e5a5d95-40c2-419b-ba46-add08460b199" name="Tide Ekspressbuss" phone="+47 55 23 87 00" url="nor-way.no"/>
+  <hasOperator id="SOF:Operator:990" name="GulenSkyss AS" url="https://www.gulenskyss.no/"/>
+  <hasOperator id="GLO:Operator:1" name="GlobeOrbit100" phone="+4799210210" url="http://www.taxi-turvogn.no"/>
+  <hasOperator id="SOF:Operator:511" name="Fjord1 ASA" url="https://www.fjord1.no/"/>
+  <hasOperator id="SOF:Operator:995" name="Lustrabaatane AS" url="https://www.lustrabaatane.no/"/>
+  <hasOperator id="SOF:Operator:994" name="Wergeland" url="https://wergeland.com/"/>
+  <hasOperator id="MOR:Operator:NB256" name="Vy Buss" phone="+4740705070" url="https://www.vybuss.no/"/>
+  <hasOperator id="NWY:Operator:5e286bbf-0fbe-418e-96a3-44d333aa2f3b" name="Telemark Bilruter Buss AS" phone="+47 35 06 54 00" url="www.telemarkbil.no"/>
+  <hasOperator id="MOR:Operator:NB250" name="Vy Buss" phone="+4740705070" url="https://www.vybuss.no/"/>
+  <hasOperator id="AKT:Operator:310" name="Ridel" url="https://ridel.no"/>
+  <hasOperator id="GJB:Operator:GJB" name="Gj&#xf8;vikbanen"/>
+  <hasOperator id="SOF:Operator:996" name="Norled AS" url="https://www.norled.no/"/>
+  <hasOperator id="SKY:Operator:TID_44" name="Tide buss AS"/>
+  <hasOperator id="SOF:Operator:999" name="Barm&#xf8;yferja AS" url="https://www.vidarhop.no/"/>
+  <hasOperator id="AVI:Operator:LTR" name="LuftTransport" phone="0047 75 43 18 00" url="https://www.lufttransport.no"/>
+  <hasOperator id="SOF:Operator:998" name="Vestkapp B&#xe5;tservice AS" url="https://www.klosterb&#xe5;ten.no/"/>
+  <hasOperator id="NOR:Operator:37" name="Torghatten trafikkselskap" url="https://www.tts.no"/>
+  <hasOperator id="SKY:Operator:TID_40" name="Tide buss AS"/>
+  <hasOperator id="SOF:Operator:519" name="Firda Billag Buss AS" url="https://www.firda-billag.no/vare-selskap/firda-billag-buss/"/>
+  <hasOperator id="NOR:Operator:38" name="Boreal Sj&#xf8; AS" url="https://www.boreal.no"/>
+  <hasOperator id="RUT:Operator:220" name="Sporveien Trikken AS" url="https://ruter.no/fa-hjelp/kontakt-oss/kontaktskjema/"/>
+  <hasOperator id="SOF:Operator:518" name="Firda Billag Buss AS" url="https://www.firda-billag.no/vare-selskap/firda-billag-buss/"/>
+  <hasOperator id="ULR:Operator:1" name="Ulriken" url="https://ulriken643.no/"/>
+  <hasOperator id="BRA:Operator:30" name="Fergeruter Oscarsborg" url="https://www.forsvarsbygg.no/no/festningene/finn-din-festning/oscarsborg-festning/fergetider-billett-og-parkering/"/>
+  <hasOperator id="SKY:Operator:KEO_45" name="Keolis"/>
+  <hasOperator id="SKY:Operator:TORGH" name="Torghatten trafikkselskap AS"/>
+  <hasOperator id="SJV:Operator:505" name="SJ"/>
+  <hasOperator id="NOR:Operator:40" name="Fjord1 AS" url="https://www.fjord1.no"/>
+  <hasOperator id="MOR:Operator:NB249" name="Vy Buss" phone="+4740705070" url="https://www.vybuss.no/"/>
+  <hasOperator id="MOR:Operator:NB248" name="Vy Buss" phone="+4740705070" url="https://www.vybuss.no/"/>
+  <hasOperator id="SJN:Operator:SJN" name="SJ Nord"/>
+  <hasOperator id="NYC:Operator:1" name="Bygd&#xf8;yfergen" phone="+4723356890" url="https://nyc.no/oppleverlser-pa-oslofjorden/bygdoyfergen/"/>
+  <hasOperator id="SOF:Operator:509" name="Tide Buss AS" url="https://www.tide.no/"/>
+  <hasOperator id="TTS:Operator:1" name="Torghatten" phone="+47 75 01 81 00" url="https://www.torghatten-buss.no/"/>
+  <hasOperator id="RUT:Operator:210" name="Sporveien T-banen AS" url="https://ruter.no/fa-hjelp/kontakt-oss/kontaktskjema/"/>
+  <hasOperator id="RUT:Operator:331" name="Boreal sj&#xf8;" url="https://ruter.no/fa-hjelp/kontakt-oss/kontaktskjema/"/>
+  <hasOperator id="KOL:Operator:580" name="Boreal Sj&#xf8; AS" url="https://www.boreal.no/"/>
+  <hasOperator id="UNI:Operator:TorpEx" name="Torp Ekspressen"/>
+  <hasOperator id="TRO:Operator:915" name="Bussring" url="http://www.example.com"/>
+  <hasOperator id="NOR:Operator:282" name="Boreal Sj&#xf8; AS" url="https://www.boreal.no"/>
+  <hasOperator id="NOR:Operator:281" name="Torghatten Nord AS" url="https://www.torghatten-nord.no"/>
+  <hasOperator id="MOR:Operator:NB231" name="Vy Buss" phone="+4740705070" url="https://www.vybuss.no/"/>
+  <hasOperator id="FLB:Operator:FLB" name="Fl&#xe5;msbanen"/>
+  <hasOperator id="ATB:Operator:270" name="Fosenlinjen AS" url="http://www.example.com"/>
+  <hasOperator id="OST:Operator:923" name="Boreal" url="https://www.boreal.no//"/>
+  <hasOperator id="NOR:Operator:21" name="Torghatten Nord" url="https://www.torghatten-nord.no"/>
+  <hasOperator id="KOL:Operator:596" name="Fjord1 ASA" url="https://www.fjord1.no/"/>
+  <hasOperator id="NWY:Operator:52d6933f-2a2c-4f72-82a6-49f2d2dff764" name="AS Jotunheimen og Valdresruten Bilselskap" phone="+47 61 36 59 00" url="nor-way.no"/>
+  <hasOperator id="KOL:Operator:590" name="Kolumbus AS" url="https://www.kolumbus.no/"/>
+  <hasOperator id="ATB:Operator:170" name="Vy H&#xf8;st 2019" url="http://www.example.com"/>
+  <hasOperator id="MOR:Operator:VE257" name="Ve&#xf8;y Buss" phone="+4771227000" url="https://www.veoy.no/veoy-buss"/>
+  <hasOperator id="MOR:Operator:TID247" name="Tide Buss" phone="+4755238700" url="https://www.tide.no"/>
+  <hasOperator id="NOR:Operator:290" name="Lur&#xf8;y" url="https://reisnordland.no"/>
+  <hasOperator id="NOR:Operator:293" name="R&#xf8;d&#xf8;y" url="https://reisnordland.no"/>
+  <hasOperator id="NOR:Operator:292" name="Reinefjorden" url="https://reisnordland.no"/>
+  <hasOperator id="VIL:Operator:1" name="Visit Lillehammer" url="https://www.lillehammer.com/"/>
+  <hasOperator id="NOR:Operator:288" name="Regionpendelen" url="https://reisnordland.no"/>
+  <hasOperator id="BSR:Operator:1" name="Bussring" url="https://www.bussring.no/bussring/airport-express/"/>
+  <hasOperator id="NOR:Operator:NOR" name="Nordland fylkeskommune" phone="" url="https://www.reisnordland.no/"/>
+  <hasOperator id="NOR:Operator:287" name="Nex" url="https://www.boreal.no"/>
+  <hasOperator id="NOR:Operator:289" name="Her&#xf8;y og Tr&#xe6;na" url="https://reisnordland.no"/>
+  <hasOperator id="NOR:Operator:284" name="R&#xf8;d&#xf8;y-Melfjorden" url="https://reisnordland.no"/>
+  <hasOperator id="TRO:Operator:901" name="Furuly" url="http://www.example.com"/>
+  <hasOperator id="NOR:Operator:283" name="Boreal Buss AS Helgeland" url="https://www.boreal.no"/>
+  <hasOperator id="NOR:Operator:286" name="V&#xe6;ran og Ytre Gildesk&#xe5;l" url="https://www.torghatten-nord.no"/>
+  <hasOperator id="NWY:Operator:4c9d1f21-0b3c-4f72-9bd9-91155f040f3a" name="Tide Kystbussen" phone="+47 55 23 87 00" url="nor-way.no"/>
+  <hasOperator id="STB:Operator:1" name="Drage Transport" phone="99155024"/>
+  <hasOperator id="NWY:Operator:a69e245c-2019-4d12-9fdd-56b0328f774a" name="Firda Billag Buss AS" phone="+47 577 25 000" url="nor-way.no"/>
+  <hasOperator id="MOR:Operator:252" name="Torghatten Nord" phone="+4790620700" url="https://www.torghatten-nord.no/"/>
+  <hasOperator id="MOR:Operator:251" name="Norled ferje" phone="+4751868700" url="https://norled.no"/>
+  <hasOperator id="VKT:Operator:72" name="Vy Buss avd. Vestfold nord" phone="+47 407 05 070" url="https://www.vy.no"/>
+  <hasOperator id="NOR:Operator:181" name="Boreal Buss AS Ofoten" url="https://www.boreal.no"/>
+  <hasOperator id="NOR:Operator:180" name="Nordlandsbuss AS Salten" url="https://www.nbuss.no"/>
+  <hasOperator id="NOR:Operator:183" name="Torghatten Holding AS" url="https://www.tts.no"/>
+  <hasOperator id="UNI:Operator:VerExp" name="V&#xe6;rnes Ekspressen"/>
+  <hasOperator id="NOR:Operator:182" name="NFK Drift" url="https://reisnordland.no"/>
+  <hasOperator id="NBU:Operator:002o" name="Flybussen Connect" phone="+47 482 80 500" url="https://flybussen.no"/>
+  <hasOperator id="UNI:Operator:LavExp" name="Lavprisekspressen"/>
+  <hasOperator id="VKT:Operator:76" name="Unibuss avd. T&#xf8;nsberg" phone="+47 22 08 43 00" url="https://www.unibuss.no"/>
+  <hasOperator id="VKT:Operator:75" name="Tide avd. Vestfold" phone="+47 05505" url="https://www.tide.no"/>
+  <hasOperator id="NOR:Operator:298" name="Tysfjord" url="https://reisnordland.no"/>
+  <hasOperator id="VYX:Operator:VyBuss" name="Vy Buss" phone="+47 407 05070" url="http://www.vybuss.no"/>
+  <hasOperator id="NOR:Operator:294" name="B&#xe5;truter rundt Br&#xf8;nn&#xf8;ysund" url="https://reisnordland.no"/>
+  <hasOperator id="NOR:Operator:297" name="Nordlandsbuss AS S&#xf8;ndre Salten" url="https://www.nbuss.no"/>
+  <hasOperator id="HAV:Operator:999523587" name="Havila" url="https://www.havilavoyages.com/nb/havn-til-havn"/>
+  <hasOperator id="NOR:Operator:296" name="Mel&#xf8;y" url="https://reisnordland.no"/>
+  <hasOperator id="ATB:Operator:171" name="Tide Buss H&#xf8;st 2019" url="http://www.example.com"/>
+  <hasOperator id="SKY:Operator:MEB" name="Modalen-Eksingedalen Billag AS"/>
+  <hasOperator id="ATB:Operator:178" name="Vidar Hop - Ytre Namdal" url="http://www.example.com"/>
+  <hasOperator id="ATB:Operator:177" name="Fosen Namsos Sj&#xf8; - Ytre Namdal" url="http://www.example.com"/>
+  <hasOperator id="ATB:Operator:190" name="Fosen Namsos Sj&#xf8;" url="http://www.example.com"/>
+  <hasOperator id="FIN:Operator:402" name="Barents Buss" phone="+4790262346" url="https://www.barentsbuss.no"/>
+  <hasOperator id="NOR:Operator:189" name="Saltdal" url="https://reisnordland.no"/>
+  <hasOperator id="NWY:Operator:a1dfb826-7f94-4852-80a6-f770c65fd3ea" name="Boreal Travel AS" phone="+47 915 55 888" url="nor-way.no"/>
+  <hasOperator id="NOR:Operator:188" name="Nordlandsbuss AS Ytre Helgeland" url="https://www.nbuss.no"/>
+  <hasOperator id="NOR:Operator:185" name="Boreal Buss AS" url="https://www.boreal.no"/>
+  <hasOperator id="NOR:Operator:187" name="NFK B&#xe5;t" url="https://reisnordland.no"/>
+  <hasOperator id="NOR:Operator:186" name="Valnesfjord" url="https://reisnordland.no"/>
+  <hasOperator id="FIN:Operator:406" name="North Cape Tours" phone="+4740107475" url="www.northcapetours.com"/>
+  <hasOperator id="GOA:Operator:GOA" name="Go-Ahead Nordic AS"/>
+  <hasOperator id="SKY:Operator:RODNE" name="L. R&#xf8;dne &amp; S&#xf8;nner AS"/>
+  <hasOperator id="AVI:Operator:FS" name="Flyr" url="https://flyr.com"/>
+  <hasOperator id="AVI:Operator:WF" name="Wider&#xf8;e" phone="0047 755 13 500" url="https://www.wideroe.no"/>
+  <hasOperator id="GFS:Operator:1" name="Geiranger Fjordservice" phone="" url="https://www.visitgeiranger.com"/>
+  <hasOperator id="HAF:Operator:1" name="Hafjell Alpinsenter" url="https://www.hafjell.no/"/>
+  <hasOperator id="KOL:Operator:KOL" name="Kolumbus" phone="" url="https://www.kolumbus.no/"/>
+  <hasOperator id="MOR:Operator:AM008" name="AMBU" url="https://www.sande-mr.kommune.no/tenester/veg-vatn-og-miljo/veg/ambu/"/>
+  <hasOperator id="TRO:Operator:953" name="Norled hurtigb&#xe5;t" url="https://www.norled.no/hurtigbat/"/>
+  <hasOperator id="KOL:Operator:309" name="Connect Bus AS" url="https://www.connectbus.no"/>
+  <hasOperator id="RUT:Operator:524" name="Minibuss 24/7" url="https://ruter.no/fa-hjelp/kontakt-oss/kontaktskjema/"/>
+  <hasOperator id="KOL:Operator:306" name="L.R&#xf8;dne &amp; S&#xf8;nner AS" url="https://rodne.no/"/>
+  <hasOperator id="RUT:Operator:520" name="Taxus" url="https://ruter.no/fa-hjelp/kontakt-oss/kontaktskjema/"/>
+  <hasOperator id="KOL:Operator:301" name="Norled AS" url="https://www.norled.no/hurtigbat/"/>
+  <hasOperator id="KOL:Operator:302" name="Boreal Buss AS" url="https://www.boreal.no/"/>
+  <hasOperator id="KOL:Operator:303" name="Ruteb&#xe5;ten Utsira AS" url="https://rutebaatenutsira.no/"/>
+  <hasOperator id="TEL:Operator:86" name="Krager&#xf8; Fjordb&#xe5;tselskap" phone="+47 400 05 858" url="https://www.fjordbat.no"/>
+  <hasOperator id="KOL:Operator:310" name="Vy Buss avd. Egersund" phone="" url="https://www.vy.no/"/>
+  <hasOperator id="VYX:Operator:VyTravel" name="Vy Buss Norge" url="https://www.vybuss.no/"/>
+  <hasOperator id="TEL:Operator:88" name="Vy Buss avd. Notodden" phone="+47 407 05 070" url="https://www.vy.no"/>
+  <hasOperator id="TEL:Operator:87" name="Brevik fergeselskap" phone="+47 35 56 32 00" url="http://fergene.no"/>
+  <hasOperator id="MOR:Operator:BO232" name="Boreal Sj&#xf8;" phone="+4791555888" url="https://www.boreal.no/"/>
+  <hasOperator id="TEL:Operator:82" name="Vy Buss avd. Notodden" phone="+47 407 05 070" url="https://www.vy.no"/>
+  <hasOperator id="TEL:Operator:81" name="Vy Buss avd. Grenland" phone="+47 407 05 070" url="https://www.vy.no"/>
+  <hasOperator id="RUT:Operator:519" name="Oslo Taxibuss Follo" url="https://ruter.no/fa-hjelp/kontakt-oss/kontaktskjema/"/>
+  <hasOperator id="HUR:Operator:1" name="Hurtigruten" url="http://www.hurtigruten.com"/>
+  <hasOperator id="TEL:Operator:89" name="Fjoneferja" phone="+47 901 99 021" url="https://fjoneferga.no"/>
+  <hasOperator id="TRO:Operator:941" name="Torghatten Nord" url="https://www.torghatten-nord.no"/>
+  <hasOperator id="TRO:Operator:942" name="Norled Ferge" url="http://www.example.com"/>
+  <hasOperator id="FLI:Operator:FlixBus" name="FlixBus" phone="+4930300137300" url="https://www.flixbus.com/"/>
+  <hasOperator id="AVI:Operator:DY" name="Norwegian" phone="0047 815 21 815" url="https://www.norwegian.no"/>
+  <hasOperator id="KOL:Operator:316" name="Norled AS" url="https://www.norled.no/"/>
+  <hasOperator id="AVI:Operator:DX" name="DAT" phone="+45 76 92 30 40" url="https://dat.dk"/>
+  <hasOperator id="KOL:Operator:317" name="Norled AS" url="https://www.norled.no/"/>
+  <hasOperator id="KOL:Operator:318" name="Norled AS" url="https://www.norled.no/"/>
+  <hasOperator id="KOL:Operator:312" name="Tide Buss AS" url="https://www.tide.no/"/>
+  <hasOperator id="KOL:Operator:314" name="Norled AS" url="https://www.norled.no/"/>
+  <hasOperator id="KOL:Operator:315" name="Vy Buss AS" url="https://www.vy.no/"/>
+  <hasOperator id="VYB:Operator:VyTravel" name="Vy Travel" phone="0046771-151515" url="http://www.bus4you.se"/>
+  <hasOperator id="UNI:Operator:OSLExp" name="OSL Ekspressen"/>
+  <hasOperator id="TID:Operator:TIDE" name="Tide Buss AS"/>
+  <hasOperator id="GOF:Operator:1o" name="Go Fjords" phone="+47 480 60 333" url="http://www.gofjords.com"/>
+  <hasOperator id="AKT:Operator:394" name="Rest AKT &#xf8;st" phone="+4738038300" url="https://akt.no"/>
+  <hasOperator id="AKT:Operator:395" name="Boreal Buss AS" phone="+4791555888" url="https://www.boreal.no/rutetilbud/lokalbuss/"/>
+  <hasOperator id="AKT:Operator:392" name="S&#xf8;rlandets Maritime" phone="+4797649861" url="https://www.sorlandetsmaritime.no"/>
+  <hasOperator id="NWY:Operator:c1fe86e9-7ff4-43d4-97f9-5459ab82b2c4" name="Telemark Bilruter Buss AS" phone="+47 35 06 54 00" url="www.nor-way.no"/>
+  <hasOperator id="AKT:Operator:393" name="S&#xf8;rlandsruta" phone="+4738278200" url="https://sorlandsruta.no"/>
+  <hasOperator id="AKT:Operator:390" name="Agder Buss" phone="+4737934400" url="http://sbr.no"/>
+  <hasOperator id="AKT:Operator:391" name="Setesdal bilruter" phone="+4737934400" url="http://sbr.no"/>
+  <hasOperator id="MOR:Operator:BO258" name="Boreal Buss" phone="+4791555888" url="https://www.boreal.no"/>
+  <hasOperator id="MOR:Operator:BO259" name="Boreal Sj&#xf8;" phone="+4791555888" url="https://www.boreal.no/"/>
+  <hasOperator id="SKY:Operator:W-H" name="Wergeland - Halsvik"/>
+  <hasOperator id="NIA:Operator:1o" name="Norsk Industriarbeidermuseum" phone="+4735099000" url="http://www.nia.no"/>
+  <hasOperator id="VOG:Operator:1" name="Voss Gondol" phone="75018100" url="https://www.vossgondol.no"/>
+  <hasOperator id="SKY:Operator:G_T" name="Geitanger Transport"/>
+  <hasOperator id="SKY:Operator:G_S" name="Gulen Skyssb&#xe5;tservice AS"/>
+  <hasOperator id="ATB:Operator:268" name="Kystekspressen" url="http://www.example.com"/>
+  <hasOperator id="ATB:Operator:267" name="Vy Region" url="http://www.example.com"/>
+  <hasOperator id="OST:Operator:152" name="Vy Buss AS" url="https://www.vy.no/"/>
+  <hasOperator id="TRO:Operator:965" name="Torghatten Buss S&#xf8;r-Troms" url="https://www.tts.no"/>
+  <hasOperator id="ATB:Operator:269" name="Fosen Namsos Sj&#xf8;" url="http://www.example.com"/>
+  <hasOperator id="OST:Operator:153" name="Hvalerferga" url="https://hollungen.no/"/>
+  <hasOperator id="TRO:Operator:964" name="Torghatten Buss Nord Troms" url="https://www.torghatten-nord.no"/>
+  <hasOperator id="AVI:Operator:SK" name="SAS" phone="0047 648 16 050" url="https://www.sas.no"/>
+  <hasOperator id="OST:Operator:155" name="Byferga" url="https://www.fredrikstad.kommune.no/tjenester/Vann-vei-trafikk/byfergene/"/>
+  <hasOperator id="RUT:Operator:130c" name="Connect Bus AS Nittedal" url="https://ruter.no/fa-hjelp/kontakt-oss/kontaktskjema/"/>
+  <hasOperator id="OST:Operator:156" name="Minibuss 24/7" url="https://www.mb24.no/"/>
+  <hasOperator id="RUT:Operator:130b" name="Connect Bus AS Asker og B&#xe6;rum" url="https://ruter.no/fa-hjelp/kontakt-oss/kontaktskjema/"/>
+  <hasOperator id="RUT:Operator:130a" name="Connect Bus AS Dr&#xf8;bak" url="https://ruter.no/fa-hjelp/kontakt-oss/kontaktskjema/"/>
+  <hasOperator id="FIN:Operator:328" name="Boreal Sj&#xf8; - hurtigb&#xe5;t" phone="+4791555888" url="https://www.boreal.no"/>
+  <hasOperator id="FIN:Operator:326" name="Boreal Sj&#xf8; - ferje" phone="+4791555888" url="https://www.boreal.no"/>
+  <hasOperator id="FIN:Operator:327" name="Boreal Buss" phone="+4775771888" url="https://www.boreal.no"/>
+  <hasOperator id="ATB:Operator:264" name="Gr&#xe5;kallbanen" url="http://www.example.com"/>
+  <hasOperator id="TRO:Operator:961" name="Tide Buss MT" url="https://www.tide.no/"/>
+  <hasOperator id="TRO:Operator:960" name="Tide Troms&#xf8;" url="https://www.tide.no/"/>
+  <hasOperator id="BRA:Operator:61" name="Vy Buss AS" url="https://www.vy.no/"/>
+  <hasOperator id="BEF:Operator:BEF" name="Beffen" phone="92977620" url="https://www.facebook.com/Beffen/"/>
+  <hasOperator id="MOR:Operator:F1" name="Fjord1" phone="+4757757000" url="https://www.fjord1.no"/>
+  <hasOperator id="VKT:Operator:11" name="Bast&#xf8; Fosen" phone="+47 33 03 17 40" url="https://basto-fosen.no"/>
+  <hasOperator id="VYG:Operator:TAG" name="Vy T&#xe5;g"/>
+  <hasOperator id="KOL:Operator:509" name="Norled AS" url="https://www.norled.no/hurtigbat/"/>
+  <hasOperator id="INN:Operator:97" name="Taxi Hedmark AS" phone="+4795950294" url="https://www.taxi-hedmark.no"/>
+  <hasOperator id="TRO:Operator:195" name="Torghatten Nord hurtigb&#xe5;t" url="https://www.torghatten-nord.no"/>
+  <hasOperator id="FIN:Operator:810" name="Neiden Taxi" phone="+4775771888" url="https://www.snelandia.no"/>
+  <hasOperator id="FIN:Operator:811" name="Gunnar Tore Olsen" phone="+4775771888" url="https://www.snelandia.no"/>
+  <hasOperator id="TRO:Operator:199" name="Sommar&#xf8;y Cruise AS" url="http://www.example.com"/>
+  <hasOperator id="INN:Operator:98" name="Taxi Oppland" phone="+4762588800" url="https://www.taxioppland.no/"/>
+  <hasOperator id="INN:Operator:99" name="Randsfjordferja" phone="+4702040" url="https://innlandstrafikk.no/reise/randsfjordferja/"/>
+  <hasOperator id="NSB:Operator:NSB" name="Vy"/>
+  <hasOperator id="RUT:Operator:160" name="Unibuss AS" url="https://ruter.no/fa-hjelp/kontakt-oss/kontaktskjema/"/>
+  <hasOperator id="INN:Operator:552" name="Tr&#xf8;nderbilene Hadeland" phone="+4747913000" url="https://www.tronderbilene.no"/>
+  <hasOperator id="INN:Operator:551" name="Tr&#xf8;nderbilene Valdres" phone="+4747913000" url="https://www.tronderbilene.no"/>
+  <hasOperator id="TRO:Operator:194" name="Boreal sj&#xf8;" url="https://www.boreal.no"/>
+  <hasOperator id="INN:Operator:553" name="Tr&#xf8;nderbilene Lillehammer" phone="+4747913000" url="https://www.tronderbilene.no"/>
+  <hasOperator id="FTR:Operator:1" name="Fl&#xe5;m Travel" phone="90130808" url="https://www.flamtravel.no/"/>
+  <hasOperator id="INN:Operator:3406" name="Kvam Taxi" phone="61294147" url="https://kvam-taxi.com/"/>
+  <hasOperator id="INN:Operator:3407" name="Lillehammer Taxisentral" phone="06565" url="https://06565.no/"/>
+  <hasOperator id="BOR:Operator:402_200804113764180" name="Boreal" url="http://www.example.com"/>
+  <hasOperator id="AKT:Operator:110" name="Rest AKT vest" phone="+4738038300" url="https://akt.no"/>
+  <hasOperator id="MOR:Operator:SUND" name="Sundb&#xe5;ten" phone="+4793283684" url="https://www.sundbaten.no/"/>
+  <hasOperator id="KOL:Operator:527" name="Norled AS" url="https://www.norled.no/ferje/"/>
+  <hasOperator id="KOL:Operator:528" name="Boreal Sj&#xf8; AS" url="https://www.boreal.no/"/>
+  <hasOperator id="RUT:Operator:140" name="Vy Buss AS" url="https://ruter.no/fa-hjelp/kontakt-oss/kontaktskjema/"/>
+  <hasOperator id="KOL:Operator:522" name="Boreal Travel AS" url="https://www.boreal.no/"/>
+  <hasOperator id="SKY:Operator:NORLED" name="Norled AS"/>
+  <hasOperator id="MOR:Operator:SN147" name="Sekken N&#xe6;ringspark" phone="+4771200410" url="https://frammr.no"/>
+  <hasOperator id="AKT:Operator:107" name="S&#xf8;rlandsruta" phone="+4738278200" url="https://sorlandsruta.no"/>
+  <hasOperator id="ATU:Operator:1" name="&#xc5;lesund Turvogn Service" url="http://turvogna.no/"/>
+  <hasOperator id="BRA:Operator:71" name="Bast&#xf8; Fosen" url="https://basto-fosen.no"/>
+  <hasOperator id="AKT:Operator:109" name="Agder Kollektivtrafikk AS" phone="+4738038300" url="https://akt.no"/>
+  <hasOperator id="FIN:Operator:809" name="Vard&#xf8; Taxi" phone="+4775771888" url="https://www.snelandia.no"/>
+  <hasOperator id="FIN:Operator:807" name="Mikkel Mathis Sara" phone="+4775771888" url="https://www.snelandia.no"/>
+  <hasOperator id="ATB:Operator:900" name="Fjord1 Ferje" url="http://www.example.com"/>
+  <hasOperator id="FIN:Operator:801" name="Berlev&#xe5;g Taxi" phone="+4775771888" url="https://www.snelandia.no"/>
+  <hasOperator id="FIN:Operator:802" name="B&#xf8;rselv Taxi" phone="+4775771888" url="https://www.snelandia.no"/>
+  <hasOperator id="FIN:Operator:806" name="Kj&#xf8;llefjord Skipsekspedisjon" phone="+4775771888" url="https://www.snelandia.no"/>
+  <hasOperator id="FLT:Operator:507" name="Flytoget"/>
+  <hasOperator id="RUT:Operator:130" name="Connect Bus AS" url="https://ruter.no/fa-hjelp/kontakt-oss/kontaktskjema/"/>
+  <hasOperator id="FIN:Operator:803" name="B&#xe5;tsfjord Drosjesentral" phone="+4775771888" url="https://www.snelandia.no"/>
+  <hasOperator id="INN:Operator:65" name="Tr&#xf8;nderbilene AS Gudbrandsdal" phone="+4747913000" url="https://www.tronderbilene.no"/>
+  <hasOperator id="FIN:Operator:804" name="D&#xf8;rm&#xe6;nen Transport" phone="+4775771888" url="https://www.snelandia.no"/>
+</transportModel:transportOrg>

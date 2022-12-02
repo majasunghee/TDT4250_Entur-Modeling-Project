@@ -2,6 +2,8 @@ package pojo;
 
 import com.fasterxml.jackson.databind.JsonNode;
 
+import transportModel.TransportModeType;
+
 public class LinesClass {
 
 	public String id;

@@ -77,7 +77,7 @@ public interface TransportModelPackage extends EPackage {
 	int TRANSPORT_ORG__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Has Operator</b></em>' containment reference.
+	 * The feature id for the '<em><b>Has Operator</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -521,10 +521,10 @@ public interface TransportModelPackage extends EPackage {
 	EAttribute gettransportOrg_Name();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link transportModel.transportOrg#getHasOperator <em>Has Operator</em>}'.
+	 * Returns the meta object for the containment reference list '{@link transportModel.transportOrg#getHasOperator <em>Has Operator</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Has Operator</em>'.
+	 * @return the meta object for the containment reference list '<em>Has Operator</em>'.
 	 * @see transportModel.transportOrg#getHasOperator()
 	 * @see #gettransportOrg()
 	 * @generated
@@ -906,7 +906,7 @@ public interface TransportModelPackage extends EPackage {
 		EAttribute TRANSPORT_ORG__NAME = eINSTANCE.gettransportOrg_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Has Operator</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Has Operator</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

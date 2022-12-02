@@ -563,7 +563,7 @@ public class TransportModelPackageImpl extends EPackageImpl implements Transport
 		// Initialize classes, features, and operations; add parameters
 		initEClass(transportOrgEClass, transportOrg.class, "transportOrg", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(gettransportOrg_Name(), ecorePackage.getEString(), "name", null, 0, 1, transportOrg.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(gettransportOrg_HasOperator(), this.getoperator(), null, "hasOperator", null, 0, 1, transportOrg.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(gettransportOrg_HasOperator(), this.getoperator(), null, "hasOperator", null, 1, -1, transportOrg.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(operatorEClass, operator.class, "operator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getoperator_HasLines(), this.getlines(), null, "hasLines", null, 1, -1, operator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

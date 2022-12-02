@@ -2,6 +2,7 @@ package tdt4250.entur.pluginProject;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
@@ -37,39 +38,37 @@ public class Mapping {
 
 	public static void main(String[] args) throws IOException {
 		updateModel();
-		test(null);
-		mapLines(null);
 	}
 	
-	public static List<OperatorClass> test(transportOrg organization) throws IOException {
+	public static List<operator> createOperator(transportOrg organization) throws IOException {
 		List<OperatorClass> operatorList = Mapper.instantiateOperators();
-		List<OperatorClass> mappedOperators = new ArrayList<OperatorClass>();
+		List<operator> mappedOperators = new ArrayList<operator>();
 		operatorList.forEach(operator -> {
 			operator op= FACTORY.createoperator();
 			op.setId(operator.getId());
 			op.setName(operator.getName());
-			//System.out.println(operator.name);
-			mappedOperators.add(operator);
+			op.setPhone(operator.getNumber());
+			op.setUrl(operator.getUrl());
+			mappedOperators.add(op);
 			//System.out.println(mappedOperators);
-			//Fikse modell? transport org har ikke liste med operatører. hasOperator() er en boolean som sier om transport org har operatøer eller ikke.
 		});
 		return mappedOperators;
 	}
 	
-	public static List<LinesClass> mapLines(transportOrg organization) throws IOException {
-		List<LinesClass> linesList = Mapper.instantiateLines();
-		List<LinesClass> mappedLines = new ArrayList<LinesClass>();
-		linesList.forEach(lines -> {
-			lines line= FACTORY.createlines();
-			line.setId(lines.getId());
-			line.setName(lines.getName());
-			line.setTransportMode(lines.getTransportMode());
-			line.setBikesAllowed(lines.getBikesAllowed());
-			mappedLines.add(lines);
-			//System.out.println(mappedLines);
-		});
-		return mappedLines;
-	}
+//	public static List<lines> createLines(transportOrg organization) throws IOException {
+//		List<LinesClass> linesList = Mapper.instantiateLines();
+//		List<lines> mappedLines = new ArrayList<lines>();
+//		linesList.forEach(lines -> {
+//			lines line= FACTORY.createlines();
+//			line.setId(lines.getId());
+//			line.setName(lines.getName());
+//			line.setTransportMode(lines.getTransportMode());
+//			line.setBikesAllowed(lines.getBikesAllowed());
+//			mappedLines.add(line);
+//			//System.out.println(mappedLines);
+//		});
+//		return mappedLines;
+//	}
 	
 	//set data to model
 	public static void updateModel() throws IOException {
@@ -80,8 +79,12 @@ public class Mapping {
 		transportOrg organization = FACTORY.createtransportOrg();
 		organization.setName("Entur");	
 		
-		List<OperatorClass> mappedOperators = test(organization);
-		//List<OperatorClass> mappedLines = test(organization);
+		//List<lines> mappedLines = createLines(organization);
+		
+		List<operator> mappedOperators = createOperator(organization);
+		organization.getHasOperator().addAll(mappedOperators);
+		//System.out.println(mappedOperators);
+		
 		
 		// Register the XMI resource factory for the .xmi extension
 		Resource.Factory.Registry registry = Resource.Factory.Registry.INSTANCE;

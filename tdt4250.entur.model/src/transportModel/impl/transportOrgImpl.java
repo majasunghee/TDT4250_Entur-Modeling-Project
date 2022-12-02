@@ -2,15 +2,19 @@
  */
 package transportModel.impl;
 
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 import transportModel.TransportModelPackage;
 import transportModel.operator;
 import transportModel.transportOrg;
@@ -51,14 +55,14 @@ public class transportOrgImpl extends MinimalEObjectImpl.Container implements tr
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getHasOperator() <em>Has Operator</em>}' containment reference.
+	 * The cached value of the '{@link #getHasOperator() <em>Has Operator</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getHasOperator()
 	 * @generated
 	 * @ordered
 	 */
-	protected operator hasOperator;
+	protected EList<operator> hasOperator;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -105,42 +109,11 @@ public class transportOrgImpl extends MinimalEObjectImpl.Container implements tr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public operator getHasOperator() {
+	public EList<operator> getHasOperator() {
+		if (hasOperator == null) {
+			hasOperator = new EObjectContainmentEList<operator>(operator.class, this, TransportModelPackage.TRANSPORT_ORG__HAS_OPERATOR);
+		}
 		return hasOperator;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetHasOperator(operator newHasOperator, NotificationChain msgs) {
-		operator oldHasOperator = hasOperator;
-		hasOperator = newHasOperator;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, TransportModelPackage.TRANSPORT_ORG__HAS_OPERATOR, oldHasOperator, newHasOperator);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setHasOperator(operator newHasOperator) {
-		if (newHasOperator != hasOperator) {
-			NotificationChain msgs = null;
-			if (hasOperator != null)
-				msgs = ((InternalEObject)hasOperator).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - TransportModelPackage.TRANSPORT_ORG__HAS_OPERATOR, null, msgs);
-			if (newHasOperator != null)
-				msgs = ((InternalEObject)newHasOperator).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - TransportModelPackage.TRANSPORT_ORG__HAS_OPERATOR, null, msgs);
-			msgs = basicSetHasOperator(newHasOperator, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TransportModelPackage.TRANSPORT_ORG__HAS_OPERATOR, newHasOperator, newHasOperator));
 	}
 
 	/**
@@ -152,7 +125,7 @@ public class transportOrgImpl extends MinimalEObjectImpl.Container implements tr
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case TransportModelPackage.TRANSPORT_ORG__HAS_OPERATOR:
-				return basicSetHasOperator(null, msgs);
+				return ((InternalEList<?>)getHasOperator()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -178,6 +151,7 @@ public class transportOrgImpl extends MinimalEObjectImpl.Container implements tr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -185,7 +159,8 @@ public class transportOrgImpl extends MinimalEObjectImpl.Container implements tr
 				setName((String)newValue);
 				return;
 			case TransportModelPackage.TRANSPORT_ORG__HAS_OPERATOR:
-				setHasOperator((operator)newValue);
+				getHasOperator().clear();
+				getHasOperator().addAll((Collection<? extends operator>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -203,7 +178,7 @@ public class transportOrgImpl extends MinimalEObjectImpl.Container implements tr
 				setName(NAME_EDEFAULT);
 				return;
 			case TransportModelPackage.TRANSPORT_ORG__HAS_OPERATOR:
-				setHasOperator((operator)null);
+				getHasOperator().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -220,7 +195,7 @@ public class transportOrgImpl extends MinimalEObjectImpl.Container implements tr
 			case TransportModelPackage.TRANSPORT_ORG__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case TransportModelPackage.TRANSPORT_ORG__HAS_OPERATOR:
-				return hasOperator != null;
+				return hasOperator != null && !hasOperator.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
