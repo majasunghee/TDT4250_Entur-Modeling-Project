@@ -382,10 +382,4 @@ public class linesImpl extends MinimalEObjectImpl.Container implements lines {
 		return result.toString();
 	}
 
-	@Override
-	public void setTransportMode(Integer integer) {
-		// TODO Auto-generated method stub
-		
-	}
-
 } //linesImpl

@@ -221,6 +221,24 @@ public class TransportModelPackageImpl extends EPackageImpl implements Transport
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getoperator_Phone() {
+		return (EAttribute)operatorEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getoperator_Url() {
+		return (EAttribute)operatorEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getlines() {
 		return linesEClass;
 	}
@@ -477,6 +495,8 @@ public class TransportModelPackageImpl extends EPackageImpl implements Transport
 		createEReference(operatorEClass, OPERATOR__HAS_LINES);
 		createEAttribute(operatorEClass, OPERATOR__ID);
 		createEAttribute(operatorEClass, OPERATOR__NAME);
+		createEAttribute(operatorEClass, OPERATOR__PHONE);
+		createEAttribute(operatorEClass, OPERATOR__URL);
 
 		linesEClass = createEClass(LINES);
 		createEReference(linesEClass, LINES__HAS_SPECIFIC_LINE);
@@ -549,6 +569,8 @@ public class TransportModelPackageImpl extends EPackageImpl implements Transport
 		initEReference(getoperator_HasLines(), this.getlines(), null, "hasLines", null, 1, -1, operator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getoperator_Id(), ecorePackage.getEString(), "id", null, 0, 1, operator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getoperator_Name(), ecorePackage.getEString(), "name", null, 0, 1, operator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getoperator_Phone(), ecorePackage.getEString(), "phone", null, 1, 1, operator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getoperator_Url(), ecorePackage.getEString(), "url", null, 1, 1, operator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(linesEClass, lines.class, "lines", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getlines_HasSpecificLine(), this.getspecificLine(), null, "hasSpecificLine", null, 1, -1, lines.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

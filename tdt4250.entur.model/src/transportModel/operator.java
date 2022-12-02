@@ -18,6 +18,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link transportModel.operator#getHasLines <em>Has Lines</em>}</li>
  *   <li>{@link transportModel.operator#getId <em>Id</em>}</li>
  *   <li>{@link transportModel.operator#getName <em>Name</em>}</li>
+ *   <li>{@link transportModel.operator#getPhone <em>Phone</em>}</li>
+ *   <li>{@link transportModel.operator#getUrl <em>Url</em>}</li>
  * </ul>
  *
  * @see transportModel.TransportModelPackage#getoperator()
@@ -80,5 +82,49 @@ public interface operator extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Phone</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Phone</em>' attribute.
+	 * @see #setPhone(String)
+	 * @see transportModel.TransportModelPackage#getoperator_Phone()
+	 * @model required="true"
+	 * @generated
+	 */
+	String getPhone();
+
+	/**
+	 * Sets the value of the '{@link transportModel.operator#getPhone <em>Phone</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Phone</em>' attribute.
+	 * @see #getPhone()
+	 * @generated
+	 */
+	void setPhone(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Url</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Url</em>' attribute.
+	 * @see #setUrl(String)
+	 * @see transportModel.TransportModelPackage#getoperator_Url()
+	 * @model required="true"
+	 * @generated
+	 */
+	String getUrl();
+
+	/**
+	 * Sets the value of the '{@link transportModel.operator#getUrl <em>Url</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Url</em>' attribute.
+	 * @see #getUrl()
+	 * @generated
+	 */
+	void setUrl(String value);
 
 } // operator
