@@ -1,36 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<transportModel:transportOrg
-    xmi:version="2.0"
-    xmlns:xmi="http://www.omg.org/XMI"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:transportModel="platform:/plugin/tdt4250.entur.model/model/transportModel.ecore"
-    xsi:schemaLocation="platform:/plugin/tdt4250.entur.model/model/transportModel.ecore TransportModel.ecore"
-    name="entur">
-  <hasOperator
-      id="82"
-      name="hei">
-    <hasLines
-        id="51"
-        name="1"
-        bikesAllowed="false">
-      <hasSpecificLine
-          id="41"
-          name="Line1">
-        <hasRoute
-            id="21"
-            name="Route1">
-          <hasStopPlace
-              id="31"
-              name="stopp1"/>
-        </hasRoute>
-        <hasJourneyPatterns
-            id="2"
-            name="JP1">
-          <hasStopPlace
-              id="iuyt"
-              name="Stopp2"/>
-        </hasJourneyPatterns>
-      </hasSpecificLine>
-    </hasLines>
-  </hasOperator>
-</transportModel:transportOrg>
+<transportModel:transportOrg xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:transportModel="platform:/plugin/tdt4250.entur.model/model/transportModel.ecore"
+    xsi:schemaLocation="platform:/plugin/tdt4250.entur.model/model/transportModel.ecore TransportModel.ecore"/>

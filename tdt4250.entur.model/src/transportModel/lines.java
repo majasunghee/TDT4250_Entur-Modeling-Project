@@ -92,7 +92,7 @@ public interface lines extends EObject {
 	 * @see transportModel.TransportModeType
 	 * @see #setTransportMode(TransportModeType)
 	 * @see transportModel.TransportModelPackage#getlines_TransportMode()
-	 * @model
+	 * @model dataType="transportModel.TransportModeType"
 	 * @generated
 	 */
 	TransportModeType getTransportMode();

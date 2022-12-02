@@ -33,6 +33,8 @@ import transportModel.operator;
  *   <li>{@link transportModel.impl.operatorImpl#getHasLines <em>Has Lines</em>}</li>
  *   <li>{@link transportModel.impl.operatorImpl#getId <em>Id</em>}</li>
  *   <li>{@link transportModel.impl.operatorImpl#getName <em>Name</em>}</li>
+ *   <li>{@link transportModel.impl.operatorImpl#getPhone <em>Phone</em>}</li>
+ *   <li>{@link transportModel.impl.operatorImpl#getUrl <em>Url</em>}</li>
  * </ul>
  *
  * @generated
@@ -87,6 +89,46 @@ public class operatorImpl extends MinimalEObjectImpl.Container implements operat
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getPhone() <em>Phone</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPhone()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String PHONE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getPhone() <em>Phone</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPhone()
+	 * @generated
+	 * @ordered
+	 */
+	protected String phone = PHONE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getUrl() <em>Url</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUrl()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String URL_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getUrl() <em>Url</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUrl()
+	 * @generated
+	 * @ordered
+	 */
+	protected String url = URL_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -166,6 +208,48 @@ public class operatorImpl extends MinimalEObjectImpl.Container implements operat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getPhone() {
+		return phone;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPhone(String newPhone) {
+		String oldPhone = phone;
+		phone = newPhone;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, TransportModelPackage.OPERATOR__PHONE, oldPhone, phone));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getUrl() {
+		return url;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setUrl(String newUrl) {
+		String oldUrl = url;
+		url = newUrl;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, TransportModelPackage.OPERATOR__URL, oldUrl, url));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -189,6 +273,10 @@ public class operatorImpl extends MinimalEObjectImpl.Container implements operat
 				return getId();
 			case TransportModelPackage.OPERATOR__NAME:
 				return getName();
+			case TransportModelPackage.OPERATOR__PHONE:
+				return getPhone();
+			case TransportModelPackage.OPERATOR__URL:
+				return getUrl();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -212,6 +300,12 @@ public class operatorImpl extends MinimalEObjectImpl.Container implements operat
 			case TransportModelPackage.OPERATOR__NAME:
 				setName((String)newValue);
 				return;
+			case TransportModelPackage.OPERATOR__PHONE:
+				setPhone((String)newValue);
+				return;
+			case TransportModelPackage.OPERATOR__URL:
+				setUrl((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -233,6 +327,12 @@ public class operatorImpl extends MinimalEObjectImpl.Container implements operat
 			case TransportModelPackage.OPERATOR__NAME:
 				setName(NAME_EDEFAULT);
 				return;
+			case TransportModelPackage.OPERATOR__PHONE:
+				setPhone(PHONE_EDEFAULT);
+				return;
+			case TransportModelPackage.OPERATOR__URL:
+				setUrl(URL_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -251,6 +351,10 @@ public class operatorImpl extends MinimalEObjectImpl.Container implements operat
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case TransportModelPackage.OPERATOR__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case TransportModelPackage.OPERATOR__PHONE:
+				return PHONE_EDEFAULT == null ? phone != null : !PHONE_EDEFAULT.equals(phone);
+			case TransportModelPackage.OPERATOR__URL:
+				return URL_EDEFAULT == null ? url != null : !URL_EDEFAULT.equals(url);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -269,6 +373,10 @@ public class operatorImpl extends MinimalEObjectImpl.Container implements operat
 		result.append(id);
 		result.append(", name: ");
 		result.append(name);
+		result.append(", phone: ");
+		result.append(phone);
+		result.append(", url: ");
+		result.append(url);
 		result.append(')');
 		return result.toString();
 	}

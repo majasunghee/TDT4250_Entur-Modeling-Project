@@ -4,8 +4,8 @@
     nsPrefix="transportModel">
   <eClassifiers xsi:type="ecore:EClass" name="transportOrg">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="hasOperator" eType="#//operator"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasOperator" lowerBound="1"
+        upperBound="-1" eType="#//operator" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="operator">
     <eStructuralFeatures xsi:type="ecore:EReference" name="hasLines" lowerBound="1"
@@ -13,6 +13,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="phone" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="lines">
     <eStructuralFeatures xsi:type="ecore:EReference" name="hasSpecificLine" lowerBound="1"
@@ -52,7 +54,7 @@
         iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="TransportModeType">
+  <eClassifiers xsi:type="ecore:EEnum" name="TransportModeType" instanceTypeName="EString">
     <eLiterals name="Bus"/>
     <eLiterals name="Air" value="1"/>
     <eLiterals name="Water" value="2"/>

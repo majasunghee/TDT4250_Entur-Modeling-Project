@@ -25,6 +25,8 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TransportModel.ecore#//operator/hasLines"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransportModel.ecore#//operator/id"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransportModel.ecore#//operator/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransportModel.ecore#//operator/phone"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransportModel.ecore#//operator/url"/>
     </genClasses>
     <genClasses ecoreClass="TransportModel.ecore#//lines">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TransportModel.ecore#//lines/hasSpecificLine"/>

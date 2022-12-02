@@ -77,7 +77,7 @@ public interface TransportModelPackage extends EPackage {
 	int TRANSPORT_ORG__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Has Operator</b></em>' containment reference.
+	 * The feature id for the '<em><b>Has Operator</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -141,13 +141,31 @@ public interface TransportModelPackage extends EPackage {
 	int OPERATOR__NAME = 2;
 
 	/**
+	 * The feature id for the '<em><b>Phone</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPERATOR__PHONE = 3;
+
+	/**
+	 * The feature id for the '<em><b>Url</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPERATOR__URL = 4;
+
+	/**
 	 * The number of structural features of the '<em>operator</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATOR_FEATURE_COUNT = 3;
+	int OPERATOR_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>operator</em>' class.
@@ -503,10 +521,10 @@ public interface TransportModelPackage extends EPackage {
 	EAttribute gettransportOrg_Name();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link transportModel.transportOrg#getHasOperator <em>Has Operator</em>}'.
+	 * Returns the meta object for the containment reference list '{@link transportModel.transportOrg#getHasOperator <em>Has Operator</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Has Operator</em>'.
+	 * @return the meta object for the containment reference list '<em>Has Operator</em>'.
 	 * @see transportModel.transportOrg#getHasOperator()
 	 * @see #gettransportOrg()
 	 * @generated
@@ -555,6 +573,28 @@ public interface TransportModelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getoperator_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link transportModel.operator#getPhone <em>Phone</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Phone</em>'.
+	 * @see transportModel.operator#getPhone()
+	 * @see #getoperator()
+	 * @generated
+	 */
+	EAttribute getoperator_Phone();
+
+	/**
+	 * Returns the meta object for the attribute '{@link transportModel.operator#getUrl <em>Url</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Url</em>'.
+	 * @see transportModel.operator#getUrl()
+	 * @see #getoperator()
+	 * @generated
+	 */
+	EAttribute getoperator_Url();
 
 	/**
 	 * Returns the meta object for class '{@link transportModel.lines <em>lines</em>}'.
@@ -866,7 +906,7 @@ public interface TransportModelPackage extends EPackage {
 		EAttribute TRANSPORT_ORG__NAME = eINSTANCE.gettransportOrg_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Has Operator</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Has Operator</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -906,6 +946,22 @@ public interface TransportModelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute OPERATOR__NAME = eINSTANCE.getoperator_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Phone</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute OPERATOR__PHONE = eINSTANCE.getoperator_Phone();
+
+		/**
+		 * The meta object literal for the '<em><b>Url</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute OPERATOR__URL = eINSTANCE.getoperator_Url();
 
 		/**
 		 * The meta object literal for the '{@link transportModel.impl.linesImpl <em>lines</em>}' class.
