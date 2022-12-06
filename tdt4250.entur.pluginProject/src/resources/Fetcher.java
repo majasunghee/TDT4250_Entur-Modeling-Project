@@ -27,7 +27,6 @@ public class Fetcher  {
 		String queryLinesData = "{lines { id name transportMode bikesAllowed}}";
 		
 		String outputLinesData = jsonFetcher(url, queryLinesData);
-		System.out.println(outputLinesData);
 		String filename1 = "OutputLinesData.json";
 		printToFile(filename1, outputLinesData);
 		
@@ -35,7 +34,6 @@ public class Fetcher  {
 		String querySpecificLinesData = "{line(id: \\\"ATB:Line:2_311\\\") {id journeyPatterns{ name id line { quays {stopPlace { name }} journeyPatterns{ name directionType} operator{id name}}}}}";
 		String outputSpecificLinesData = jsonFetcher(url, querySpecificLinesData);
 		
-		System.out.println(outputSpecificLinesData);
 		String filename2 = "OutputSpecificLinesData.json";
 		printToFile(filename2, outputSpecificLinesData);
 		
@@ -44,7 +42,6 @@ public class Fetcher  {
 		String queryAllOperatorsData = "{operators { id name url phone lines{id name}}}";
 		
 		String outputAllOperatorsData = jsonFetcher(url, queryAllOperatorsData);
-		System.out.println(outputAllOperatorsData);
 		String filename3 = "OutputAllOperatorsData.json";
 		printToFile(filename3, outputAllOperatorsData);
 	
