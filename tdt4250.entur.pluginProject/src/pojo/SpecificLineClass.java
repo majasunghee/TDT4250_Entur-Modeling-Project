@@ -10,8 +10,8 @@ public class SpecificLineClass {
 	public String specificLineId;
 	public String routeId;
 	public String routeName;
-	ArrayList<String> stopPlaces = new ArrayList<>();
-	ArrayList<ArrayList<String>> journeyPatterns = new ArrayList<>();
+	ArrayList<Object> routesInSpecificLine = new ArrayList<>();
+	
 	
 	public String getSpecificLineId() {
 		return specificLineId;
@@ -31,30 +31,23 @@ public class SpecificLineClass {
 	public void setRouteName(String routeName) {
 		this.routeName = routeName;
 	}
-	public ArrayList<String> getStopPlaces() {
-		return stopPlaces;
+	public ArrayList<Object> getRoutesInSpecificLine() {
+		return routesInSpecificLine;
 	}
-	public void setStopPlaces(ArrayList<String> stopPlaces) {
-		this.stopPlaces = stopPlaces;
+	public void setRoutesInSpecificLine(ArrayList<Object> routesInSpecificLine) {
+		this.routesInSpecificLine = routesInSpecificLine;
 	}
-	public ArrayList<ArrayList<String>> getJourneyPatterns() {
-		return journeyPatterns;
-	}
-	public void setJourneyPatterns(ArrayList<ArrayList<String>> routes) {
-		this.journeyPatterns = routes;
-	}
-
-
 
 	@Override
 	public String toString(){
 		StringBuilder sb = new StringBuilder();
 		sb.append("***** Route *****\n");
 		sb.append("ID of line = "+getSpecificLineId()+"\n");
-		sb.append("ID of route = "+getRouteId()+"\n");
-		sb.append("Name of route = "+getRouteName()+"\n");
-		sb.append("Stopplaces = "+getStopPlaces()+"\n");
-		sb.append("Journeypatterns = "+getJourneyPatterns()+"\n");
+		sb.append("ID of route = "+getRoutesInSpecificLine().get(0)+"\n");
+		sb.append("Name of route = "+getRoutesInSpecificLine().get(1)+"\n");
+		sb.append("Stopplaces in route = "+getRoutesInSpecificLine().get(2)+"\n");
+		sb.append("Journeypatterns in route = "+getRoutesInSpecificLine().get(3)+"\n");
+		sb.append("\n");
 		return sb.toString();
 	}
 	

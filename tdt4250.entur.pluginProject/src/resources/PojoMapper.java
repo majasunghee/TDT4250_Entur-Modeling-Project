@@ -14,6 +14,7 @@ import org.eclipse.emfcloud.jackson.resource.JsonResourceFactory;
 import com.fasterxml.jackson.annotation.JsonSubTypes.Type;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 
 import pojo.LinesClass;
 import pojo.OperatorClass;
@@ -24,7 +25,7 @@ public class PojoMapper {
 	
 	private static String jsonpath1 = "../tdt4250.entur.pluginProject/src/data/OutputAllOperatorsData.json";
 	private static String jsonpath2 = "../tdt4250.entur.pluginProject/src/data/OutputLinesData.json";
-	private static String jsonpath3 = "../tdt4250.entur.pluginProject/src/data/OutputSpecificLineData.json";
+	private static String jsonpath3 = "../tdt4250.entur.pluginProject/src/data/OutputSpecificLinesData.json";
 	
 	public static void main(String[] args) throws IOException {
 		
@@ -51,19 +52,20 @@ public class PojoMapper {
 		//Create new instances of operators
 		ArrayList<OperatorClass> operatorList = new ArrayList<OperatorClass>();
 		JsonNode treeNode = objmapper.readTree(Paths.get(jsonpath1).toFile());
+		
+		//Iterates through all the nodes in the operators list
 		treeNode=treeNode.findValue("operators");
 		for (Iterator<JsonNode> it = treeNode.elements(); it.hasNext(); ) {
 			ArrayList<JsonNode> listOfLines = new ArrayList<JsonNode>();
 			OperatorClass operator = new OperatorClass();
 		   JsonNode node = it.next();
-//		   System.out.println(node);
 		   operator.setId(node.findValue("id").textValue());
 		   operator.setName(node.findValue("name").textValue());
 		   operator.setNumber(node.findValue("phone").textValue());
 		   operator.setUrl(node.findValue("url").textValue());
 		   operator.setLines(node.get("lines"));
-		   for (JsonNode element: node.get("lines")) {
-			   listOfLines.add(element);
+		   for (JsonNode lineNode: node.get("lines")) {
+			   listOfLines.add(lineNode);
 		   } 
 //		   System.out.println(operator); 
 		   operatorList.add(operator);
@@ -80,6 +82,8 @@ public class PojoMapper {
 		//Create new instances of lines
 		ArrayList<LinesClass> linesList = new ArrayList<LinesClass>();
 		JsonNode treeNode = objmapper.readTree(Paths.get(jsonpath2).toFile());
+		
+		//Iterates through all the nodes in the lines list
 		treeNode=treeNode.findValue("lines");
 		for (Iterator<JsonNode> it = treeNode.elements(); it.hasNext(); ) {
 			LinesClass lines = new LinesClass();
@@ -128,46 +132,46 @@ public class PojoMapper {
 	public static SpecificLineClass instantiateSpecificLines() throws IOException {
 		//Create ObjectMapper instance
 		ObjectMapper objmapper = new ObjectMapper();
-		
-		//Create new instance of a specific line
-		
 		JsonNode treeNode = objmapper.readTree(Paths.get(jsonpath3).toFile());
+		
 		treeNode=treeNode.findValue("line");
-		//System.out.println(treeNode);
+		//Create new instance of a specific line
 		SpecificLineClass specificLine = new SpecificLineClass();
+		ArrayList<String> routeStopPlaces = new ArrayList<>();
+		ArrayList<String> routeJourneyPatterns = new ArrayList<>();
+		
 		specificLine.setSpecificLineId(treeNode.findValue("id").textValue());
 		
 		treeNode=treeNode.findValue("journeyPatterns");
-		ArrayList<ArrayList<String>> routes = new ArrayList<>();
-		ArrayList<ArrayList<String>> route = new ArrayList<>();
-		for (Iterator<JsonNode> it = treeNode.elements(); it.hasNext(); ) {
-		   JsonNode node = it.next();
-		   //System.out.println(node);
+		
+		//Iterates through all the nodes in the line object
+		Iterator<JsonNode> it = treeNode.elements();
+		while (it.hasNext()) {
+			ArrayList<Object>singleRoute = new ArrayList<>();
+			
+		   specificLine.setRouteId(it.next().findValue("id").textValue());
+		   singleRoute.add(specificLine.getRouteId());
+		   
+		   specificLine.setRouteName(it.next().findValue("name").textValue());
+		   singleRoute.add(specificLine.getRouteName());
 
-		   specificLine.setRouteId(node.findValue("id").textValue());
-		   specificLine.setRouteName(node.findValue("name").textValue());
-//		   System.out.println(specificLine);
-//		   
-//		   ArrayList<String> stopPlaces = new ArrayList<>();
-//		   for (Iterator<JsonNode> stopIt = node.findValue("quays").elements(); stopIt.hasNext(); ) {
-//			   JsonNode stopNode = stopIt.next();
-//			   stopPlaces.add(stopNode.findValue("name").textValue());
+		   for (JsonNode routes: treeNode.findValue("quays")) {
+			   routeStopPlaces.add(routes.findValue("name").textValue());
 		   }
-//		   
-//		   ArrayList<String> singlePattern = new ArrayList<>();
-//		   ArrayList<ArrayList<String>> journeyPatterns = new ArrayList<>();
-//		   for (Iterator<JsonNode> patternIt = node.findValue("journeyPatterns").elements(); patternIt.hasNext(); ) {
-//			   JsonNode patternNode = patternIt.next();
-//			   singlePattern.add(patternNode.findValue("name").textValue());
-//			  
-//			   singlePattern.add(patternNode.findValue("directionType").textValue());
-//			   journeyPatterns.add(singlePattern);
-//		   }
-//		   routes.add(stopPlaces);
-//		   routes.addAll(journeyPatterns);
-//		   specificLine.setJourneyPatterns(routes);;
-//		}
-		//System.out.print(specificLine);
+		   singleRoute.add(routeStopPlaces);
+		   
+		   for (JsonNode routes: treeNode.findValue("journeyPatterns")) {
+			   routeJourneyPatterns.add(routes.findValue("name").textValue());
+			   routeJourneyPatterns.add(routes.findValue("directionType").textValue());
+			   //System.out.println(routes);
+		   }
+		   singleRoute.add(routeJourneyPatterns);
+		   
+		   specificLine.setRoutesInSpecificLine(singleRoute);
+
+		   //System.out.println(specificLine);
+		   
+		   }
 		return specificLine;
 	}
 	
