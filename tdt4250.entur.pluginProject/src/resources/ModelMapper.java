@@ -17,6 +17,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 
 import pojo.LinesClass;
 import pojo.OperatorClass;
+import pojo.SpecificLineClass;
 import resources.PojoMapper;
 import transportModel.DirectionType;
 import transportModel.journeyPatterns;
@@ -76,6 +77,16 @@ public class ModelMapper {
 		return mappedLines;
 	}
 	
+	//Sets specificLine data to model
+	public static SpecificLineClass createSpecificLine(transportOrg organization) throws IOException {
+		SpecificLineClass specificLine = PojoMapper.instantiateSpecificLines();
+		specificLine specificlineInstance = FACTORY.createspecificLine();
+		specificlineInstance.setId(specificLine.getSpecificLineId());
+		
+		System.out.println(specificLine);
+		return specificLine;
+	}
+	
 	public static void updateModel() throws IOException {
 		
 		//initializing package
@@ -89,6 +100,9 @@ public class ModelMapper {
 		List<operator> mappedOperators = createOperator(organization, mappedLines);
 		organization.getHasOperator().addAll(mappedOperators);
 		//System.out.println(mappedOperators);
+		
+		
+		SpecificLineClass specificlineInstance = createSpecificLine(organization);
 		
 		
 		// Register the XMI resource factory for the .xmi extension

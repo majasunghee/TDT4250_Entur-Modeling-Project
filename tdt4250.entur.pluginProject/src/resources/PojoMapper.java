@@ -38,11 +38,11 @@ public class PojoMapper {
 		
 		Resource resource2 = resourceSet.createResource(URI.createFileURI(jsonpath2));
 		resource2.load(null);
-		instantiateLines();
+		//instantiateLines();
 		
 		Resource resource3 = resourceSet.createResource(URI.createFileURI(jsonpath3));
 		resource3.load(null);
-		instantiateSpecificLines();
+		//instantiateSpecificLines();
 	}
 
 	public static ArrayList<OperatorClass> instantiateOperators() throws IOException {
