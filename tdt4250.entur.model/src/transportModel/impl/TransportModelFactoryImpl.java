@@ -60,7 +60,6 @@ public class TransportModelFactoryImpl extends EFactoryImpl implements Transport
 			case TransportModelPackage.TRANSPORT_ORG: return createtransportOrg();
 			case TransportModelPackage.OPERATOR: return createoperator();
 			case TransportModelPackage.LINES: return createlines();
-			case TransportModelPackage.SPECIFIC_LINE: return createspecificLine();
 			case TransportModelPackage.ROUTE: return createroute();
 			case TransportModelPackage.JOURNEY_PATTERNS: return createjourneyPatterns();
 			case TransportModelPackage.STOP_PLACE: return createstopPlace();
@@ -131,16 +130,6 @@ public class TransportModelFactoryImpl extends EFactoryImpl implements Transport
 	public lines createlines() {
 		linesImpl lines = new linesImpl();
 		return lines;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public specificLine createspecificLine() {
-		specificLineImpl specificLine = new specificLineImpl();
-		return specificLine;
 	}
 
 	/**

@@ -49,15 +49,6 @@ public interface TransportModelFactory extends EFactory {
 	lines createlines();
 
 	/**
-	 * Returns a new object of class '<em>specific Line</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>specific Line</em>'.
-	 * @generated
-	 */
-	specificLine createspecificLine();
-
-	/**
 	 * Returns a new object of class '<em>route</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

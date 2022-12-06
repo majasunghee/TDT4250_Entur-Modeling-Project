@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import transportModel.TransportModeType;
 import transportModel.TransportModelPackage;
 import transportModel.lines;
-import transportModel.specificLine;
+import transportModel.route;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,7 +31,7 @@ import transportModel.specificLine;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link transportModel.impl.linesImpl#getHasSpecificLine <em>Has Specific Line</em>}</li>
+ *   <li>{@link transportModel.impl.linesImpl#getRoutes <em>Routes</em>}</li>
  *   <li>{@link transportModel.impl.linesImpl#getId <em>Id</em>}</li>
  *   <li>{@link transportModel.impl.linesImpl#getName <em>Name</em>}</li>
  *   <li>{@link transportModel.impl.linesImpl#getTransportMode <em>Transport Mode</em>}</li>
@@ -42,14 +42,14 @@ import transportModel.specificLine;
  */
 public class linesImpl extends MinimalEObjectImpl.Container implements lines {
 	/**
-	 * The cached value of the '{@link #getHasSpecificLine() <em>Has Specific Line</em>}' containment reference list.
+	 * The cached value of the '{@link #getRoutes() <em>Routes</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getHasSpecificLine()
+	 * @see #getRoutes()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<specificLine> hasSpecificLine;
+	protected EList<route> routes;
 
 	/**
 	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
@@ -145,11 +145,11 @@ public class linesImpl extends MinimalEObjectImpl.Container implements lines {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<specificLine> getHasSpecificLine() {
-		if (hasSpecificLine == null) {
-			hasSpecificLine = new EObjectContainmentEList<specificLine>(specificLine.class, this, TransportModelPackage.LINES__HAS_SPECIFIC_LINE);
+	public EList<route> getRoutes() {
+		if (routes == null) {
+			routes = new EObjectContainmentEList<route>(route.class, this, TransportModelPackage.LINES__ROUTES);
 		}
-		return hasSpecificLine;
+		return routes;
 	}
 
 	/**
@@ -244,8 +244,8 @@ public class linesImpl extends MinimalEObjectImpl.Container implements lines {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case TransportModelPackage.LINES__HAS_SPECIFIC_LINE:
-				return ((InternalEList<?>)getHasSpecificLine()).basicRemove(otherEnd, msgs);
+			case TransportModelPackage.LINES__ROUTES:
+				return ((InternalEList<?>)getRoutes()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -258,8 +258,8 @@ public class linesImpl extends MinimalEObjectImpl.Container implements lines {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case TransportModelPackage.LINES__HAS_SPECIFIC_LINE:
-				return getHasSpecificLine();
+			case TransportModelPackage.LINES__ROUTES:
+				return getRoutes();
 			case TransportModelPackage.LINES__ID:
 				return getId();
 			case TransportModelPackage.LINES__NAME:
@@ -281,9 +281,9 @@ public class linesImpl extends MinimalEObjectImpl.Container implements lines {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case TransportModelPackage.LINES__HAS_SPECIFIC_LINE:
-				getHasSpecificLine().clear();
-				getHasSpecificLine().addAll((Collection<? extends specificLine>)newValue);
+			case TransportModelPackage.LINES__ROUTES:
+				getRoutes().clear();
+				getRoutes().addAll((Collection<? extends route>)newValue);
 				return;
 			case TransportModelPackage.LINES__ID:
 				setId((String)newValue);
@@ -292,7 +292,7 @@ public class linesImpl extends MinimalEObjectImpl.Container implements lines {
 				setName((String)newValue);
 				return;
 			case TransportModelPackage.LINES__TRANSPORT_MODE:
-				setTransportMode((TransportModeType) newValue);
+				setTransportMode(newValue);
 				return;
 			case TransportModelPackage.LINES__BIKES_ALLOWED:
 				setBikesAllowed((Boolean)newValue);
@@ -309,8 +309,8 @@ public class linesImpl extends MinimalEObjectImpl.Container implements lines {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case TransportModelPackage.LINES__HAS_SPECIFIC_LINE:
-				getHasSpecificLine().clear();
+			case TransportModelPackage.LINES__ROUTES:
+				getRoutes().clear();
 				return;
 			case TransportModelPackage.LINES__ID:
 				setId(ID_EDEFAULT);
@@ -336,8 +336,8 @@ public class linesImpl extends MinimalEObjectImpl.Container implements lines {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case TransportModelPackage.LINES__HAS_SPECIFIC_LINE:
-				return hasSpecificLine != null && !hasSpecificLine.isEmpty();
+			case TransportModelPackage.LINES__ROUTES:
+				return routes != null && !routes.isEmpty();
 			case TransportModelPackage.LINES__ID:
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case TransportModelPackage.LINES__NAME:

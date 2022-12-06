@@ -13,7 +13,6 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link transportModel.stopPlace#getId <em>Id</em>}</li>
  *   <li>{@link transportModel.stopPlace#getName <em>Name</em>}</li>
  * </ul>
  *
@@ -23,35 +22,13 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface stopPlace extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Id</em>' attribute.
-	 * @see #setId(String)
-	 * @see transportModel.TransportModelPackage#getstopPlace_Id()
-	 * @model id="true"
-	 * @generated
-	 */
-	String getId();
-
-	/**
-	 * Sets the value of the '{@link transportModel.stopPlace#getId <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Id</em>' attribute.
-	 * @see #getId()
-	 * @generated
-	 */
-	void setId(String value);
-
-	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see transportModel.TransportModelPackage#getstopPlace_Name()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	String getName();

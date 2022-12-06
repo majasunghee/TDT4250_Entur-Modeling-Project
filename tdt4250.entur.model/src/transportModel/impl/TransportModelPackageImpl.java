@@ -18,7 +18,6 @@ import transportModel.journeyPatterns;
 import transportModel.lines;
 import transportModel.operator;
 import transportModel.route;
-import transportModel.specificLine;
 import transportModel.stopPlace;
 import transportModel.transportOrg;
 
@@ -49,13 +48,6 @@ public class TransportModelPackageImpl extends EPackageImpl implements Transport
 	 * @generated
 	 */
 	private EClass linesEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass specificLineEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -110,7 +102,6 @@ public class TransportModelPackageImpl extends EPackageImpl implements Transport
 	private TransportModelPackageImpl() {
 		super(eNS_URI, TransportModelFactory.eINSTANCE);
 	}
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -248,7 +239,7 @@ public class TransportModelPackageImpl extends EPackageImpl implements Transport
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getlines_HasSpecificLine() {
+	public EReference getlines_Routes() {
 		return (EReference)linesEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -293,51 +284,6 @@ public class TransportModelPackageImpl extends EPackageImpl implements Transport
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getspecificLine() {
-		return specificLineEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getspecificLine_HasRoute() {
-		return (EReference)specificLineEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getspecificLine_HasJourneyPatterns() {
-		return (EReference)specificLineEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getspecificLine_Id() {
-		return (EAttribute)specificLineEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getspecificLine_Name() {
-		return (EAttribute)specificLineEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getroute() {
 		return routeEClass;
 	}
@@ -347,7 +293,7 @@ public class TransportModelPackageImpl extends EPackageImpl implements Transport
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getroute_HasStopPlace() {
+	public EReference getroute_StopPlaces() {
 		return (EReference)routeEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -356,8 +302,17 @@ public class TransportModelPackageImpl extends EPackageImpl implements Transport
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getroute_JourneyPatterns() {
+		return (EReference)routeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EAttribute getroute_Id() {
-		return (EAttribute)routeEClass.getEStructuralFeatures().get(1);
+		return (EAttribute)routeEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -366,7 +321,7 @@ public class TransportModelPackageImpl extends EPackageImpl implements Transport
 	 * @generated
 	 */
 	public EAttribute getroute_Name() {
-		return (EAttribute)routeEClass.getEStructuralFeatures().get(2);
+		return (EAttribute)routeEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -383,26 +338,8 @@ public class TransportModelPackageImpl extends EPackageImpl implements Transport
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getjourneyPatterns_HasStopPlace() {
-		return (EReference)journeyPatternsEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getjourneyPatterns_Id() {
-		return (EAttribute)journeyPatternsEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getjourneyPatterns_Name() {
-		return (EAttribute)journeyPatternsEClass.getEStructuralFeatures().get(2);
+		return (EAttribute)journeyPatternsEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -411,7 +348,7 @@ public class TransportModelPackageImpl extends EPackageImpl implements Transport
 	 * @generated
 	 */
 	public EAttribute getjourneyPatterns_Direction() {
-		return (EAttribute)journeyPatternsEClass.getEStructuralFeatures().get(3);
+		return (EAttribute)journeyPatternsEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -428,17 +365,8 @@ public class TransportModelPackageImpl extends EPackageImpl implements Transport
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getstopPlace_Id() {
-		return (EAttribute)stopPlaceEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getstopPlace_Name() {
-		return (EAttribute)stopPlaceEClass.getEStructuralFeatures().get(1);
+		return (EAttribute)stopPlaceEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -499,31 +427,23 @@ public class TransportModelPackageImpl extends EPackageImpl implements Transport
 		createEAttribute(operatorEClass, OPERATOR__URL);
 
 		linesEClass = createEClass(LINES);
-		createEReference(linesEClass, LINES__HAS_SPECIFIC_LINE);
+		createEReference(linesEClass, LINES__ROUTES);
 		createEAttribute(linesEClass, LINES__ID);
 		createEAttribute(linesEClass, LINES__NAME);
 		createEAttribute(linesEClass, LINES__TRANSPORT_MODE);
 		createEAttribute(linesEClass, LINES__BIKES_ALLOWED);
 
-		specificLineEClass = createEClass(SPECIFIC_LINE);
-		createEReference(specificLineEClass, SPECIFIC_LINE__HAS_ROUTE);
-		createEReference(specificLineEClass, SPECIFIC_LINE__HAS_JOURNEY_PATTERNS);
-		createEAttribute(specificLineEClass, SPECIFIC_LINE__ID);
-		createEAttribute(specificLineEClass, SPECIFIC_LINE__NAME);
-
 		routeEClass = createEClass(ROUTE);
-		createEReference(routeEClass, ROUTE__HAS_STOP_PLACE);
+		createEReference(routeEClass, ROUTE__STOP_PLACES);
+		createEReference(routeEClass, ROUTE__JOURNEY_PATTERNS);
 		createEAttribute(routeEClass, ROUTE__ID);
 		createEAttribute(routeEClass, ROUTE__NAME);
 
 		journeyPatternsEClass = createEClass(JOURNEY_PATTERNS);
-		createEReference(journeyPatternsEClass, JOURNEY_PATTERNS__HAS_STOP_PLACE);
-		createEAttribute(journeyPatternsEClass, JOURNEY_PATTERNS__ID);
 		createEAttribute(journeyPatternsEClass, JOURNEY_PATTERNS__NAME);
 		createEAttribute(journeyPatternsEClass, JOURNEY_PATTERNS__DIRECTION);
 
 		stopPlaceEClass = createEClass(STOP_PLACE);
-		createEAttribute(stopPlaceEClass, STOP_PLACE__ID);
 		createEAttribute(stopPlaceEClass, STOP_PLACE__NAME);
 
 		// Create enums
@@ -573,32 +493,24 @@ public class TransportModelPackageImpl extends EPackageImpl implements Transport
 		initEAttribute(getoperator_Url(), ecorePackage.getEString(), "url", null, 1, 1, operator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(linesEClass, lines.class, "lines", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getlines_HasSpecificLine(), this.getspecificLine(), null, "hasSpecificLine", null, 1, -1, lines.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getlines_Routes(), this.getroute(), null, "routes", null, 1, -1, lines.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getlines_Id(), ecorePackage.getEString(), "id", null, 0, 1, lines.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getlines_Name(), ecorePackage.getEString(), "name", null, 0, 1, lines.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getlines_TransportMode(), this.getTransportModeType(), "transportMode", null, 0, 1, lines.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getlines_BikesAllowed(), ecorePackage.getEBooleanObject(), "bikesAllowed", null, 0, 1, lines.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(specificLineEClass, specificLine.class, "specificLine", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getspecificLine_HasRoute(), this.getroute(), null, "hasRoute", null, 1, -1, specificLine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getspecificLine_HasJourneyPatterns(), this.getjourneyPatterns(), null, "hasJourneyPatterns", null, 1, -1, specificLine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getspecificLine_Id(), ecorePackage.getEString(), "id", null, 0, 1, specificLine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getspecificLine_Name(), ecorePackage.getEString(), "name", null, 0, 1, specificLine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEClass(routeEClass, route.class, "route", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getroute_HasStopPlace(), this.getstopPlace(), null, "hasStopPlace", null, 1, -1, route.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getroute_Id(), ecorePackage.getEString(), "id", null, 0, 1, route.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getroute_Name(), ecorePackage.getEString(), "name", null, 0, 1, route.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getroute_StopPlaces(), this.getstopPlace(), null, "stopPlaces", null, 1, -1, route.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getroute_JourneyPatterns(), this.getjourneyPatterns(), null, "journeyPatterns", null, 1, -1, route.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getroute_Id(), ecorePackage.getEString(), "id", null, 1, 1, route.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getroute_Name(), ecorePackage.getEString(), "name", null, 1, 1, route.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(journeyPatternsEClass, journeyPatterns.class, "journeyPatterns", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getjourneyPatterns_HasStopPlace(), this.getstopPlace(), null, "hasStopPlace", null, 1, -1, journeyPatterns.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getjourneyPatterns_Id(), ecorePackage.getEString(), "id", null, 0, 1, journeyPatterns.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getjourneyPatterns_Name(), ecorePackage.getEString(), "name", null, 0, 1, journeyPatterns.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getjourneyPatterns_Direction(), this.getDirectionType(), "direction", null, 0, 1, journeyPatterns.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getjourneyPatterns_Name(), ecorePackage.getEString(), "name", null, 1, 1, journeyPatterns.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getjourneyPatterns_Direction(), this.getDirectionType(), "direction", null, 1, 1, journeyPatterns.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(stopPlaceEClass, stopPlace.class, "stopPlace", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getstopPlace_Id(), ecorePackage.getEString(), "id", null, 0, 1, stopPlace.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getstopPlace_Name(), ecorePackage.getEString(), "name", null, 0, 1, stopPlace.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getstopPlace_Name(), ecorePackage.getEString(), "name", null, 1, 1, stopPlace.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(transportModeTypeEEnum, TransportModeType.class, "TransportModeType");

@@ -2,26 +2,16 @@
  */
 package transportModel.impl;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
-
 import transportModel.DirectionType;
 import transportModel.TransportModelPackage;
 import transportModel.journeyPatterns;
-import transportModel.stopPlace;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,8 +21,6 @@ import transportModel.stopPlace;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link transportModel.impl.journeyPatternsImpl#getHasStopPlace <em>Has Stop Place</em>}</li>
- *   <li>{@link transportModel.impl.journeyPatternsImpl#getId <em>Id</em>}</li>
  *   <li>{@link transportModel.impl.journeyPatternsImpl#getName <em>Name</em>}</li>
  *   <li>{@link transportModel.impl.journeyPatternsImpl#getDirection <em>Direction</em>}</li>
  * </ul>
@@ -40,36 +28,6 @@ import transportModel.stopPlace;
  * @generated
  */
 public class journeyPatternsImpl extends MinimalEObjectImpl.Container implements journeyPatterns {
-	/**
-	 * The cached value of the '{@link #getHasStopPlace() <em>Has Stop Place</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getHasStopPlace()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<stopPlace> hasStopPlace;
-
-	/**
-	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getId()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String ID_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getId()
-	 * @generated
-	 * @ordered
-	 */
-	protected String id = ID_EDEFAULT;
-
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -134,39 +92,6 @@ public class journeyPatternsImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<stopPlace> getHasStopPlace() {
-		if (hasStopPlace == null) {
-			hasStopPlace = new EObjectContainmentEList<stopPlace>(stopPlace.class, this, TransportModelPackage.JOURNEY_PATTERNS__HAS_STOP_PLACE);
-		}
-		return hasStopPlace;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getId() {
-		return id;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setId(String newId) {
-		String oldId = id;
-		id = newId;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TransportModelPackage.JOURNEY_PATTERNS__ID, oldId, id));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getName() {
 		return name;
 	}
@@ -210,26 +135,8 @@ public class journeyPatternsImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case TransportModelPackage.JOURNEY_PATTERNS__HAS_STOP_PLACE:
-				return ((InternalEList<?>)getHasStopPlace()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case TransportModelPackage.JOURNEY_PATTERNS__HAS_STOP_PLACE:
-				return getHasStopPlace();
-			case TransportModelPackage.JOURNEY_PATTERNS__ID:
-				return getId();
 			case TransportModelPackage.JOURNEY_PATTERNS__NAME:
 				return getName();
 			case TransportModelPackage.JOURNEY_PATTERNS__DIRECTION:
@@ -243,17 +150,9 @@ public class journeyPatternsImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case TransportModelPackage.JOURNEY_PATTERNS__HAS_STOP_PLACE:
-				getHasStopPlace().clear();
-				getHasStopPlace().addAll((Collection<? extends stopPlace>)newValue);
-				return;
-			case TransportModelPackage.JOURNEY_PATTERNS__ID:
-				setId((String)newValue);
-				return;
 			case TransportModelPackage.JOURNEY_PATTERNS__NAME:
 				setName((String)newValue);
 				return;
@@ -272,12 +171,6 @@ public class journeyPatternsImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case TransportModelPackage.JOURNEY_PATTERNS__HAS_STOP_PLACE:
-				getHasStopPlace().clear();
-				return;
-			case TransportModelPackage.JOURNEY_PATTERNS__ID:
-				setId(ID_EDEFAULT);
-				return;
 			case TransportModelPackage.JOURNEY_PATTERNS__NAME:
 				setName(NAME_EDEFAULT);
 				return;
@@ -296,10 +189,6 @@ public class journeyPatternsImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case TransportModelPackage.JOURNEY_PATTERNS__HAS_STOP_PLACE:
-				return hasStopPlace != null && !hasStopPlace.isEmpty();
-			case TransportModelPackage.JOURNEY_PATTERNS__ID:
-				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case TransportModelPackage.JOURNEY_PATTERNS__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case TransportModelPackage.JOURNEY_PATTERNS__DIRECTION:
@@ -318,9 +207,7 @@ public class journeyPatternsImpl extends MinimalEObjectImpl.Container implements
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (id: ");
-		result.append(id);
-		result.append(", name: ");
+		result.append(" (name: ");
 		result.append(name);
 		result.append(", direction: ");
 		result.append(direction);
