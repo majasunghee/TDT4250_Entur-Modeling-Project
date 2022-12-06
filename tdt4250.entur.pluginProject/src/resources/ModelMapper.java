@@ -1,4 +1,4 @@
-package tdt4250.entur.pluginProject;
+package resources;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -17,6 +17,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 
 import pojo.LinesClass;
 import pojo.OperatorClass;
+import resources.PojoMapper;
 import transportModel.DirectionType;
 import transportModel.journeyPatterns;
 import transportModel.lines;
@@ -29,10 +30,8 @@ import transportModel.TransportModelFactory;
 import transportModel.TransportModelPackage;
 import transportModel.TransportModeType;
 
-import tdt4250.entur.pluginProject.Mapper;
 
-
-public class Mapping {
+public class ModelMapper {
 	public static String xmiPath =  "../tdt4250.entur.pluginProject/src/data/transportOrg.xmi";
 	public static final TransportModelFactory FACTORY = TransportModelFactory.eINSTANCE;
 
@@ -42,7 +41,7 @@ public class Mapping {
 	
 	// Sets operator data to model
 	public static List<operator> createOperator(transportOrg organization, List<lines> inputLines) throws IOException {
-		List<OperatorClass> operatorList = Mapper.instantiateOperators();
+		List<OperatorClass> operatorList = PojoMapper.instantiateOperators();
 		List<operator> mappedOperators = new ArrayList<operator>();
 		operatorList.forEach(operator -> {
 			operator op= FACTORY.createoperator();
@@ -64,7 +63,7 @@ public class Mapping {
 	
 	//Sets line data to model
 	public static List<lines> createLines(transportOrg organization) throws IOException {
-		List<LinesClass> linesList = Mapper.instantiateLines();
+		List<LinesClass> linesList = PojoMapper.instantiateLines();
 		List<lines> mappedLines = new ArrayList<lines>();
 		linesList.forEach(lines -> {
 			lines line= FACTORY.createlines();

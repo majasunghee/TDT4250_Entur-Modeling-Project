@@ -1,4 +1,4 @@
-package tdt4250.entur.pluginProject;
+package resources;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -41,7 +41,7 @@ public class Fetcher  {
 		
 		//3. data fetch + write to file
 		String queryATBOperatorData = "{operator(id: \\\"ATB:Operator:267\\\") { id url lines{name}}}";
-		String queryAllOperatorsData = "{operators { id url lines{name}}}";
+		String queryAllOperatorsData = "{operators { id name url phone lines{id name}}}";
 		
 		String outputAllOperatorsData = jsonFetcher(url, queryAllOperatorsData);
 		System.out.println(outputAllOperatorsData);

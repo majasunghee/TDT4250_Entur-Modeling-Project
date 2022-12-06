@@ -139,7 +139,7 @@
     <hasLines id="INN:Line:45" name="Tongjordet - Tranberghallen" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="INN:Line:46" name="Lena-Raufoss-Gj&#xf8;vik-Kapp-Lena" transportMode="Bus" bikesAllowed="false"/>
   </hasOperator>
-  <hasOperator id="RUT:Operator:120" name="Nobina Norge AS" url="https://ruter.no/fa-hjelp/kontakt-oss/kontaktskjema/">
+  <hasOperator id="RUT:Operator:120" name="Nobina AS" url="https://ruter.no/fa-hjelp/kontakt-oss/kontaktskjema/">
     <hasLines id="RUT:Line:521" name="TusenFryd - Ski stasjon" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="RUT:Line:520" name="Vinterbro - Ski" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="RUT:Line:525" name="Kr&#xe5;kstad - Ski - Kr&#xe5;kstad" transportMode="Bus" bikesAllowed="false"/>
@@ -237,23 +237,21 @@
     <hasLines id="SKY:Line:600" name="Halhjemsmarka - Os&#xf8;yro - Busstasjonen" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="SKY:Line:602" name="Str&#xf8;no - Os&#xf8;yro" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="SKY:Line:601" name="Os&#xf8;yro - Ulven - Lysekloster - Helleskaret -Drange" transportMode="Bus" bikesAllowed="false"/>
-    <hasLines id="SKY:Line:604" name="Os&#xf8;yro - Nesttun - Haukeland sjukehus" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="SKY:Line:603" name="Leps&#xf8;y - Ulven - T&#xf8;sdalskiftet - Os&#xf8;yro" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="SKY:Line:606" name="Solbj&#xf8;rg - Os&#xf8;yro" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="SKY:Line:50E" name="Birkelandsskiftet - Sandsli - Busstasjonen" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="SKY:Line:22" name="Lagunen terminal - Fyllingsdalen terminal" transportMode="Bus" bikesAllowed="false"/>
-    <hasLines id="SKY:Line:54" name="Dolvik - Kokstad - Birkelandskrysset - Lagunen" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="SKY:Line:56" name="Espeland - Birkelandsskiftet" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="SKY:Line:57" name="Flesland - Birkelandsskiftet" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="SKY:Line:51" name="Birkelandsskiftet - Kokstad - Fj&#xf8;sanger - Sentrum" transportMode="Bus" bikesAllowed="false"/>
-    <hasLines id="SKY:Line:52" name="Grimstad - S&#xf8;reide - Dolvik" transportMode="Bus" bikesAllowed="false"/>
-    <hasLines id="SKY:Line:53" name="Milde - Hjellestad - Lagunen - sentrum" transportMode="Bus" bikesAllowed="false"/>
+    <hasLines id="SKY:Line:52" name="Grimstad - Dolvik - Sandsli - Lagunen" transportMode="Bus" bikesAllowed="false"/>
+    <hasLines id="SKY:Line:53" name="Milde - Hjellestad - Birkelandsskiftet" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="SKY:Line:65" name="Grimseid - Lagunen terminal" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="SKY:Line:67" name="S&#xf8;r&#xe5;sh&#xf8;gda - Nord&#xe5;s - sentrum" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="SKY:Line:61" name="Krokeide - Lagunen terminal" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="SKY:Line:62" name="Helleskaret - Fanafjellet - Fana" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="SKY:Line:64" name="Hordnes - Lagunen terminal" transportMode="Bus" bikesAllowed="false"/>
-    <hasLines id="SKY:Line:60" name="Fanahammeren - Fana - Lagunen terminal" transportMode="Bus" bikesAllowed="false"/>
+    <hasLines id="SKY:Line:60" name="Fanahammeren - Lagunen" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="SKY:Line:76" name="Sm&#xf8;r&#xe5;s - Nesttun" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="SKY:Line:73" name="Bontveit - Kaland" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="SKY:Line:74" name="Haugsdal - Kalandseid" transportMode="Bus" bikesAllowed="false"/>
@@ -292,6 +290,7 @@
     <hasLines id="BRA:FlexibleLine:9204411c-bf86-4b6a-b8fa-5c40b8702213" name="HentMeg Kongsberg" transportMode="Bus" bikesAllowed="false"/>
   </hasOperator>
   <hasOperator id="SKY:Operator:SKY" name="Skyss" url="https://www.skyss.no/">
+    <hasLines id="SKY:FlexibleLine:abde3947-f79f-47ef-8e58-720e723b438f" name="Tertnes" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="SKY:FlexibleLine:f840566b-eab4-42fe-9861-2c91a57bf72b" name="HentMeg i Odda" transportMode="Bus" bikesAllowed="false"/>
   </hasOperator>
   <hasOperator id="SKY:Operator:FJORD1" name="Fjord1">
@@ -324,13 +323,11 @@
     <hasLines id="INN:Line:885" name="Tylldalen - Yynset" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="INN:Line:895" name="Tolga - Tynset &#xf8;stsiden" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="INN:Line:894" name="Tolga - Vingelen - Tynset" transportMode="Bus" bikesAllowed="false"/>
-    <hasLines id="INN:Line:891" name="Tolga - &#xd8;versj&#xf8;dalen" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="INN:Line:878" name="Alvdal - Brandvoll - Tynset" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="INN:Line:877" name="Alvdal - Bellingmo - Alvdal" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="INN:Line:875" name="Alvdal - Str&#xf8;mmen - Alvdal" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="INN:Line:883" name="Tynset - Bygda - Savalen" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="INN:Line:882" name="Tynset - Kvikne" transportMode="Bus" bikesAllowed="false"/>
-    <hasLines id="INN:Line:880" name="Tynset - Brekka - Tynset" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="INN:Line:873" name="Alvdal - Plassen" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="INN:Line:872" name="Alvdal - M&#xe5;ntr&#xf8;en - Tynset" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="INN:Line:871" name="Folldal - Rykroken" transportMode="Bus" bikesAllowed="false"/>
@@ -373,8 +370,8 @@
     <hasLines id="INN:Line:802" name="Rena - Elverum" transportMode="Bus" bikesAllowed="false"/>
   </hasOperator>
   <hasOperator id="SKY:Operator:F1P" name="Keolis">
+    <hasLines id="SKY:Line:2" name="Bybane Fyllingsdalen" bikesAllowed="false"/>
     <hasLines id="SKY:Line:1" name="Bergen lufthavn Flesland- Lagunen - Byparken" bikesAllowed="false"/>
-    <hasLines id="SKY:Line:02" name="Bybane Fyllingsdalen" bikesAllowed="false"/>
   </hasOperator>
   <hasOperator id="SKY:Operator:TID_31" name="Tide Buss AS">
     <hasLines id="SKY:Line:766" name="&#xc5;kra-Rosendal" transportMode="Bus" bikesAllowed="false"/>
@@ -500,7 +497,7 @@
     <hasLines id="INN:Line:652" name="Treh&#xf8;rningn-Narmo-Ingebrg-Ener" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="INN:Line:651" name="Skolerute Vang 1" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="INN:Line:650" name="G&#xe5;sbu - Vest&#xe5;sen - Hamar" transportMode="Bus" bikesAllowed="false"/>
-    <hasLines id="INN:Line:637" name="Hamar - Jessnes - Brumunddal" transportMode="Bus" bikesAllowed="false"/>
+    <hasLines id="INN:Line:637" name="Jessnes - Hamar" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="INN:Line:636" name="Brumunddal-Brumund-Brumunddal" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="INN:Line:635" name="Brumunddal-Nybygda-Brumunddal" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="INN:Line:634" name="Brumunddal-Arneberg-Brumunddal" transportMode="Bus" bikesAllowed="false"/>
@@ -602,8 +599,8 @@
   <hasOperator id="GLO:Operator:1" name="GlobeOrbit100" phone="+4799210210" url="http://www.taxi-turvogn.no">
     <hasLines id="GLO:Line:d4b28fff-b717-426b-b827-3165ca0ea188" name="Arendal-Kristiansand lufthavn" transportMode="Bus" bikesAllowed="false"/>
   </hasOperator>
-  <hasOperator id="SOF:Operator:511" name="Fjord1 ASA" url="https://www.fjord1.no/"/>
   <hasOperator id="SOF:Operator:995" name="Lustrabaatane AS" url="https://www.lustrabaatane.no/"/>
+  <hasOperator id="SOF:Operator:511" name="Fjord1 ASA" url="https://www.fjord1.no/"/>
   <hasOperator id="SOF:Operator:994" name="Wergeland" url="https://wergeland.com/"/>
   <hasOperator id="MOR:Operator:NB256" name="Vy Buss" phone="+4740705070" url="https://www.vybuss.no/">
     <hasLines id="MOR:Line:901" name="Kristiansund - Oppdal Togbusse" transportMode="Bus" bikesAllowed="false"/>
@@ -713,7 +710,6 @@
   <hasOperator id="SKY:Operator:TID_40" name="Tide buss AS">
     <hasLines id="SKY:Line:424" name="Ramsvik - Bergen" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="SKY:Line:420" name="Skuleturar Sund" transportMode="Bus" bikesAllowed="false"/>
-    <hasLines id="SKY:Line:403" name="Straume/Kleppest&#xf8; - Haukeland sjukehus" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="SKY:Line:467" name="Algr&#xf8;y/Lok&#xf8;y/Sylt&#xf8;y - &#xc5;se - Straume" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="SKY:Line:460" name="&#xc5;gotnes - Bergen" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="SKY:Line:462" name="Morland/Fj&#xe6;reide - &#xc5;gotnes" transportMode="Bus" bikesAllowed="false"/>
@@ -791,25 +787,20 @@
     <hasLines id="SKY:Line:12" name="L&#xf8;nborglien - L&#xe6;gdene - Montana" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="SKY:Line:13" name="Bergen sentrum - Solheimsviken" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="SKY:Line:18" name="Barlieveien - Formanns vei" transportMode="Bus" bikesAllowed="false"/>
-    <hasLines id="SKY:Line:14" name="Bergen busstasjon - B&#xf8;nes o/Fj&#xf8;sanger" transportMode="Bus" bikesAllowed="false"/>
+    <hasLines id="SKY:Line:14" name="Bergen busstasjon - Fyllingsdalen terminal" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="SKY:Line:15" name="Bergen sentrum - B&#xf8;nes" transportMode="Bus" bikesAllowed="false"/>
-    <hasLines id="SKY:Line:21" name="Lagunen - Haukeland sjukehus - Bergen busstasjon" transportMode="Bus" bikesAllowed="false"/>
-    <hasLines id="SKY:Line:24" name="Olsvikskjenet  - Fyllingsdalen terminal" transportMode="Bus" bikesAllowed="false"/>
+    <hasLines id="SKY:Line:24" name="Olsvikskjenet - Loddefjord terminal - Fyllingsdale" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="SKY:Line:20" name="Storavatnet - Haukeland sjukehus" transportMode="Bus" bikesAllowed="false"/>
-    <hasLines id="SKY:Line:25" name="Fyllingsdalen termina - B&#xf8;nes - Haukeland sjukehus" transportMode="Bus" bikesAllowed="false"/>
-    <hasLines id="SKY:Line:28" name="Fyllingsdalen termnal - Haukeland sjukehus" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="SKY:Line:43" name="Tyss&#xf8;y/Bjor&#xf8;y - Loddefjord terminal" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="SKY:Line:44" name="Gravdal - Nipedalen" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="SKY:Line:45" name="Loddefjord - Sk&#xe5;levik - Br&#xf8;staneset - Loddefjord" transportMode="Bus" bikesAllowed="false"/>
-    <hasLines id="SKY:Line:46" name="L&#xf8;vstakkskiftet - Fylingsdalen terminal" transportMode="Bus" bikesAllowed="false"/>
+    <hasLines id="SKY:Line:46" name="L&#xf8;vstakkskiftet - Fyllingsdalen Terminal" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="SKY:Line:40" name="Storavatnet terminal - Olsvik - Bergen busstasjon" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="SKY:Line:41" name="Hetlevik&#xe5;sen - Loddefjord terminal" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="SKY:Line:42" name="Alv&#xf8;en - Loddefjord terminal" transportMode="Bus" bikesAllowed="false"/>
-    <hasLines id="SKY:Line:47" name="Fyllingsdalen terminal - Bergen busstasjon" transportMode="Bus" bikesAllowed="false"/>
-    <hasLines id="SKY:Line:48" name="Fyllingsdalen terminal - L&#xf8;tveit" transportMode="Bus" bikesAllowed="false"/>
+    <hasLines id="SKY:Line:48" name="Oasen - L&#xf8;tveit" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="SKY:Line:49" name="Skoleturer Bergen Sentrum" transportMode="Bus" bikesAllowed="false"/>
-    <hasLines id="SKY:Line:55" name="B&#xf8;nes - Sandsli" transportMode="Bus" bikesAllowed="false"/>
-    <hasLines id="SKY:Line:81" name="Nattlandsfjellet - Mannsverk" transportMode="Bus" bikesAllowed="false"/>
+    <hasLines id="SKY:Line:81" name="Nattlandsfjellet - Wergeland" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="SKY:Line:82" name="Gr&#xf8;nnest&#xf8;len - Wergeland" transportMode="Bus" bikesAllowed="false"/>
   </hasOperator>
   <hasOperator id="SKY:Operator:TORGH" name="Torghatten trafikkselskap AS">
@@ -817,7 +808,9 @@
   </hasOperator>
   <hasOperator id="SJV:Operator:505" name="SJ"/>
   <hasOperator id="NOR:Operator:40" name="Fjord1 AS" url="https://www.fjord1.no">
+    <hasLines id="NOR:Line:12_8581" name="Drag-Kj&#xf8;psvik" transportMode="Water" bikesAllowed="true"/>
     <hasLines id="NOR:Line:12_8538" name="Festv&#xe5;g - Misten" transportMode="Water" bikesAllowed="true"/>
+    <hasLines id="NOR:Line:12_8611" name="Skarberget - Bognes" transportMode="Water" bikesAllowed="true"/>
   </hasOperator>
   <hasOperator id="MOR:Operator:NB249" name="Vy Buss" phone="+4740705070" url="https://www.vybuss.no/">
     <hasLines id="MOR:Line:482" name="&#xc5;ndalsnes - Vikebukt" transportMode="Bus" bikesAllowed="false"/>
@@ -950,7 +943,6 @@
   <hasOperator id="NOR:Operator:21" name="Torghatten Nord" url="https://www.torghatten-nord.no">
     <hasLines id="NOR:Line:12_8336" name="Nesna - Nesna&#xf8;yene" transportMode="Water" bikesAllowed="true"/>
     <hasLines id="NOR:Line:12_8335" name="Nesna- Levang" transportMode="Water" bikesAllowed="true"/>
-    <hasLines id="NOR:Line:12_8581" name="Drag-Kj&#xf8;psvik" transportMode="Water" bikesAllowed="true"/>
     <hasLines id="NOR:Line:12_8444" name="Sund - Horsdal - S&#xf8;rarn&#xf8;y" transportMode="Water" bikesAllowed="true"/>
     <hasLines id="NOR:Line:12_8412" name="Nordnes&#xf8;y - Kilboghamn" transportMode="Water" bikesAllowed="true"/>
     <hasLines id="NOR:Line:12_8414" name="Jektvik - Kilboghamn" transportMode="Water" bikesAllowed="true"/>
@@ -961,7 +953,6 @@
     <hasLines id="NOR:Line:12_8732" name="Melbu - Fiskeb&#xf8;l" transportMode="Water" bikesAllowed="true"/>
     <hasLines id="NOR:Line:12_8751" name="Svolv&#xe6;r - Skrova - Skutvik" transportMode="Water" bikesAllowed="true"/>
     <hasLines id="NOR:Line:12_8703" name="Bognes-L&#xf8;dingen" transportMode="Water" bikesAllowed="true"/>
-    <hasLines id="NOR:Line:12_8611" name="Skarberget - Bognes" transportMode="Water" bikesAllowed="true"/>
   </hasOperator>
   <hasOperator id="KOL:Operator:596" name="Fjord1 ASA" url="https://www.fjord1.no/">
     <hasLines id="KOL:Line:30_1130" name="Mortavika - Arsv&#xe5;gen" transportMode="Water" bikesAllowed="true"/>
@@ -972,9 +963,6 @@
     <hasLines id="NWY:Line:aeab7211-520a-452d-8d8e-1b781538fc9b" name="Valdresekspressen" bikesAllowed="false"/>
     <hasLines id="NWY:Line:6d9035c4-627e-4a4b-85d7-7f99cdb6849d" name="&#xd8;st-Vestekspressen" bikesAllowed="false"/>
     <hasLines id="NWY:Line:e92705a2-7d58-43c3-9b62-b444304a5625" name="Beltebil" bikesAllowed="false"/>
-  </hasOperator>
-  <hasOperator id="KOL:Operator:590" name="Kolumbus AS" url="https://www.kolumbus.no/">
-    <hasLines id="KOL:Line:8_9900" name="17" transportMode="Bus" bikesAllowed="false"/>
   </hasOperator>
   <hasOperator id="ATB:Operator:170" name="Vy H&#xf8;st 2019" url="http://www.example.com">
     <hasLines id="ATB:Line:2_299" name="Sunnland- Br&#xf8;set Interimskole" transportMode="Bus" bikesAllowed="false"/>
@@ -1780,12 +1768,14 @@
     <hasLines id="VKT:Line:1112" name="Larvik-Tj&#xf8;lling-Sandefjord Vgs" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="VKT:Line:1115" name="Kjerringvik-Tj&#xf8;llinvollen" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="VKT:Line:1117" name="Kjerringvik-Tj&#xf8;llinvollen" transportMode="Bus" bikesAllowed="false"/>
+    <hasLines id="VKT:Line:221" name="Kl&#xe5;stad-Kj&#xe6;rringvik" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="VKT:Line:1116" name="Auby-Tj&#xf8;lling-Vgs i Larvik" transportMode="Bus" bikesAllowed="false"/>
+    <hasLines id="VKT:Line:220" name="Kl&#xe5;stad-Ula-Eftang" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="VKT:Line:1119" name="Ula-Vgs i Larvik" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="VKT:Line:1118" name="Hem-Tj&#xf8;lling" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="VKT:Line:208" name="Hagalia-Nevlunghavn" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="VKT:Line:207" name="Larvik-Kjose" transportMode="Bus" bikesAllowed="false"/>
-    <hasLines id="VKT:Line:206" name="Kysthopsitalet-Helgeroa" transportMode="Bus" bikesAllowed="false"/>
+    <hasLines id="VKT:Line:206" name="Larvik-Stavern-Nevlunghavn" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="VKT:Line:1186" name="Borre-&#xc5;sg&#xe5;rdstrand" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="VKT:Line:1185" name="Hengsr&#xf8;d-Revetal" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="VKT:Line:1188" name="Borre-Skoppum-Nykirke-Horten" transportMode="Bus" bikesAllowed="false"/>
@@ -2033,31 +2023,39 @@
     <hasLines id="AVI:Line:WF_BGO-BOO" name="Bergen-Bod&#xf8;" transportMode="Air" bikesAllowed="false"/>
     <hasLines id="AVI:Line:WF_TRD-BNN" name="Trondheim-Br&#xf8;nn&#xf8;ysund" transportMode="Air" bikesAllowed="false"/>
     <hasLines id="AVI:Line:WF_OSL-OSL" name="Oslo-Oslo" transportMode="Air" bikesAllowed="false"/>
+    <hasLines id="AVI:Line:WF_SSJ-BNN" name="Sandnessj&#xf8;en-Br&#xf8;nn&#xf8;ysund" transportMode="Air" bikesAllowed="false"/>
     <hasLines id="AVI:Line:WF_BGO-SVG" name="Bergen-Stavanger" transportMode="Air" bikesAllowed="false"/>
+    <hasLines id="AVI:Line:WF_VAW-BJF" name="Vard&#xf8;-B&#xe5;tsfjord" transportMode="Air" bikesAllowed="false"/>
     <hasLines id="AVI:Line:WF_TRD-SSJ" name="Trondheim-Sandnessj&#xf8;en" transportMode="Air" bikesAllowed="false"/>
+    <hasLines id="AVI:Line:WF_MEH-VDS" name="Mehamn-Vads&#xf8;" transportMode="Air" bikesAllowed="false"/>
     <hasLines id="AVI:Line:WF_BOO-LKN" name="Bod&#xf8;-Leknes" transportMode="Air" bikesAllowed="false"/>
-    <hasLines id="AVI:Line:WF_KKN-BJF" name="Kirkenes-B&#xe5;tsfjord" transportMode="Air" bikesAllowed="false"/>
+    <hasLines id="AVI:Line:WF_TRD-KRS" name="Trondheim-Kristiansand" transportMode="Air" bikesAllowed="false"/>
+    <hasLines id="AVI:Line:WF_BOO-EVE" name="Bod&#xf8;-Harstad/Narvik" transportMode="Air" bikesAllowed="false"/>
     <hasLines id="AVI:Line:WF_TRD-AES" name="Trondheim-&#xc5;lesund" transportMode="Air" bikesAllowed="false"/>
     <hasLines id="AVI:Line:WF_HAA-TOS" name="Hasvik-Troms&#xf8;" transportMode="Air" bikesAllowed="false"/>
     <hasLines id="AVI:Line:WF_TRD-RVK" name="Trondheim-R&#xf8;rvik" transportMode="Air" bikesAllowed="false"/>
     <hasLines id="AVI:Line:WF_KKN-ALF" name="Kirkenes-Alta" transportMode="Air" bikesAllowed="false"/>
     <hasLines id="AVI:Line:WF_TOS-VDS" name="Troms&#xf8;-Vads&#xf8;" transportMode="Air" bikesAllowed="false"/>
     <hasLines id="AVI:Line:WF_BOO-MQN" name="Bod&#xf8;-Mo i Rana" transportMode="Air" bikesAllowed="false"/>
-    <hasLines id="AVI:Line:WF_BOO-MJF" name="Bod&#xf8;-Mosj&#xf8;en" transportMode="Air" bikesAllowed="false"/>
+    <hasLines id="AVI:Line:WF_ANX-TOS" name="Andenes-Troms&#xf8;" transportMode="Air" bikesAllowed="false"/>
     <hasLines id="AVI:Line:WF_BGO-AES" name="Bergen-&#xc5;lesund" transportMode="Air" bikesAllowed="false"/>
     <hasLines id="AVI:Line:WF_TOS-ALF" name="Troms&#xf8;-Alta" transportMode="Air" bikesAllowed="false"/>
+    <hasLines id="AVI:Line:WF_ALF-VDS" name="Alta-Vads&#xf8;" transportMode="Air" bikesAllowed="false"/>
+    <hasLines id="AVI:Line:WF_BJF-HFT" name="B&#xe5;tsfjord-Hammerfest" transportMode="Air" bikesAllowed="false"/>
     <hasLines id="AVI:Line:WF_HFT-KKN" name="Hammerfest-Kirkenes" transportMode="Air" bikesAllowed="false"/>
-    <hasLines id="AVI:Line:WF_SOG-SDN" name="Sogndal-Sandane" transportMode="Air" bikesAllowed="false"/>
     <hasLines id="AVI:Line:WF_HVG-TOS" name="Honningsv&#xe5;g-Troms&#xf8;" transportMode="Air" bikesAllowed="false"/>
     <hasLines id="AVI:Line:WF_TOS-SOJ" name="Troms&#xf8;-S&#xf8;rkjosen" transportMode="Air" bikesAllowed="false"/>
     <hasLines id="AVI:Line:WF_BGO-TOS" name="Bergen-Troms&#xf8;" transportMode="Air" bikesAllowed="false"/>
     <hasLines id="AVI:Line:WF_BGO-TRF" name="Bergen-Sandefjord" transportMode="Air" bikesAllowed="false"/>
     <hasLines id="AVI:Line:WF_BGO-TRD" name="Bergen-Trondheim" transportMode="Air" bikesAllowed="false"/>
     <hasLines id="AVI:Line:WF_TRF-TOS" name="Sandefjord-Troms&#xf8;" transportMode="Air" bikesAllowed="false"/>
+    <hasLines id="AVI:Line:WF_HFT-MEH" name="Hammerfest-Mehamn" transportMode="Air" bikesAllowed="false"/>
     <hasLines id="AVI:Line:WF_OSL-FDE" name="Oslo-F&#xf8;rde" transportMode="Air" bikesAllowed="false"/>
     <hasLines id="AVI:Line:WF_SVG-TRF" name="Stavanger-Sandefjord" transportMode="Air" bikesAllowed="false"/>
+    <hasLines id="AVI:Line:WF_BGO-LKN" name="Bergen-Leknes" transportMode="Air" bikesAllowed="false"/>
     <hasLines id="AVI:Line:WF_ALF-MEH" name="Alta-Mehamn" transportMode="Air" bikesAllowed="false"/>
     <hasLines id="AVI:Line:WF_HOV-SOG" name="&#xd8;rsta/Volda-Sogndal" transportMode="Air" bikesAllowed="false"/>
+    <hasLines id="AVI:Line:WF_BJF-HVG" name="B&#xe5;tsfjord-Honningsv&#xe5;g" transportMode="Air" bikesAllowed="false"/>
     <hasLines id="AVI:Line:WF_BGO-KRS" name="Bergen-Kristiansand" transportMode="Air" bikesAllowed="false"/>
     <hasLines id="AVI:Line:WF_BGO-KSU" name="Bergen-Kristiansund" transportMode="Air" bikesAllowed="false"/>
     <hasLines id="AVI:Line:WF_KKN-TOS" name="Kirkenes-Troms&#xf8;" transportMode="Air" bikesAllowed="false"/>
@@ -2065,6 +2063,7 @@
     <hasLines id="AVI:Line:WF_MEH-HVG" name="Mehamn-Honningsv&#xe5;g" transportMode="Air" bikesAllowed="false"/>
     <hasLines id="AVI:Line:WF_BGO-FRO" name="Bergen-Flor&#xf8;" transportMode="Air" bikesAllowed="false"/>
     <hasLines id="AVI:Line:WF_OSL-SSJ" name="Oslo-Sandnessj&#xf8;en" transportMode="Air" bikesAllowed="false"/>
+    <hasLines id="AVI:Line:WF_OSL-SVJ" name="Oslo-Svolv&#xe6;r" transportMode="Air" bikesAllowed="false"/>
     <hasLines id="AVI:Line:WF_TOS-HFT" name="Troms&#xf8;-Hammerfest" transportMode="Air" bikesAllowed="false"/>
     <hasLines id="AVI:Line:WF_OSL-SDN" name="Oslo-Sandane" transportMode="Air" bikesAllowed="false"/>
     <hasLines id="AVI:Line:WF_OSL-BGO" name="Oslo-Bergen" transportMode="Air" bikesAllowed="false"/>
@@ -2072,13 +2071,13 @@
     <hasLines id="AVI:Line:WF_OSL-SOG" name="Oslo-Sogndal" transportMode="Air" bikesAllowed="false"/>
     <hasLines id="AVI:Line:WF_OSL-TRD" name="Oslo-Trondheim" transportMode="Air" bikesAllowed="false"/>
     <hasLines id="AVI:Line:WF_BGO-EVE" name="Bergen-Harstad/Narvik" transportMode="Air" bikesAllowed="false"/>
-    <hasLines id="AVI:Line:WF_BOO-RET" name="Bod&#xf8;-R&#xf8;st" transportMode="Air" bikesAllowed="false"/>
     <hasLines id="AVI:Line:WF_OSL-LKN" name="Oslo-Leknes" transportMode="Air" bikesAllowed="false"/>
     <hasLines id="AVI:Line:WF_TRD-EVE" name="Trondheim-Harstad/Narvik" transportMode="Air" bikesAllowed="false"/>
-    <hasLines id="AVI:Line:WF_KKN-VDS" name="Kirkenes-Vads&#xf8;" transportMode="Air" bikesAllowed="false"/>
+    <hasLines id="AVI:Line:WF_KKN-VAW" name="Kirkenes-Vard&#xf8;" transportMode="Air" bikesAllowed="false"/>
     <hasLines id="AVI:Line:WF_BGO-MOL" name="Bergen-Molde" transportMode="Air" bikesAllowed="false"/>
     <hasLines id="AVI:Line:WF_BOO-BNN" name="Bod&#xf8;-Br&#xf8;nn&#xf8;ysund" transportMode="Air" bikesAllowed="false"/>
     <hasLines id="AVI:Line:WF_BOO-BOO" name="Bod&#xf8;-Bod&#xf8;" transportMode="Air" bikesAllowed="false"/>
+    <hasLines id="AVI:Line:WF_SKN-TOS" name="Stokmarknes-Troms&#xf8;" transportMode="Air" bikesAllowed="false"/>
     <hasLines id="AVI:Line:WF_BOO-SKN" name="Bod&#xf8;-Stokmarknes" transportMode="Air" bikesAllowed="false"/>
     <hasLines id="AVI:Line:WF_BJF-TOS" name="B&#xe5;tsfjord-Troms&#xf8;" transportMode="Air" bikesAllowed="false"/>
     <hasLines id="AVI:Line:WF_OSL-HOV" name="Oslo-&#xd8;rsta/Volda" transportMode="Air" bikesAllowed="false"/>
@@ -2094,6 +2093,10 @@
     <hasLines id="AVI:Line:WF_SKN-SVJ" name="Stokmarknes-Svolv&#xe6;r" transportMode="Air" bikesAllowed="false"/>
     <hasLines id="AVI:Line:WF_BGO-HAU" name="Bergen-Haugesund" transportMode="Air" bikesAllowed="false"/>
     <hasLines id="AVI:Line:WF_TRD-TOS" name="Trondheim-Troms&#xf8;" transportMode="Air" bikesAllowed="false"/>
+    <hasLines id="AVI:Line:WF_HVG-HFT" name="Honningsv&#xe5;g-Hammerfest" transportMode="Air" bikesAllowed="false"/>
+    <hasLines id="AVI:Line:WF_BJF-VDS" name="B&#xe5;tsfjord-Vads&#xf8;" transportMode="Air" bikesAllowed="false"/>
+    <hasLines id="AVI:Line:WF_VDS-KKN" name="Vads&#xf8;-Kirkenes" transportMode="Air" bikesAllowed="false"/>
+    <hasLines id="AVI:Line:WF_ANX-EVE" name="Andenes-Harstad/Narvik" transportMode="Air" bikesAllowed="false"/>
     <hasLines id="AVI:Line:WF_BOO-SVJ" name="Bod&#xf8;-Svolv&#xe6;r" transportMode="Air" bikesAllowed="false"/>
     <hasLines id="AVI:Line:WF_ALF-HVG" name="Alta-Honningsv&#xe5;g" transportMode="Air" bikesAllowed="false"/>
     <hasLines id="AVI:Line:WF_BOO-SSJ" name="Bod&#xf8;-Sandnessj&#xf8;en" transportMode="Air" bikesAllowed="false"/>
@@ -2249,7 +2252,7 @@
     <hasLines id="KOL:Line:8_5650" name="350" transportMode="Water" bikesAllowed="true"/>
   </hasOperator>
   <hasOperator id="TEL:Operator:86" name="Krager&#xf8; Fjordb&#xe5;tselskap" phone="+47 400 05 858" url="https://www.fjordbat.no">
-    <hasLines id="TEL:Line:1_8710" name="Perlen Krager&#xf8;" transportMode="Water" bikesAllowed="true"/>
+    <hasLines id="TEL:Line:1_8710" name="West Sea" transportMode="Water" bikesAllowed="true"/>
     <hasLines id="TEL:Line:1_8711" name="BF Jesper" transportMode="Water" bikesAllowed="true"/>
     <hasLines id="TEL:Line:1_8712" name="Ferje Krager&#xf8;" transportMode="Water" bikesAllowed="true"/>
   </hasOperator>
@@ -2484,14 +2487,14 @@
     <hasLines id="TEL:Line:1_8892" name="Skyer-Skien" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="TEL:Line:1_8893" name="Fjelldalen-Skien" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="TEL:Line:1_8890" name="Vinje-Rogn-Grasmyr" transportMode="Bus" bikesAllowed="false"/>
-    <hasLines id="TEL:Line:1_8005" name="Skien-B&#xf8;leh&#xf8;gda-Porsgr.-Herre" transportMode="Bus" bikesAllowed="false"/>
-    <hasLines id="TEL:Line:1_8006" name="J&#xf8;nnevald-Skien-&#xc5;foss" transportMode="Bus" bikesAllowed="false"/>
-    <hasLines id="TEL:Line:1_8003" name="Klyve-Porsgrunn-Skjelsvik" transportMode="Bus" bikesAllowed="false"/>
+    <hasLines id="TEL:Line:1_8005" name="Skien-B&#xf8;leh&#xf8;gda-Herre" transportMode="Bus" bikesAllowed="false"/>
+    <hasLines id="TEL:Line:1_8006" name="J&#xf8;nnevall-Skien-&#xc5;foss" transportMode="Bus" bikesAllowed="false"/>
+    <hasLines id="TEL:Line:1_8003" name="Skien-Klyve-Skjelsvik" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="TEL:Line:1_8004" name="Skotfoss-Ballestad-Hydro" transportMode="Bus" bikesAllowed="false"/>
-    <hasLines id="TEL:Line:1_8007" name="Siljan-Skien-R&#xf8;dmyr-Klyve" transportMode="Bus" bikesAllowed="false"/>
-    <hasLines id="TEL:Line:1_8008" name="Cochepl.-Stathelle-Skjelsvik" transportMode="Bus" bikesAllowed="false"/>
+    <hasLines id="TEL:Line:1_8007" name="Siljan-R&#xf8;dmyr-Klyve" transportMode="Bus" bikesAllowed="false"/>
+    <hasLines id="TEL:Line:1_8008" name="Herre-Stathelle-Skjelsvik" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="TEL:Line:1_8001" name="Gulset-Skien-Langesund" transportMode="Bus" bikesAllowed="false"/>
-    <hasLines id="TEL:Line:1_8002" name="Porsgrunn-Bratt&#xe5;s-Skjelsvik" transportMode="Bus" bikesAllowed="false"/>
+    <hasLines id="TEL:Line:1_8002" name="Falkum-Skjelsvik" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="TEL:Line:1_8010" name="Gulset-Kj&#xf8;rbekk-Porsgrunn" transportMode="Bus" bikesAllowed="false"/>
   </hasOperator>
   <hasOperator id="RUT:Operator:519" name="Oslo Taxibuss Follo" url="https://ruter.no/fa-hjelp/kontakt-oss/kontaktskjema/">
@@ -2766,6 +2769,7 @@
     <hasLines id="AKT:Line:2182" name="S&#xf8;gne - Samfundets skole" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="AKT:Line:2180" name="Tangvall - Birkelid" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="AKT:Line:2184" name="Tofteland - Samfundet skole" transportMode="Bus" bikesAllowed="false"/>
+    <hasLines id="AKT:Line:1001" name="Flekker&#xf8;y - S&#xf8;rlandsparken" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="AKT:Line:1015" name="Tinnheia - Lund - UiA" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="AKT:Line:1019" name="Suldalen - Gimlekollen" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="AKT:Line:1010" name="Sykehuset - Kvadraturen" transportMode="Bus" bikesAllowed="false"/>
@@ -3520,6 +3524,8 @@
     <hasLines id="AVI:Line:SK_TRD-TOS" name="Trondheim-Troms&#xf8;" transportMode="Air" bikesAllowed="false"/>
     <hasLines id="AVI:Line:SK_SVG-BGO" name="Stavanger-Bergen" transportMode="Air" bikesAllowed="false"/>
     <hasLines id="AVI:Line:SK_OSL-HAU" name="Oslo-Haugesund" transportMode="Air" bikesAllowed="false"/>
+    <hasLines id="AVI:Line:SK_BOO-TOS" name="Bod&#xf8;-Troms&#xf8;" transportMode="Air" bikesAllowed="false"/>
+    <hasLines id="AVI:Line:SK_BOO-TRD" name="Bod&#xf8;-Trondheim" transportMode="Air" bikesAllowed="false"/>
     <hasLines id="AVI:Line:SK_OSL-EVE" name="Oslo-Harstad/Narvik" transportMode="Air" bikesAllowed="false"/>
     <hasLines id="AVI:Line:SK_OSL-MOL" name="Oslo-Molde" transportMode="Air" bikesAllowed="false"/>
     <hasLines id="AVI:Line:SK_OSL-LYR" name="Oslo-Longyearbyen" transportMode="Air" bikesAllowed="false"/>
@@ -3690,7 +3696,7 @@
     <hasLines id="FIN:Line:_BUSS2235" name="Alta sentrum - Tverrelvdalen" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="FIN:Line:_BUSS2236" name="Skolerute Rafsbotn - Russeluft" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="FIN:Line:_BUSS2237" name="Masjok - Langnes" transportMode="Bus" bikesAllowed="false"/>
-    <hasLines id="FIN:Line:_BUSS2230" name="Talvik skole - Storsandnes" transportMode="Bus" bikesAllowed="false"/>
+    <hasLines id="FIN:Line:_BUSS2230" name="Talvik skole - Isnestoften" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="FIN:Line:_BUSS2231" name="Skolerute Alta" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="FIN:Line:_BUSS2232" name="Skolerute Aronnes" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="FIN:Line:_BUSS2233" name="Skolerute Amtmannsnes" transportMode="Bus" bikesAllowed="false"/>
@@ -3786,6 +3792,7 @@
     <hasLines id="TRO:Line:1_34" name="UNN-Sydspissen-Sentrum-UNN" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="TRO:Line:1_35" name="Direkterute Myreng" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="TRO:Line:1_36" name="Unn - Uit - &#xc5;sg&#xe5;rd - Myreng" transportMode="Bus" bikesAllowed="false"/>
+    <hasLines id="TRO:Line:1_37" name="Sentrum - Nansenvegen - sentrum" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="TRO:Line:1_20" name="Skatt&#xf8;ra - sentrum - Kroken" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="TRO:Line:1_21" name="Sentrum - UNN" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="TRO:Line:1_22" name="Kroken - Gi&#xe6;verbukta" transportMode="Bus" bikesAllowed="false"/>
@@ -3928,6 +3935,7 @@
     <hasLines id="BRA:Line:4_6407" name="Gamlegrend&#xe5;sen N-Knutepunktet" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="BRA:Line:4_6409" name="Kongsberg knutepunkt - Saggren" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="BRA:Line:4_6403" name="Skollenborg - Kongsberg" transportMode="Bus" bikesAllowed="false"/>
+    <hasLines id="BRA:Line:4_6404" name="Kongsberg stasjon Baneveien - Vibehaugen" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="BRA:Line:4_6405" name="Frydenberg&#xe5;sen - Vibehaugen" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="BRA:Line:4_6401" name="Gamlegrend&#xe5;sen S-Lindbojordet" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="BRA:Line:4_6435" name="Hellekleiv - J&#xf8;nndalen" transportMode="Bus" bikesAllowed="false"/>
@@ -4069,12 +4077,12 @@
     <hasLines id="NSB:Line:L22x" name="Sk&#xf8;yen-Oslo S-Mysen-Rakkestad" transportMode="Rail" bikesAllowed="false"/>
     <hasLines id="NSB:Line:R23" name="Stabekk-Oslo S-Moss" transportMode="Rail" bikesAllowed="false"/>
     <hasLines id="NSB:Line:R20" name="Oslo S-Halden-G&#xf6;teborg" transportMode="Rail" bikesAllowed="false"/>
-    <hasLines id="NSB:Line:R10" name="Drammen-Lillehammer" transportMode="Rail" bikesAllowed="false"/>
-    <hasLines id="NSB:Line:R11" name="Eidsvoll-Oslo S-Skien-Notodden" transportMode="Rail" bikesAllowed="false"/>
+    <hasLines id="NSB:Line:R10" name="Drammen-Oslo S-Lillehammer" transportMode="Rail" bikesAllowed="false"/>
+    <hasLines id="NSB:Line:R11" name="Eidsvoll-Oslo S-Skien" transportMode="Rail" bikesAllowed="false"/>
     <hasLines id="NSB:Line:L1" name="Spikkestad-Oslo S-Lillestr&#xf8;m" transportMode="Rail" bikesAllowed="false"/>
     <hasLines id="NSB:Line:L2" name="Stabekk-Oslo S-Ski" transportMode="Rail" bikesAllowed="false"/>
     <hasLines id="NSB:Line:R20x" name="Oslo S-Halden-G&#xf6;teborg" transportMode="Rail" bikesAllowed="false"/>
-    <hasLines id="NSB:Line:R11x" name="Eidsvoll-Oslo S-Skien-Notodden" transportMode="Rail" bikesAllowed="false"/>
+    <hasLines id="NSB:Line:R11x" name="Eidsvoll-Oslo S-Skien" transportMode="Rail" bikesAllowed="false"/>
     <hasLines id="NSB:Line:52" name="Porsgrunn-Notodden" transportMode="Rail" bikesAllowed="false"/>
     <hasLines id="NSB:Line:L14x" name="Asker-Oslo S-Kongsvinger" transportMode="Rail" bikesAllowed="false"/>
     <hasLines id="NSB:Line:L2x" name="Stabekk-Oslo S-Ski" transportMode="Rail" bikesAllowed="false"/>
@@ -4083,6 +4091,7 @@
     <hasLines id="NSB:Line:L14" name="Asker-Oslo S-Kongsvinger" transportMode="Rail" bikesAllowed="false"/>
     <hasLines id="NSB:Line:L12" name="Kongsberg-Oslo S-Eidsvoll" transportMode="Rail" bikesAllowed="false"/>
     <hasLines id="NSB:Line:L13" name="Drammen-Oslo S-Dal" transportMode="Rail" bikesAllowed="false"/>
+    <hasLines id="NSB:Line:R10B" transportMode="Bus" bikesAllowed="false"/>
   </hasOperator>
   <hasOperator id="RUT:Operator:160" name="Unibuss AS" url="https://ruter.no/fa-hjelp/kontakt-oss/kontaktskjema/">
     <hasLines id="RUT:Line:2160" name="Rykkinn - Nationaltheatret" transportMode="Bus" bikesAllowed="false"/>
@@ -4247,6 +4256,8 @@
     <hasLines id="AKT:Line:410" name="Mandal - D&#xf8;lebru" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="AKT:Line:4111" name="Lyngdal - Brygges&#xe5;" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="AKT:Line:4112" name="Lyngdal - Brygges&#xe5;" transportMode="Bus" bikesAllowed="false"/>
+    <hasLines id="AKT:Line:4122" name="Feda - Farsund" transportMode="Bus" bikesAllowed="false"/>
+    <hasLines id="AKT:Line:4121" name="Feda - Farsund" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="AKT:Line:4142" name="Konsmo - Byremo" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="AKT:Line:4141" name="Konsmo - Byremo" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="AKT:Line:4151" name="Bjelland - &#xd8;ysleb&#xf8;" transportMode="Bus" bikesAllowed="false"/>
@@ -4394,8 +4405,8 @@
     <hasLines id="RUT:Line:3735" name="Vilberg/ Eidsvoll - Finstad/  B&#xe5;rstad" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="RUT:Line:3742" name="Eidsvoll - &#xc5;s skole - Finstad" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="RUT:Line:3740" name="Venger - R&#xe5;holt" transportMode="Bus" bikesAllowed="false"/>
-    <hasLines id="RUT:Line:3731" name="Millidal - Skovseth - Eidsvoll/ Vilberg" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="RUT:Line:2400" name="Elton&#xe5;sen - Oslo Ekspress" transportMode="Bus" bikesAllowed="false"/>
+    <hasLines id="RUT:Line:3731" name="Millidal - Skovseth - Eidsvoll/ Vilberg" transportMode="Bus" bikesAllowed="false"/>
   </hasOperator>
   <hasOperator id="KOL:Operator:522" name="Boreal Travel AS" url="https://www.boreal.no/">
     <hasLines id="KOL:Line:25_2900" name="Flybussen Stavanger" transportMode="Bus" bikesAllowed="false"/>
@@ -4404,6 +4415,7 @@
     <hasLines id="SKY:Line:1019" name="Klokkarvik - Ler&#xf8;y - Bjelkar&#xf8;y - Hjellestad" transportMode="Water" bikesAllowed="true"/>
     <hasLines id="SKY:Line:1017" name="Fjelberg - Sydnes - Utbjoa - Skjersholmane" transportMode="Water" bikesAllowed="true"/>
     <hasLines id="SKY:Line:390" name="Nordhordland" transportMode="Water" bikesAllowed="true"/>
+    <hasLines id="SKY:Line:2095" name="Turistrute indre Hardanger" transportMode="Water" bikesAllowed="true"/>
     <hasLines id="SKY:Line:2078" name="B&#xe5;truter Austevoll" transportMode="Water" bikesAllowed="true"/>
     <hasLines id="SKY:Line:2070" name="Kleppest&#xf8; - Strandkaien" transportMode="Water" bikesAllowed="true"/>
     <hasLines id="SKY:Line:2080" name="Sunnhordland - Austevoll - Bergen" transportMode="Water" bikesAllowed="true"/>
@@ -4411,7 +4423,6 @@
   <hasOperator id="MOR:Operator:SN147" name="Sekken N&#xe6;ringspark" phone="+4771200410" url="https://frammr.no">
     <hasLines id="MOR:Line:720" name="Sekken (Sekken kai-Vestadstranda)" transportMode="Bus" bikesAllowed="false"/>
   </hasOperator>
-  <hasOperator id="AKT:Operator:107" name="S&#xf8;rlandsruta" phone="+4738278200" url="https://sorlandsruta.no"/>
   <hasOperator id="ATU:Operator:1" name="&#xc5;lesund Turvogn Service" url="http://turvogna.no/">
     <hasLines id="ATU:FlexibleLine:df81eeae-28e9-45c3-a687-5b7166499182" name="Vigra-Valder&#xf8;y" transportMode="Bus" bikesAllowed="false"/>
   </hasOperator>
@@ -4464,6 +4475,8 @@
     <hasLines id="RUT:Line:2069" name="Tveita ring" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="RUT:Line:2064" name="Furuset T - Stovner T via Haugenstua" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="RUT:Line:2056" name="Nydalen - Grefsenkollen" transportMode="Bus" bikesAllowed="false"/>
+    <hasLines id="RUT:Line:3080" name="Buss for tog Tollboden - Holmlia" transportMode="Bus" bikesAllowed="false"/>
+    <hasLines id="RUT:Line:3081" name="Buss for tog Oslo S - Kolbotn" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="RUT:Line:3077" name="Hauketo stasjon - Bj&#xf8;rndal" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="RUT:Line:3983" name="Nationaltheatret - Fl&#xf8;ysbonn" transportMode="Bus" bikesAllowed="false"/>
     <hasLines id="RUT:Line:3981" name="Nationaltheatret - Ski" transportMode="Bus" bikesAllowed="false"/>

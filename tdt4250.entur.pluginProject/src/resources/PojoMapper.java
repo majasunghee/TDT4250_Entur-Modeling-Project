@@ -1,4 +1,4 @@
-package tdt4250.entur.pluginProject;
+package resources;
 
 import java.io.IOException;
 import java.nio.file.Paths;
@@ -20,11 +20,11 @@ import pojo.OperatorClass;
 import pojo.SpecificLineClass;
 import transportModel.TransportModeType;
 
-public class Mapper {
+public class PojoMapper {
 	
-	private static String jsonpath1 = "../tdt4250.entur.pluginProject/src/data/OperatorsData.json";
-	private static String jsonpath2 = "../tdt4250.entur.pluginProject/src/data/LinesData.json";
-	private static String jsonpath3 = "../tdt4250.entur.pluginProject/src/data/SpecificLineData.json";
+	private static String jsonpath1 = "../tdt4250.entur.pluginProject/src/data/OutputAllOperatorsData.json";
+	private static String jsonpath2 = "../tdt4250.entur.pluginProject/src/data/OutputLinesData.json";
+	private static String jsonpath3 = "../tdt4250.entur.pluginProject/src/data/OutputSpecificLineData.json";
 	
 	public static void main(String[] args) throws IOException {
 		
