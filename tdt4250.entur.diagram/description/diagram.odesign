@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/table/description/1.1.0" name="diagram" version="12.0.0.2017041100">
+  <ownedViewpoints name="EnturDiagramViewpoint" modelFileExtension="xmi">
+    <ownedRepresentations xsi:type="description_1:EditionTableDescription" name="EnturTable" domainClass="transportModel::transportOrg">
+      <ownedLineMappings name="OperatorLine" domainClass="transportModel::operator" headerLabelExpression="Operator">
+        <defaultForeground>
+          <labelFormat>bold</labelFormat>
+          <foreGroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_chocolate']"/>
+        </defaultForeground>
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+        </defaultBackground>
+      </ownedLineMappings>
+      <ownedColumnMappings name="operatorsNameCol" headerLabelExpression="Operators name" featureName="name"/>
+      <ownedColumnMappings name="operatorsPhoneCol" headerLabelExpression="Phone number" featureName="phone"/>
+      <ownedColumnMappings name="operatorsUrlCol" headerLabelExpression="URL" featureName="url"/>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_1:EditionTableDescription" name="EnturLinesTable" domainClass="transportModel::transportOrg">
+      <ownedLineMappings name="LinesLine" domainClass="transportModel::lines"/>
+      <ownedLineMappings name="OperatorLine" domainClass="transportModel::operator" headerLabelExpression="Operator">
+        <defaultForeground>
+          <labelFormat>bold</labelFormat>
+          <foreGroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_chocolate']"/>
+        </defaultForeground>
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+        </defaultBackground>
+      </ownedLineMappings>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_1:CrossTableDescription" name="CrossTableOpLines" domainClass="transportModel::transportOrg">
+      <ownedLineMappings name="opLines" domainClass="transportModel::operator" semanticCandidatesExpression="[operator/]"/>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="tdt4250.entur.diagram.Services"/>
+  </ownedViewpoints>
+</description:Group>
