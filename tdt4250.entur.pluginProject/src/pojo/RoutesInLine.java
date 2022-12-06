@@ -43,18 +43,23 @@ public class RoutesInLine {
 	public void setRoutesInLine(ArrayList<Object> routesInLine) {
 		this.routesInLine = routesInLine;
 	}
-
-	@Override
-	public String toString(){
-		StringBuilder sb = new StringBuilder();
-		sb.append("***** Route *****\n");
-		sb.append("ID of line = "+getLineId()+"\n");
-		sb.append("ID of route = "+getRoutesInLine().get(0)+"\n");
-		sb.append("Name of route = "+getRoutesInLine().get(1)+"\n");
-		sb.append("Stopplaces in route = "+getRoutesInLine().get(2)+"\n");
-		sb.append("Journeypatterns in route = "+getRoutesInLine().get(3)+"\n");
-		sb.append("\n");
-		return sb.toString();
-	}
+	
+	
+//  Remove comment to see formatted data in console when running ModelMapper.java.
+//	@Override
+//	public String toString(){
+//		StringBuilder sb = new StringBuilder();
+//		sb.append("***** Routes *****\n");
+//		sb.append("\n");
+//		sb.append("ID of line = "+getLineId()+"\n");
+//		getRoutesInLine().forEach(line -> {
+//			sb.append("ID of route = "+((ArrayList<Object>) line).get(0)+"\n");
+//			sb.append("Name of route = "+((ArrayList<Object>) line).get(1)+"\n");
+//			sb.append("Stopplaces in route = "+((ArrayList<Object>) line).get(2)+"\n");
+//			sb.append("Journeypatterns in route "+((ArrayList<Object>) line).get(3)+"\n");
+//			sb.append("\n");
+//		});
+//		return sb.toString();
+//	}
 	
 }

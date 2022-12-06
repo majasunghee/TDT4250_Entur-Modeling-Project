@@ -13,10 +13,8 @@ import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emfcloud.jackson.resource.JsonResourceFactory;
 
-import com.fasterxml.jackson.annotation.JsonSubTypes.Type;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.node.ObjectNode;
 
 import pojo.LinesClass;
 import pojo.OperatorClass;
@@ -177,7 +175,7 @@ public class PojoMapper {
 		 allRoutesInLine.add(singleRoute);
 		 routes.setRoutesInLine(allRoutesInLine);
 		   }
-		System.out.println(allRoutesInLine);
+		//System.out.println(routes);
 		return routes;
 	}
 	

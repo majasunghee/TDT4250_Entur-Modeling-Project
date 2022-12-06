@@ -73,13 +73,14 @@ public class ModelMapper {
 			line.setTransportMode(lines.getTransportMode());
 			line.setBikesAllowed(lines.getBikesAllowed());
 			
+			
 			if(line.getId().toString().equals(routes.getLineId().toString())) {
-				routes.getRoutesInLine().forEach(routeEntry -> {
-					System.out.println(routeEntry);
-					line.getRoutes().add(routeEntry);
+				routes.getRoutesInLine().forEach(entry -> {
+					//Disse listene er ikke av samme type, derfor vi ikke får adde 
+					System.out.println(entry.getClass());
+					System.out.println(line.getRoutes().getClass());
+					//line.getRoutes().addAll(entry);
 				});
-				//line.getRoutes().add(routes.getRoutesInLine());
-				System.out.println("Halla");
 			}
 			mappedLines.add(line);
 		});
