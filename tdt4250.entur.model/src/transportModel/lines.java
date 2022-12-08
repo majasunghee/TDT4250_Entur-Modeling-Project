@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link transportModel.lines#getHasSpecificLine <em>Has Specific Line</em>}</li>
+ *   <li>{@link transportModel.lines#getRoutes <em>Routes</em>}</li>
  *   <li>{@link transportModel.lines#getId <em>Id</em>}</li>
  *   <li>{@link transportModel.lines#getName <em>Name</em>}</li>
  *   <li>{@link transportModel.lines#getTransportMode <em>Transport Mode</em>}</li>
@@ -28,16 +28,16 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface lines extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Has Specific Line</b></em>' containment reference list.
-	 * The list contents are of type {@link transportModel.specificLine}.
+	 * Returns the value of the '<em><b>Routes</b></em>' containment reference list.
+	 * The list contents are of type {@link transportModel.route}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Has Specific Line</em>' containment reference list.
-	 * @see transportModel.TransportModelPackage#getlines_HasSpecificLine()
+	 * @return the value of the '<em>Routes</em>' containment reference list.
+	 * @see transportModel.TransportModelPackage#getlines_Routes()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<specificLine> getHasSpecificLine();
+	EList<route> getRoutes();
 
 	/**
 	 * Returns the value of the '<em><b>Id</b></em>' attribute.

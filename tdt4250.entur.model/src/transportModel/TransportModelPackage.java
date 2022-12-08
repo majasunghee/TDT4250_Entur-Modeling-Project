@@ -187,13 +187,13 @@ public interface TransportModelPackage extends EPackage {
 	int LINES = 2;
 
 	/**
-	 * The feature id for the '<em><b>Has Specific Line</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Routes</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LINES__HAS_SPECIFIC_LINE = 0;
+	int LINES__ROUTES = 0;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -250,70 +250,6 @@ public interface TransportModelPackage extends EPackage {
 	int LINES_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link transportModel.impl.specificLineImpl <em>specific Line</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see transportModel.impl.specificLineImpl
-	 * @see transportModel.impl.TransportModelPackageImpl#getspecificLine()
-	 * @generated
-	 */
-	int SPECIFIC_LINE = 3;
-
-	/**
-	 * The feature id for the '<em><b>Has Route</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SPECIFIC_LINE__HAS_ROUTE = 0;
-
-	/**
-	 * The feature id for the '<em><b>Has Journey Patterns</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SPECIFIC_LINE__HAS_JOURNEY_PATTERNS = 1;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SPECIFIC_LINE__ID = 2;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SPECIFIC_LINE__NAME = 3;
-
-	/**
-	 * The number of structural features of the '<em>specific Line</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SPECIFIC_LINE_FEATURE_COUNT = 4;
-
-	/**
-	 * The number of operations of the '<em>specific Line</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SPECIFIC_LINE_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link transportModel.impl.routeImpl <em>route</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -321,16 +257,25 @@ public interface TransportModelPackage extends EPackage {
 	 * @see transportModel.impl.TransportModelPackageImpl#getroute()
 	 * @generated
 	 */
-	int ROUTE = 4;
+	int ROUTE = 3;
 
 	/**
-	 * The feature id for the '<em><b>Has Stop Place</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Stop Places</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROUTE__HAS_STOP_PLACE = 0;
+	int ROUTE__STOP_PLACES = 0;
+
+	/**
+	 * The feature id for the '<em><b>Journey Patterns</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROUTE__JOURNEY_PATTERNS = 1;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -339,7 +284,7 @@ public interface TransportModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROUTE__ID = 1;
+	int ROUTE__ID = 2;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -348,7 +293,7 @@ public interface TransportModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROUTE__NAME = 2;
+	int ROUTE__NAME = 3;
 
 	/**
 	 * The number of structural features of the '<em>route</em>' class.
@@ -357,7 +302,7 @@ public interface TransportModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROUTE_FEATURE_COUNT = 3;
+	int ROUTE_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>route</em>' class.
@@ -376,25 +321,7 @@ public interface TransportModelPackage extends EPackage {
 	 * @see transportModel.impl.TransportModelPackageImpl#getjourneyPatterns()
 	 * @generated
 	 */
-	int JOURNEY_PATTERNS = 5;
-
-	/**
-	 * The feature id for the '<em><b>Has Stop Place</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int JOURNEY_PATTERNS__HAS_STOP_PLACE = 0;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int JOURNEY_PATTERNS__ID = 1;
+	int JOURNEY_PATTERNS = 4;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -403,7 +330,7 @@ public interface TransportModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int JOURNEY_PATTERNS__NAME = 2;
+	int JOURNEY_PATTERNS__NAME = 0;
 
 	/**
 	 * The feature id for the '<em><b>Direction</b></em>' attribute.
@@ -412,7 +339,7 @@ public interface TransportModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int JOURNEY_PATTERNS__DIRECTION = 3;
+	int JOURNEY_PATTERNS__DIRECTION = 1;
 
 	/**
 	 * The number of structural features of the '<em>journey Patterns</em>' class.
@@ -421,7 +348,7 @@ public interface TransportModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int JOURNEY_PATTERNS_FEATURE_COUNT = 4;
+	int JOURNEY_PATTERNS_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>journey Patterns</em>' class.
@@ -440,16 +367,7 @@ public interface TransportModelPackage extends EPackage {
 	 * @see transportModel.impl.TransportModelPackageImpl#getstopPlace()
 	 * @generated
 	 */
-	int STOP_PLACE = 6;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STOP_PLACE__ID = 0;
+	int STOP_PLACE = 5;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -458,7 +376,7 @@ public interface TransportModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STOP_PLACE__NAME = 1;
+	int STOP_PLACE__NAME = 0;
 
 	/**
 	 * The number of structural features of the '<em>stop Place</em>' class.
@@ -467,7 +385,7 @@ public interface TransportModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STOP_PLACE_FEATURE_COUNT = 2;
+	int STOP_PLACE_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>stop Place</em>' class.
@@ -486,7 +404,7 @@ public interface TransportModelPackage extends EPackage {
 	 * @see transportModel.impl.TransportModelPackageImpl#getTransportModeType()
 	 * @generated
 	 */
-	int TRANSPORT_MODE_TYPE = 7;
+	int TRANSPORT_MODE_TYPE = 6;
 
 	/**
 	 * The meta object id for the '{@link transportModel.DirectionType <em>Direction Type</em>}' enum.
@@ -496,7 +414,7 @@ public interface TransportModelPackage extends EPackage {
 	 * @see transportModel.impl.TransportModelPackageImpl#getDirectionType()
 	 * @generated
 	 */
-	int DIRECTION_TYPE = 8;
+	int DIRECTION_TYPE = 7;
 
 
 	/**
@@ -607,15 +525,15 @@ public interface TransportModelPackage extends EPackage {
 	EClass getlines();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link transportModel.lines#getHasSpecificLine <em>Has Specific Line</em>}'.
+	 * Returns the meta object for the containment reference list '{@link transportModel.lines#getRoutes <em>Routes</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Has Specific Line</em>'.
-	 * @see transportModel.lines#getHasSpecificLine()
+	 * @return the meta object for the containment reference list '<em>Routes</em>'.
+	 * @see transportModel.lines#getRoutes()
 	 * @see #getlines()
 	 * @generated
 	 */
-	EReference getlines_HasSpecificLine();
+	EReference getlines_Routes();
 
 	/**
 	 * Returns the meta object for the attribute '{@link transportModel.lines#getId <em>Id</em>}'.
@@ -662,60 +580,6 @@ public interface TransportModelPackage extends EPackage {
 	EAttribute getlines_BikesAllowed();
 
 	/**
-	 * Returns the meta object for class '{@link transportModel.specificLine <em>specific Line</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>specific Line</em>'.
-	 * @see transportModel.specificLine
-	 * @generated
-	 */
-	EClass getspecificLine();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link transportModel.specificLine#getHasRoute <em>Has Route</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Has Route</em>'.
-	 * @see transportModel.specificLine#getHasRoute()
-	 * @see #getspecificLine()
-	 * @generated
-	 */
-	EReference getspecificLine_HasRoute();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link transportModel.specificLine#getHasJourneyPatterns <em>Has Journey Patterns</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Has Journey Patterns</em>'.
-	 * @see transportModel.specificLine#getHasJourneyPatterns()
-	 * @see #getspecificLine()
-	 * @generated
-	 */
-	EReference getspecificLine_HasJourneyPatterns();
-
-	/**
-	 * Returns the meta object for the attribute '{@link transportModel.specificLine#getId <em>Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see transportModel.specificLine#getId()
-	 * @see #getspecificLine()
-	 * @generated
-	 */
-	EAttribute getspecificLine_Id();
-
-	/**
-	 * Returns the meta object for the attribute '{@link transportModel.specificLine#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see transportModel.specificLine#getName()
-	 * @see #getspecificLine()
-	 * @generated
-	 */
-	EAttribute getspecificLine_Name();
-
-	/**
 	 * Returns the meta object for class '{@link transportModel.route <em>route</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -726,15 +590,26 @@ public interface TransportModelPackage extends EPackage {
 	EClass getroute();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link transportModel.route#getHasStopPlace <em>Has Stop Place</em>}'.
+	 * Returns the meta object for the containment reference list '{@link transportModel.route#getStopPlaces <em>Stop Places</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Has Stop Place</em>'.
-	 * @see transportModel.route#getHasStopPlace()
+	 * @return the meta object for the containment reference list '<em>Stop Places</em>'.
+	 * @see transportModel.route#getStopPlaces()
 	 * @see #getroute()
 	 * @generated
 	 */
-	EReference getroute_HasStopPlace();
+	EReference getroute_StopPlaces();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link transportModel.route#getJourneyPatterns <em>Journey Patterns</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Journey Patterns</em>'.
+	 * @see transportModel.route#getJourneyPatterns()
+	 * @see #getroute()
+	 * @generated
+	 */
+	EReference getroute_JourneyPatterns();
 
 	/**
 	 * Returns the meta object for the attribute '{@link transportModel.route#getId <em>Id</em>}'.
@@ -769,28 +644,6 @@ public interface TransportModelPackage extends EPackage {
 	EClass getjourneyPatterns();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link transportModel.journeyPatterns#getHasStopPlace <em>Has Stop Place</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Has Stop Place</em>'.
-	 * @see transportModel.journeyPatterns#getHasStopPlace()
-	 * @see #getjourneyPatterns()
-	 * @generated
-	 */
-	EReference getjourneyPatterns_HasStopPlace();
-
-	/**
-	 * Returns the meta object for the attribute '{@link transportModel.journeyPatterns#getId <em>Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see transportModel.journeyPatterns#getId()
-	 * @see #getjourneyPatterns()
-	 * @generated
-	 */
-	EAttribute getjourneyPatterns_Id();
-
-	/**
 	 * Returns the meta object for the attribute '{@link transportModel.journeyPatterns#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -821,17 +674,6 @@ public interface TransportModelPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getstopPlace();
-
-	/**
-	 * Returns the meta object for the attribute '{@link transportModel.stopPlace#getId <em>Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see transportModel.stopPlace#getId()
-	 * @see #getstopPlace()
-	 * @generated
-	 */
-	EAttribute getstopPlace_Id();
 
 	/**
 	 * Returns the meta object for the attribute '{@link transportModel.stopPlace#getName <em>Name</em>}'.
@@ -974,12 +816,12 @@ public interface TransportModelPackage extends EPackage {
 		EClass LINES = eINSTANCE.getlines();
 
 		/**
-		 * The meta object literal for the '<em><b>Has Specific Line</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Routes</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference LINES__HAS_SPECIFIC_LINE = eINSTANCE.getlines_HasSpecificLine();
+		EReference LINES__ROUTES = eINSTANCE.getlines_Routes();
 
 		/**
 		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
@@ -1014,48 +856,6 @@ public interface TransportModelPackage extends EPackage {
 		EAttribute LINES__BIKES_ALLOWED = eINSTANCE.getlines_BikesAllowed();
 
 		/**
-		 * The meta object literal for the '{@link transportModel.impl.specificLineImpl <em>specific Line</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see transportModel.impl.specificLineImpl
-		 * @see transportModel.impl.TransportModelPackageImpl#getspecificLine()
-		 * @generated
-		 */
-		EClass SPECIFIC_LINE = eINSTANCE.getspecificLine();
-
-		/**
-		 * The meta object literal for the '<em><b>Has Route</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SPECIFIC_LINE__HAS_ROUTE = eINSTANCE.getspecificLine_HasRoute();
-
-		/**
-		 * The meta object literal for the '<em><b>Has Journey Patterns</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SPECIFIC_LINE__HAS_JOURNEY_PATTERNS = eINSTANCE.getspecificLine_HasJourneyPatterns();
-
-		/**
-		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SPECIFIC_LINE__ID = eINSTANCE.getspecificLine_Id();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SPECIFIC_LINE__NAME = eINSTANCE.getspecificLine_Name();
-
-		/**
 		 * The meta object literal for the '{@link transportModel.impl.routeImpl <em>route</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1066,12 +866,20 @@ public interface TransportModelPackage extends EPackage {
 		EClass ROUTE = eINSTANCE.getroute();
 
 		/**
-		 * The meta object literal for the '<em><b>Has Stop Place</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Stop Places</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ROUTE__HAS_STOP_PLACE = eINSTANCE.getroute_HasStopPlace();
+		EReference ROUTE__STOP_PLACES = eINSTANCE.getroute_StopPlaces();
+
+		/**
+		 * The meta object literal for the '<em><b>Journey Patterns</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ROUTE__JOURNEY_PATTERNS = eINSTANCE.getroute_JourneyPatterns();
 
 		/**
 		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
@@ -1100,22 +908,6 @@ public interface TransportModelPackage extends EPackage {
 		EClass JOURNEY_PATTERNS = eINSTANCE.getjourneyPatterns();
 
 		/**
-		 * The meta object literal for the '<em><b>Has Stop Place</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference JOURNEY_PATTERNS__HAS_STOP_PLACE = eINSTANCE.getjourneyPatterns_HasStopPlace();
-
-		/**
-		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute JOURNEY_PATTERNS__ID = eINSTANCE.getjourneyPatterns_Id();
-
-		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1140,14 +932,6 @@ public interface TransportModelPackage extends EPackage {
 		 * @generated
 		 */
 		EClass STOP_PLACE = eINSTANCE.getstopPlace();
-
-		/**
-		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute STOP_PLACE__ID = eINSTANCE.getstopPlace_Id();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.

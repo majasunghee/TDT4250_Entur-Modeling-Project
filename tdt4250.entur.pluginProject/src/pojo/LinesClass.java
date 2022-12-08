@@ -1,7 +1,5 @@
 package pojo;
 
-import com.fasterxml.jackson.databind.JsonNode;
-
 import transportModel.TransportModeType;
 
 public class LinesClass<TransportMode> {
@@ -44,16 +42,16 @@ public class LinesClass<TransportMode> {
 	}
 	
 
-//  Remove comment to see formatted data in console when running Mapping.data.
-	@Override
-	public String toString(){
-		StringBuilder sb = new StringBuilder();
-		sb.append("***** Line *****\n");
-		sb.append("ID = "+getId()+"\n");
-		sb.append("Name = "+getName()+"\n");
-		sb.append("Transportmode = "+getTransportMode()+"\n");
-		sb.append("Bikes allowed = "+getBikesAllowed()+"\n");
-		return sb.toString();
-	}
+//  Remove comment to see formatted data in console when running ModelMapper.java.
+//	@Override
+//	public String toString(){
+//		StringBuilder sb = new StringBuilder();
+//		sb.append("***** Line *****\n");
+//		sb.append("ID = "+getId()+"\n");
+//		sb.append("Name = "+getName()+"\n");
+//		sb.append("Transportmode = "+getTransportMode()+"\n");
+//		sb.append("Bikes allowed = "+getBikesAllowed()+"\n");
+//		return sb.toString();
+//	}
 
 }

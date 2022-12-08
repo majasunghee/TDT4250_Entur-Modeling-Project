@@ -3,12 +3,10 @@
 package transportModel.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import transportModel.TransportModelPackage;
 import transportModel.stopPlace;
 
@@ -20,33 +18,12 @@ import transportModel.stopPlace;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link transportModel.impl.stopPlaceImpl#getId <em>Id</em>}</li>
  *   <li>{@link transportModel.impl.stopPlaceImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class stopPlaceImpl extends MinimalEObjectImpl.Container implements stopPlace {
-	/**
-	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getId()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String ID_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getId()
-	 * @generated
-	 * @ordered
-	 */
-	protected String id = ID_EDEFAULT;
-
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -56,7 +33,6 @@ public class stopPlaceImpl extends MinimalEObjectImpl.Container implements stopP
 	 * @ordered
 	 */
 	protected static final String NAME_EDEFAULT = null;
-
 	/**
 	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -91,27 +67,6 @@ public class stopPlaceImpl extends MinimalEObjectImpl.Container implements stopP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getId() {
-		return id;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setId(String newId) {
-		String oldId = id;
-		id = newId;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TransportModelPackage.STOP_PLACE__ID, oldId, id));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getName() {
 		return name;
 	}
@@ -136,8 +91,6 @@ public class stopPlaceImpl extends MinimalEObjectImpl.Container implements stopP
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case TransportModelPackage.STOP_PLACE__ID:
-				return getId();
 			case TransportModelPackage.STOP_PLACE__NAME:
 				return getName();
 		}
@@ -149,12 +102,10 @@ public class stopPlaceImpl extends MinimalEObjectImpl.Container implements stopP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case TransportModelPackage.STOP_PLACE__ID:
-				setId((String)newValue);
-				return;
 			case TransportModelPackage.STOP_PLACE__NAME:
 				setName((String)newValue);
 				return;
@@ -170,9 +121,6 @@ public class stopPlaceImpl extends MinimalEObjectImpl.Container implements stopP
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case TransportModelPackage.STOP_PLACE__ID:
-				setId(ID_EDEFAULT);
-				return;
 			case TransportModelPackage.STOP_PLACE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
@@ -188,8 +136,6 @@ public class stopPlaceImpl extends MinimalEObjectImpl.Container implements stopP
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case TransportModelPackage.STOP_PLACE__ID:
-				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case TransportModelPackage.STOP_PLACE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
@@ -206,9 +152,7 @@ public class stopPlaceImpl extends MinimalEObjectImpl.Container implements stopP
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (id: ");
-		result.append(id);
-		result.append(", name: ");
+		result.append(" (name: ");
 		result.append(name);
 		result.append(')');
 		return result.toString();

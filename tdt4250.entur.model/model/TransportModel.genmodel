@@ -29,31 +29,23 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransportModel.ecore#//operator/url"/>
     </genClasses>
     <genClasses ecoreClass="TransportModel.ecore#//lines">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TransportModel.ecore#//lines/hasSpecificLine"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TransportModel.ecore#//lines/routes"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransportModel.ecore#//lines/id"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransportModel.ecore#//lines/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransportModel.ecore#//lines/transportMode"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransportModel.ecore#//lines/bikesAllowed"/>
     </genClasses>
-    <genClasses ecoreClass="TransportModel.ecore#//specificLine">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TransportModel.ecore#//specificLine/hasRoute"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TransportModel.ecore#//specificLine/hasJourneyPatterns"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransportModel.ecore#//specificLine/id"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransportModel.ecore#//specificLine/name"/>
-    </genClasses>
     <genClasses ecoreClass="TransportModel.ecore#//route">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TransportModel.ecore#//route/hasStopPlace"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TransportModel.ecore#//route/stopPlaces"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TransportModel.ecore#//route/journeyPatterns"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransportModel.ecore#//route/id"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransportModel.ecore#//route/name"/>
     </genClasses>
     <genClasses ecoreClass="TransportModel.ecore#//journeyPatterns">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TransportModel.ecore#//journeyPatterns/hasStopPlace"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransportModel.ecore#//journeyPatterns/id"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransportModel.ecore#//journeyPatterns/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransportModel.ecore#//journeyPatterns/direction"/>
     </genClasses>
     <genClasses ecoreClass="TransportModel.ecore#//stopPlace">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransportModel.ecore#//stopPlace/id"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransportModel.ecore#//stopPlace/name"/>
     </genClasses>
   </genPackages>
