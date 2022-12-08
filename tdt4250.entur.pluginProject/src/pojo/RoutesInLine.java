@@ -1,16 +1,13 @@
 package pojo;
 
-import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
 
 public class RoutesInLine {
 	
-//	Since the dataset for Specific lines has two lists called journeypatterns, 
-//	we differentiate between them by referring to routes, and journeypatterns for a specific route
-	
 	public String lineId;
-	public String routeId;
-	public String routeName;
-	ArrayList<Object> routesInLine = new ArrayList<>();
+	Map<String, Set<String>> routesInLine = new HashMap<>();
 	
 	public String getLineId() {
 		return lineId;
@@ -19,32 +16,15 @@ public class RoutesInLine {
 	public void setLineId(String lineId) {
 		this.lineId = lineId;
 	}
-
-	public String getRouteId() {
-		return routeId;
-	}
-
-	public void setRouteId(String routeId) {
-		this.routeId = routeId;
-	}
-
-	public String getRouteName() {
-		return routeName;
-	}
-
-	public void setRouteName(String routeName) {
-		this.routeName = routeName;
-	}
-
-	public ArrayList<Object> getRoutesInLine() {
+	
+	public Map<String, Set<String>> getRoutesInLine() {
 		return routesInLine;
 	}
 
-	public void setRoutesInLine(ArrayList<Object> routesInLine) {
+	public void setRoutesInLine(Map<String, Set<String>> routesInLine) {
 		this.routesInLine = routesInLine;
 	}
-	
-	
+
 //  Remove comment to see formatted data in console when running ModelMapper.java.
 //	@Override
 //	public String toString(){
@@ -52,14 +32,11 @@ public class RoutesInLine {
 //		sb.append("***** Routes *****\n");
 //		sb.append("\n");
 //		sb.append("ID of line = "+getLineId()+"\n");
-//		getRoutesInLine().forEach(line -> {
-//			sb.append("ID of route = "+((ArrayList<Object>) line).get(0)+"\n");
-//			sb.append("Name of route = "+((ArrayList<Object>) line).get(1)+"\n");
-//			sb.append("Stopplaces in route = "+((ArrayList<Object>) line).get(2)+"\n");
-//			sb.append("Journeypatterns in route "+((ArrayList<Object>) line).get(3)+"\n");
-//			sb.append("\n");
-//		});
+//		getRoutesInLine().keySet().forEach(routeEntry -> {
+//		sb.append("ID of route = "+routeEntry+"\n");
+//		sb.append("ID of Stopplaces = "+getRoutesInLine().get(routeEntry)+"\n");
+//	});
+//		sb.append("\n");
 //		return sb.toString();
 //	}
-	
 }

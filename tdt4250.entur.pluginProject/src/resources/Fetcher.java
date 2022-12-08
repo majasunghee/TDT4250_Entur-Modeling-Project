@@ -1,21 +1,14 @@
 package resources;
 
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
-import java.util.Scanner;
-
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
-
-import com.fasterxml.jackson.databind.util.JSONPObject;
 
 public class Fetcher  {
 	
@@ -34,7 +27,7 @@ public class Fetcher  {
 		String querySpecificLinesData = "{line(id: \\\"ATB:Line:2_311\\\") {id journeyPatterns{ name id line { quays {stopPlace { name }} journeyPatterns{ name directionType} operator{id name}}}}}";
 		String outputSpecificLinesData = jsonFetcher(url, querySpecificLinesData);
 		
-		String filename2 = "OutputSpecificLinesData.json";
+		String filename2 = "OutputRoutesInLine.json";
 		printToFile(filename2, outputSpecificLinesData);
 		
 		//3. data fetch + write to file

@@ -25,7 +25,7 @@ public class PojoMapper {
 	
 	private static String jsonpath1 = "../tdt4250.entur.pluginProject/src/data/OutputAllOperatorsData.json";
 	private static String jsonpath2 = "../tdt4250.entur.pluginProject/src/data/OutputLinesData.json";
-	private static String jsonpath3 = "../tdt4250.entur.pluginProject/src/data/OutputSpecificLinesData.json";
+	private static String jsonpath3 = "../tdt4250.entur.pluginProject/src/data/OutputRoutesInLine.json";
 	
 	public static void main(String[] args) throws IOException {
 		
@@ -139,7 +139,6 @@ public class PojoMapper {
 		treeNode=treeNode.findValue("line");
 		//Create new instance of a specific line
 		RoutesInLine routes = new RoutesInLine();
-		ArrayList<Object> allRoutesInLine = new ArrayList<Object>();
 		
 		routes.setLineId(treeNode.findValue("id").textValue());
 		
@@ -148,32 +147,12 @@ public class PojoMapper {
 		//Iterates through all the nodes in the line object
 		Iterator<JsonNode> it = treeNode.elements();
 		while (it.hasNext()) {
-			ArrayList<Object>singleRoute = new ArrayList<>();
-			Set<String> routeStopPlaces = new HashSet<String>();
-			ArrayList<Object> routeJourneyPatterns = new ArrayList<>();
-			
-			
-			routes.setRouteId(it.next().findValue("id").textValue());
-		   singleRoute.add(routes.getRouteId());
-		   
-		   routes.setRouteName(it.next().findValue("name").textValue());
-		   singleRoute.add(routes.getRouteName());
-
+			String routeId = it.next().findValue("id").textValue();
+			Set<String> tempStopPlaces = new HashSet<String>();
 		   for (JsonNode routeEntry: treeNode.findValue("quays")) {
-			   routeStopPlaces.add(routeEntry.findValue("name").textValue());
+			   tempStopPlaces.add(routeEntry.findValue("name").textValue());
 		   }
-		   singleRoute.add(routeStopPlaces);
-		   
-		   for (JsonNode routeEntry: treeNode.findValue("journeyPatterns")){
-			   ArrayList<Object> singleJourneyPattern = new ArrayList<>();
-			   singleJourneyPattern.add(routeEntry.get("name").textValue());
-			   singleJourneyPattern.add(routeEntry.get("directionType").textValue());
-			   routeJourneyPatterns.add(singleJourneyPattern);
-		   }
-		   singleRoute.add(routeJourneyPatterns);
-		   
-		 allRoutesInLine.add(singleRoute);
-		 routes.setRoutesInLine(allRoutesInLine);
+		   routes.getRoutesInLine().put(routeId, tempStopPlaces);
 		   }
 		//System.out.println(routes);
 		return routes;

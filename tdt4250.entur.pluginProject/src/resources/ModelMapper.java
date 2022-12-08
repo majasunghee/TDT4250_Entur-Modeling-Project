@@ -2,7 +2,6 @@ package resources;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
@@ -13,27 +12,22 @@ import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 
-import com.fasterxml.jackson.databind.JsonNode;
 
 import pojo.LinesClass;
 import pojo.OperatorClass;
 import pojo.RoutesInLine;
-import resources.PojoMapper;
-import transportModel.DirectionType;
-import transportModel.journeyPatterns;
 import transportModel.lines;
 import transportModel.operator;
 import transportModel.route;
-import transportModel.specificLine;
 import transportModel.stopPlace;
 import transportModel.transportOrg;
 import transportModel.TransportModelFactory;
 import transportModel.TransportModelPackage;
-import transportModel.TransportModeType;
 
 
 public class ModelMapper {
 	public static String xmiPath =  "../tdt4250.entur.pluginProject/src/data/transportOrg.xmi";
+	//public static String xmiSubset =  "../tdt4250.entur.pluginProject/src/data/transportOrgSubset.xmi";
 	public static final TransportModelFactory FACTORY = TransportModelFactory.eINSTANCE;
 
 	public static void main(String[] args) throws IOException {
@@ -63,7 +57,7 @@ public class ModelMapper {
 	}
 	
 	//Sets line data to model
-	public static List<lines> createLines(transportOrg organization, RoutesInLine routes) throws IOException {
+	public static List<lines> createLines(transportOrg organization, List<route> routes) throws IOException {
 		List<LinesClass> linesList = PojoMapper.instantiateLines();
 		List<lines> mappedLines = new ArrayList<lines>();
 		linesList.forEach(lines -> {
@@ -72,38 +66,31 @@ public class ModelMapper {
 			line.setName(lines.getName());
 			line.setTransportMode(lines.getTransportMode());
 			line.setBikesAllowed(lines.getBikesAllowed());
-			
-			
-			if(line.getId().toString().equals(routes.getLineId().toString())) {
-				routes.getRoutesInLine().forEach(entry -> {
-					//Disse listene er ikke av samme type, derfor vi ikke får adde 
-					System.out.println(entry.getClass());
-					System.out.println(line.getRoutes().getClass());
-					//line.getRoutes().addAll(entry);
-				});
+			if(line.getId().toString().equals(routes.get(0).getId())) {
+				line.getRoutes().addAll(routes);
 			}
 			mappedLines.add(line);
 		});
 		return mappedLines;
 	};
-	
-//	public static List<stopPlace> createStopPlaces(transportOrg organization,RoutesInLine routes)throws IOException {
-//		 List<stopPlace> stopPlacesList = new ArrayList<stopPlace>();
-//		 ((Iterable<JsonNode>) routes).forEach(route -> {
-//			 for ()
-// 			 stopPlace sp = FACTORY.createstopPlace();
-//			 sp.setName()
-//		 });
-// 	return null
+
 	
 	//Sets specificLine data to model
-	public static RoutesInLine createRoutesInLine(transportOrg organization) throws IOException {
+	public static List<route> createRoutesInLine(transportOrg organization) throws IOException {
 		RoutesInLine routes = PojoMapper.instantiateRoutesInLines();
-		route routeInstance = FACTORY.createroute();
-		
-		//routeInstance.setId(routes.getLineId());
-		
-		return routes;
+		List<route> listOfRoutes = new ArrayList<>();
+		for (String routeId: routes.getRoutesInLine().keySet() ) {
+			route routeInstance = FACTORY.createroute();
+			routeInstance.setId(routes.getLineId());
+			routeInstance.setName(routeId);
+			for (String stopplace: routes.getRoutesInLine().get(routeId)) {
+				stopPlace sp = FACTORY.createstopPlace();
+				sp.setName(stopplace);
+				routeInstance.getStopPlaces().add(sp);
+			}
+			listOfRoutes.add(routeInstance);
+		};
+		return listOfRoutes;	
 	}
 	
 	public static void updateModel() throws IOException {
@@ -114,14 +101,12 @@ public class ModelMapper {
 		transportOrg organization = FACTORY.createtransportOrg();
 		organization.setName("Entur");	
 		
-		RoutesInLine routes = createRoutesInLine(organization);
+		List<route> routes = createRoutesInLine(organization);
 		
 		List<lines> mappedLines = createLines(organization, routes);
 		
 		List<operator> mappedOperators = createOperator(organization, mappedLines);
-		organization.getHasOperator().addAll(mappedOperators);
-		//System.out.println(mappedOperators);
-		
+		organization.getHasOperator().addAll(mappedOperators);		
 		
 		
 		// Register the XMI resource factory for the .xmi extension
@@ -135,9 +120,11 @@ public class ModelMapper {
 
 		//Read from json file and convert content to json string 
 		Resource resource = resourceSet.createResource(URI.createFileURI(xmiPath));
+		//Resource resource2 = resourceSet.createResource(URI.createFileURI(xmiSubset));
 		
 	
         resource.getContents().add(organization); 
+        //resource2.getContents().add(organization);
 
 		
 			try {
