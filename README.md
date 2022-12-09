@@ -81,12 +81,12 @@ The repository is structured as shown below. Each bundle contains its own Readme
 &nbsp; &nbsp; &nbsp; :file_folder: data <br/>
 &nbsp; &nbsp; &nbsp; &nbsp; :page_facing_up: OutputAllOperatorsData.json <br/>
 &nbsp; &nbsp; &nbsp; &nbsp; :page_facing_up: OuputLinesData.json <br/>
-&nbsp; &nbsp; &nbsp; &nbsp; :page_facing_up: OutputSpecificLinesData.json <br/>
+&nbsp; &nbsp; &nbsp; &nbsp; :page_facing_up: OutputRoutesInLine.json <br/>
 &nbsp; &nbsp; &nbsp; &nbsp; :page_facing_up: TransportOrg.xmi <br/>
 &nbsp; &nbsp; &nbsp; :file_folder: pojo <br/>
 &nbsp; &nbsp; &nbsp; &nbsp; :page_facing_up: LinesClass.java <br/>
 &nbsp; &nbsp; &nbsp; &nbsp; :page_facing_up: OperatorClass.java <br/>
-&nbsp; &nbsp; &nbsp; &nbsp; :page_facing_up: SpecificLineClass.java <br/>
+&nbsp; &nbsp; &nbsp; &nbsp; :page_facing_up: RoutesInLine.java <br/>
 &nbsp; &nbsp; &nbsp; :file_folder: resources <br/>
 &nbsp; &nbsp; &nbsp; &nbsp; :page_facing_up: Fetcher.java <br/>
 &nbsp; &nbsp; &nbsp; &nbsp; :page_facing_up: ModelMapper.java <br/>
