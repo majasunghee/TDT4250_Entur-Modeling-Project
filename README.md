@@ -21,8 +21,18 @@ The data is fetched, deserialized and mapped to an Ecore model, this model is th
 
 ## Requirements
 - Ecore and Eclipse Modeling Framework
-- Sirius
+- Sirius:
+  - Sirius Specifier Environment 
+  - Sirius Properties Views
 - Jackson
+- Acceleo Query SDK
+- Ecore Diagram Editor (SDK)
+- PlantUML: 
+  - PlantUML Ecore Feature
+  - PlantUML Feature
+  - PlantUML Library Feature
+
+No additional plugins than those required for the TDT4250 course have been used.
 
 ## Setup
 
