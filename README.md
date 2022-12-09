@@ -83,10 +83,10 @@ The repository is structured as follows:
 &nbsp; &nbsp; ... <br/>
 
 ## Ecore model
-[Redirect to Readme in Model bundle](./tdt4250.entur.model/README.md)
+[Redirect to Readme in Model bundle](./tdt4250.entur.model/)
 
 ## Fetching data and data mapping
-[Redirect to Readme in Plugin Project bundle](./tdt4250.entur.pluginProject/README.md)
+[Redirect to Readme in Plugin Project bundle](./tdt4250.entur.pluginProject/)
 
 ## Sirius viewpoints
-[Redirect to Readme in Diagram bundle](./tdt4250.entur.diagram/README.md)
+[Redirect to Readme in Model Instance bundle](./tdt4250.entur.modelInstance/)
