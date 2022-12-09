@@ -26,6 +26,6 @@ Diagram of all lines to all operators.
 ![Picture of the diagram of operators and lines.](img/DiaOpLine.png "Diagram of operators' lines")
 
 ## Diagram: Routes' stop places
-Diagram of all stop places to all routes for one specific line. Chose to model only a specific line and its routes to constrain the amount of data to process.
+Diagram of all stop places to all routes for one specific line. We chose to model only a specific line and its routes to restrict the amount of data to process. The image below is from a line which only had two routes. Although they look similar, the routes have different ID's. One route represents the inbound direction, while the other represents the outbound direction.
 
 ![Picture of the diagram of stop places in routes.](img/DiaRoutes.png  "Diagram of routes' stop places")
