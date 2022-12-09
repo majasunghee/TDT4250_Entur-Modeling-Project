@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/tdt4250.entur.model/src" modelPluginID="tdt4250.entur.model"
+    modelName="TransportModel" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>TransportModel.ecore</foreignModel>
+  <genPackages prefix="TransportModel" disposableProviderFactory="true" ecorePackage="TransportModel.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="TransportModel.ecore#//TransportModeType">
+      <genEnumLiterals ecoreEnumLiteral="TransportModel.ecore#//TransportModeType/Bus"/>
+      <genEnumLiterals ecoreEnumLiteral="TransportModel.ecore#//TransportModeType/Air"/>
+      <genEnumLiterals ecoreEnumLiteral="TransportModel.ecore#//TransportModeType/Water"/>
+      <genEnumLiterals ecoreEnumLiteral="TransportModel.ecore#//TransportModeType/Rail"/>
+      <genEnumLiterals ecoreEnumLiteral="TransportModel.ecore#//TransportModeType/Lift"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="TransportModel.ecore#//DirectionType">
+      <genEnumLiterals ecoreEnumLiteral="TransportModel.ecore#//DirectionType/Inbound"/>
+      <genEnumLiterals ecoreEnumLiteral="TransportModel.ecore#//DirectionType/Outbound"/>
+    </genEnums>
+    <genClasses ecoreClass="TransportModel.ecore#//transportOrg">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransportModel.ecore#//transportOrg/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TransportModel.ecore#//transportOrg/hasOperator"/>
+    </genClasses>
+    <genClasses ecoreClass="TransportModel.ecore#//operator">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TransportModel.ecore#//operator/hasLines"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransportModel.ecore#//operator/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransportModel.ecore#//operator/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransportModel.ecore#//operator/phone"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransportModel.ecore#//operator/url"/>
+    </genClasses>
+    <genClasses ecoreClass="TransportModel.ecore#//lines">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TransportModel.ecore#//lines/routes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransportModel.ecore#//lines/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransportModel.ecore#//lines/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransportModel.ecore#//lines/transportMode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransportModel.ecore#//lines/bikesAllowed"/>
+    </genClasses>
+    <genClasses ecoreClass="TransportModel.ecore#//route">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TransportModel.ecore#//route/stopPlaces"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TransportModel.ecore#//route/journeyPatterns"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransportModel.ecore#//route/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransportModel.ecore#//route/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransportModel.ecore#//route/lineID"/>
+    </genClasses>
+    <genClasses ecoreClass="TransportModel.ecore#//journeyPatterns">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransportModel.ecore#//journeyPatterns/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransportModel.ecore#//journeyPatterns/direction"/>
+    </genClasses>
+    <genClasses ecoreClass="TransportModel.ecore#//stopPlace">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransportModel.ecore#//stopPlace/name"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

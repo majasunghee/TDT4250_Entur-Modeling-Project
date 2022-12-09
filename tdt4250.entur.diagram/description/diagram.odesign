@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/table/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" name="diagram" version="12.0.0.2017041100">
+  <ownedViewpoints name="EnturDiagramViewpoint" modelFileExtension="xmi">
+    <ownedRepresentations xsi:type="description_1:EditionTableDescription" name="EnturOperatorsTable" domainClass="transportModel::transportOrg">
+      <ownedLineMappings name="OperatorLine" domainClass="transportModel::operator" headerLabelExpression="Operator">
+        <defaultForeground>
+          <labelFormat>bold</labelFormat>
+          <foreGroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_chocolate']"/>
+        </defaultForeground>
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+        </defaultBackground>
+      </ownedLineMappings>
+      <ownedColumnMappings name="operatorsNameCol" headerLabelExpression="Operators name" featureName="name"/>
+      <ownedColumnMappings name="operatorsPhoneCol" headerLabelExpression="Phone number" featureName="phone"/>
+      <ownedColumnMappings name="operatorsUrlCol" headerLabelExpression="URL" featureName="url"/>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_1:EditionTableDescription" name="EnturLinesTable" domainClass="transportModel::transportOrg">
+      <ownedLineMappings name="LinesLine" domainClass="transportModel::lines">
+        <defaultForeground>
+          <labelFormat>bold</labelFormat>
+          <foreGroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+        </defaultForeground>
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+        </defaultBackground>
+      </ownedLineMappings>
+      <ownedColumnMappings name="lineName" headerLabelExpression="Line name" featureName="name"/>
+      <ownedColumnMappings name="lineTransportMode" headerLabelExpression="Transport mode" featureName="transportMode" labelExpression="feature:transportMode"/>
+      <ownedColumnMappings name="lineBikesAllowed" headerLabelExpression="Are bikes allowed?" featureName="bikesAllowed"/>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_2:DiagramDescription" name="OpLinesDiagram" domainClass="transportModel::transportOrg" enablePopupBars="true">
+      <defaultLayer name="Default">
+        <containerMappings name="OperatorContainer" domainClass="transportModel::operator" childrenPresentation="List">
+          <subNodeMappings name="opLinesNode" semanticCandidatesExpression="feature:eAllContents" domainClass="transportModel::lines">
+            <style xsi:type="style:BundledImageDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='purple']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+          </style>
+        </containerMappings>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_2:DiagramDescription" name="StopPlacesLinesDiagram" domainClass="transportModel::lines" enablePopupBars="true">
+      <defaultLayer name="Default">
+        <containerMappings name="routeContainer" domainClass="transportModel::route" childrenPresentation="List">
+          <subNodeMappings name="stopPlaceNode" semanticCandidatesExpression="feature:eAllContents" domainClass="transportModel::stopPlace">
+            <style xsi:type="style:BundledImageDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+          </style>
+        </containerMappings>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="tdt4250.entur.diagram.Services"/>
+  </ownedViewpoints>
+</description:Group>
