@@ -1,6 +1,6 @@
 # tdt4250 Semester Project 
 *by group11:*
-- Maja Sunghee Jenssen
+- Maja Sung Hee Jenssen
 - Ingvild Søvik
 - Synne Jenssen
 - Phajsi Halvorsen
@@ -8,13 +8,14 @@
 
 ## Description
 
-This project was made to visualize some of the data found in [Entur's API](https://developer.entur.org/pages-journeyplanner-journeyplanner) Entur operates the national registry for all public transport in Norway. We chose to fetch the data on all public transport lines in Norway and data on details on some lines and operators. 
+This project was made to visualize some of the data found in [Entur's API](https://developer.entur.org/pages-journeyplanner-journeyplanner). Entur operates the national registry for all public transport in Norway. We chose to fetch the data on all public operators and transport lines in Norway, as well as detailed data for some lines. This includes information about the routes a line is responsible for.
 
-The data is fetched, deserialized and mapped to an Ecore model, this model is then visualized using the Sirius framework.
+The data is fetched, deserialized and mapped to an Ecore model. This model is then visualized using the Sirius framework.
 
 ## Contents
 - [Requirements](#Requirements)
 - [Setup](#Setup)
+- [How to run the project](#How to run the project)
 - [Repository](#Repository)
 - [Ecore Model](#Ecore model)
 - [Sirius Viewpoints](#Sirius viewpoints)
@@ -36,15 +37,25 @@ No additional plugins than those required for the TDT4250 course have been used.
 
 ## Setup
 
-1. Clone the repo
+1. Clone the repository
 ```
 git clone https://gitlab.stud.idi.ntnu.no/TDT4250/2022-projects/tdt4250-group11.git
 ```
 
-The environment should be now ready to use.
+The environment should now be ready to use.
+
+## How to run the project
+**The project is already set up so that anyone can simply clone it and start making views in Sirius. See the Readme.md file linked to in the subsection [Sirius viewpoints](#Sirius viewpoints) on how to generate and view the different tables and diagrams.**
+
+In general, the project can be updated/run in the following way:
+
+1. Run Fetcher.java in tdt4250.entur.pluginProject to update data in json files.
+2. Run ModelMapper.Java in tdt4250.entur.pluginProject to set the updated data to the xmi-file.
+3. Replace the xmi-file in tdt4250.entur.modelInstance with the newly generated xmi from pluginProject.
+4. Generate views (tables and diagrams) of the data.
 
 ## Repository
-The repository is structured as follows:
+The repository is structured as shown below. Each bundle contains its own Readme.md file with information about the contents of the bundle. 
 
 :file_folder: tdt4250-group11 <br/>
 &nbsp; :file_folder: tdt4250.entur.diagram <br/>
