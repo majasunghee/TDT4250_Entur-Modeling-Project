@@ -40,7 +40,6 @@ No additional plugins than those required for the TDT4250 course have been used.
 ```
 git clone https://gitlab.stud.idi.ntnu.no/TDT4250/2022-projects/tdt4250-group11.git
 ```
-2. 
 
 The environment should be now ready to use.
 
@@ -84,6 +83,7 @@ The repository is structured as follows:
 &nbsp; &nbsp; ... <br/>
 
 ## Ecore model
+[Ecore model](./tdt4250.entur.diagram/README.md)
 
 ## Fetching data and data mapping
 
