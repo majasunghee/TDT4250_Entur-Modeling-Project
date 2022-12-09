@@ -1,8 +1,8 @@
-# Diagram - Readme
+# Diagram Readme
 
 This bundle is required for the projects Sirius views.
-In the src-folder the files Activator.java and Services.java sets the instances of the Sirius viewpoint.
-In the description-folder the diagram.odesign file contains the compiled logic of the values of the fields generated in Eclipse Sirius.
+In the src folder the files Activator.java and Services.java sets the instances of the Sirius viewpoint.
+In the description folder the diagram.odesign file contains the compiled logic of the values of the fields generated in Eclipse Sirius.
 
 ## Repository
 
