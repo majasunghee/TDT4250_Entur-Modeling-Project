@@ -20,7 +20,7 @@ The data is fetched, deserialized and mapped to an Ecore model, this model is th
 - [Sirius Viewpoints](#Sirius viewpoints)
 
 ## Requirements
-- Ecore and Eclipse Modeliing Framework
+- Ecore and Eclipse Modeling Framework
 - Sirius
 - Jackson
 
@@ -41,8 +41,7 @@ The repository is structured as follows:
 &nbsp; :file_folder: tdt4250.entur.diagram <br/>
 &nbsp; &nbsp; :file_folder: src <br/>
 &nbsp; &nbsp; :file_folder: description <br/>
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;... <br/>
-<br/>
+&nbsp; &nbsp;... <br/>
 
 &nbsp; :file_folder: tdt4250.entur.model  <br/>
 &nbsp; &nbsp; :file_folder: src <br/>
@@ -50,21 +49,29 @@ The repository is structured as follows:
 &nbsp; &nbsp; &nbsp; :page_facing_up: TransportModel.ecore <br/>
 &nbsp; &nbsp; &nbsp; :page_facing_up: TransportModel.genmodel <br/>
 &nbsp; &nbsp; &nbsp; :page_facing_up: TransportOrg.xmi <br/>
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;... <br/>
-<br/>
+&nbsp; &nbsp; ... <br/>
 
 &nbsp; :file_folder: tdt4250.entur.modelInstance  <br/>
+&nbsp; &nbsp; :page_facing_up: representations.aird <br/>
 &nbsp; &nbsp; :page_facing_up: TransportOrg.xmi <br/>
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;... <br/>
-<br/>
+&nbsp; &nbsp; ... <br/>
 
 &nbsp; :file_folder: tdt4250.entur.pluginProject  <br/>
 &nbsp; &nbsp; :file_folder: src <br/>
 &nbsp; &nbsp; &nbsp; :file_folder: data <br/>
+&nbsp; &nbsp; &nbsp; &nbsp; :page_facing_up: OutputAllOperatorsData.json <br/>
+&nbsp; &nbsp; &nbsp; &nbsp; :page_facing_up: OuputLinesData.json <br/>
+&nbsp; &nbsp; &nbsp; &nbsp; :page_facing_up: OutputSpecificLinesData.json <br/>
+&nbsp; &nbsp; &nbsp; &nbsp; :page_facing_up: TransportOrg.xmi <br/>
 &nbsp; &nbsp; &nbsp; :file_folder: pojo <br/>
+&nbsp; &nbsp; &nbsp; &nbsp; :page_facing_up: LinesClass.java <br/>
+&nbsp; &nbsp; &nbsp; &nbsp; :page_facing_up: OperatorClass.java <br/>
+&nbsp; &nbsp; &nbsp; &nbsp; :page_facing_up: SpecificLineClass.java <br/>
 &nbsp; &nbsp; &nbsp; :file_folder: resources <br/>
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;... <br/>
-<br/>
+&nbsp; &nbsp; &nbsp; &nbsp; :page_facing_up: Fetcher.java <br/>
+&nbsp; &nbsp; &nbsp; &nbsp; :page_facing_up: ModelMapper.java <br/>
+&nbsp; &nbsp; &nbsp; &nbsp; :page_facing_up: PojoMapper.java <br/>
+&nbsp; &nbsp; ... <br/>
 
 ## Ecore model
 
