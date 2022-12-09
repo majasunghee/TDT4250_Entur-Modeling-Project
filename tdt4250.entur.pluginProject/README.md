@@ -28,3 +28,5 @@ The plugin project uses the ecore model from the tdt4250.entur.model bundle. It 
     - Fetcher.java contains logic for fetching data from Entur's API.
     - PojoMapper.java contains logic for storing data from the json files in the POJOs.
     - ModelMapper.java creates new instances of the classes in the ecore model and sets data from the POJOs to the model.
+
+Due to the complexity of the data in Entur's API and time limitations, Fetcher.java have been set up to only fetch information regarding routes for a specific line. As a result, the xmi-file only contains route information for the line in the first operator. All other operators with lines will not show route information. You can change the line you want to request route information on by changing the line ID in the *querySpecificLinesData* string, and running Fetcher.java and ModelMapper.java again. 
