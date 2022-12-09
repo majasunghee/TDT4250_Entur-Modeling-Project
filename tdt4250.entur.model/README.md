@@ -1,1 +1,3 @@
-# tdt4250.entur.model - README
+# Model - README
+
+## Ecore model
