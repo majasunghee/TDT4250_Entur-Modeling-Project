@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link transportModel.route#getJourneyPatterns <em>Journey Patterns</em>}</li>
  *   <li>{@link transportModel.route#getId <em>Id</em>}</li>
  *   <li>{@link transportModel.route#getName <em>Name</em>}</li>
+ *   <li>{@link transportModel.route#getLineID <em>Line ID</em>}</li>
  * </ul>
  *
  * @see transportModel.TransportModelPackage#getroute()
@@ -45,7 +46,7 @@ public interface route extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Journey Patterns</em>' containment reference list.
 	 * @see transportModel.TransportModelPackage#getroute_JourneyPatterns()
-	 * @model containment="true" required="true"
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<journeyPatterns> getJourneyPatterns();
@@ -93,5 +94,27 @@ public interface route extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Line ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Line ID</em>' attribute.
+	 * @see #setLineID(String)
+	 * @see transportModel.TransportModelPackage#getroute_LineID()
+	 * @model required="true"
+	 * @generated
+	 */
+	String getLineID();
+
+	/**
+	 * Sets the value of the '{@link transportModel.route#getLineID <em>Line ID</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Line ID</em>' attribute.
+	 * @see #getLineID()
+	 * @generated
+	 */
+	void setLineID(String value);
 
 } // route

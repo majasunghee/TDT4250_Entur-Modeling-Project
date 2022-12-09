@@ -34,7 +34,7 @@ public interface lines extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Routes</em>' containment reference list.
 	 * @see transportModel.TransportModelPackage#getlines_Routes()
-	 * @model containment="true" required="true"
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<route> getRoutes();
@@ -46,7 +46,7 @@ public interface lines extends EObject {
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(String)
 	 * @see transportModel.TransportModelPackage#getlines_Id()
-	 * @model id="true"
+	 * @model id="true" required="true"
 	 * @generated
 	 */
 	String getId();
@@ -68,7 +68,7 @@ public interface lines extends EObject {
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see transportModel.TransportModelPackage#getlines_Name()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	String getName();
@@ -92,7 +92,7 @@ public interface lines extends EObject {
 	 * @see transportModel.TransportModeType
 	 * @see #setTransportMode(TransportModeType)
 	 * @see transportModel.TransportModelPackage#getlines_TransportMode()
-	 * @model dataType="transportModel.TransportModeType"
+	 * @model dataType="transportModel.TransportModeType" required="true"
 	 * @generated
 	 */
 	TransportModeType getTransportMode();
@@ -115,7 +115,7 @@ public interface lines extends EObject {
 	 * @return the value of the '<em>Bikes Allowed</em>' attribute.
 	 * @see #setBikesAllowed(Boolean)
 	 * @see transportModel.TransportModelPackage#getlines_BikesAllowed()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	Boolean getBikesAllowed();

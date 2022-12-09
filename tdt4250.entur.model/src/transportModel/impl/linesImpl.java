@@ -275,7 +275,7 @@ public class linesImpl extends MinimalEObjectImpl.Container implements lines {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
@@ -292,7 +292,7 @@ public class linesImpl extends MinimalEObjectImpl.Container implements lines {
 				setName((String)newValue);
 				return;
 			case TransportModelPackage.LINES__TRANSPORT_MODE:
-				setTransportMode(newValue);
+				setTransportMode((TransportModeType) newValue);
 				return;
 			case TransportModelPackage.LINES__BIKES_ALLOWED:
 				setBikesAllowed((Boolean)newValue);

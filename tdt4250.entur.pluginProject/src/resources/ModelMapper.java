@@ -27,7 +27,6 @@ import transportModel.TransportModelPackage;
 
 public class ModelMapper {
 	public static String xmiPath =  "../tdt4250.entur.pluginProject/src/data/transportOrg.xmi";
-	//public static String xmiSubset =  "../tdt4250.entur.pluginProject/src/data/transportOrgSubset.xmi";
 	public static final TransportModelFactory FACTORY = TransportModelFactory.eINSTANCE;
 
 	public static void main(String[] args) throws IOException {
@@ -66,7 +65,7 @@ public class ModelMapper {
 			line.setName(lines.getName());
 			line.setTransportMode(lines.getTransportMode());
 			line.setBikesAllowed(lines.getBikesAllowed());
-			if(line.getId().toString().equals(routes.get(0).getId())) {
+			if(line.getId().toString().equals(routes.get(0).getLineID())) {
 				line.getRoutes().addAll(routes);
 			}
 			mappedLines.add(line);
@@ -81,7 +80,8 @@ public class ModelMapper {
 		List<route> listOfRoutes = new ArrayList<>();
 		for (String routeId: routes.getRoutesInLine().keySet() ) {
 			route routeInstance = FACTORY.createroute();
-			routeInstance.setId(routes.getLineId());
+			routeInstance.setLineID(routes.getLineId());
+			routeInstance.setId(routeId);
 			routeInstance.setName(routeId);
 			for (String stopplace: routes.getRoutesInLine().get(routeId)) {
 				stopPlace sp = FACTORY.createstopPlace();
@@ -120,12 +120,8 @@ public class ModelMapper {
 
 		//Read from json file and convert content to json string 
 		Resource resource = resourceSet.createResource(URI.createFileURI(xmiPath));
-		//Resource resource2 = resourceSet.createResource(URI.createFileURI(xmiSubset));
-		
 	
         resource.getContents().add(organization); 
-        //resource2.getContents().add(organization);
-
 		
 			try {
 				System.out.println("Saved data to xmi file.");

@@ -19,7 +19,8 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see transportModel.TransportModelPackage#gettransportOrg()
- * @model
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='hasNameCheck'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL hasNameCheck='self.name.size()&gt;0'"
  * @generated
  */
 public interface transportOrg extends EObject {
@@ -30,7 +31,7 @@ public interface transportOrg extends EObject {
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see transportModel.TransportModelPackage#gettransportOrg_Name()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	String getName();

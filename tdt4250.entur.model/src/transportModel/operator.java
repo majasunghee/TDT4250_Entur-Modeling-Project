@@ -23,7 +23,8 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see transportModel.TransportModelPackage#getoperator()
- * @model
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='hasIdCheck'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL hasIdCheck='self.id.size()&gt;0'"
  * @generated
  */
 public interface operator extends EObject {
@@ -34,7 +35,7 @@ public interface operator extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Has Lines</em>' containment reference list.
 	 * @see transportModel.TransportModelPackage#getoperator_HasLines()
-	 * @model containment="true" required="true"
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<lines> getHasLines();
@@ -46,7 +47,7 @@ public interface operator extends EObject {
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(String)
 	 * @see transportModel.TransportModelPackage#getoperator_Id()
-	 * @model id="true"
+	 * @model id="true" required="true"
 	 * @generated
 	 */
 	String getId();
@@ -68,7 +69,7 @@ public interface operator extends EObject {
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see transportModel.TransportModelPackage#getoperator_Name()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	String getName();
@@ -90,7 +91,7 @@ public interface operator extends EObject {
 	 * @return the value of the '<em>Phone</em>' attribute.
 	 * @see #setPhone(String)
 	 * @see transportModel.TransportModelPackage#getoperator_Phone()
-	 * @model required="true"
+	 * @model
 	 * @generated
 	 */
 	String getPhone();
@@ -112,7 +113,7 @@ public interface operator extends EObject {
 	 * @return the value of the '<em>Url</em>' attribute.
 	 * @see #setUrl(String)
 	 * @see transportModel.TransportModelPackage#getoperator_Url()
-	 * @model required="true"
+	 * @model
 	 * @generated
 	 */
 	String getUrl();

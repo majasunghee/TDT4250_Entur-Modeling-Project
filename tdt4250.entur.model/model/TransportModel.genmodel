@@ -40,6 +40,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TransportModel.ecore#//route/journeyPatterns"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransportModel.ecore#//route/id"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransportModel.ecore#//route/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransportModel.ecore#//route/lineID"/>
     </genClasses>
     <genClasses ecoreClass="TransportModel.ecore#//journeyPatterns">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransportModel.ecore#//journeyPatterns/name"/>

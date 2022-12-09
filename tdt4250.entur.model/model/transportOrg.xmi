@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<transportModel:transportOrg xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:transportModel="platform:/plugin/tdt4250.entur.model/model/transportModel.ecore"
-    xsi:schemaLocation="platform:/plugin/tdt4250.entur.model/model/transportModel.ecore TransportModel.ecore"/>
+<transportModel:transportOrg
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:transportModel="platform:/plugin/tdt4250.entur.model/model/transportModel.ecore"
+    xsi:schemaLocation="platform:/plugin/tdt4250.entur.model/model/transportModel.ecore TransportModel.ecore">
+  <hasOperator
+      id="1"
+      name=""
+      phone="s"
+      url="s"/>
+</transportModel:transportOrg>
