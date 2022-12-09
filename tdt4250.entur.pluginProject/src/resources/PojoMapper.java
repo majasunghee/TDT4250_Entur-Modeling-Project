@@ -43,8 +43,6 @@ public class PojoMapper {
 		Resource resource3 = resourceSet.createResource(URI.createFileURI(jsonpath3));
 		resource3.load(null);
 		//instantiateSpecificLines();
-		
-		instantiateRoutesInLines();
 	}
 
 	public static ArrayList<OperatorClass> instantiateOperators() throws IOException {

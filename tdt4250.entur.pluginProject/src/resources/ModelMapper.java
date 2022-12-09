@@ -27,7 +27,6 @@ import transportModel.TransportModelPackage;
 
 public class ModelMapper {
 	public static String xmiPath =  "../tdt4250.entur.pluginProject/src/data/transportOrg.xmi";
-	//public static String xmiSubset =  "../tdt4250.entur.pluginProject/src/data/transportOrgSubset.xmi";
 	public static final TransportModelFactory FACTORY = TransportModelFactory.eINSTANCE;
 
 	public static void main(String[] args) throws IOException {
@@ -121,12 +120,8 @@ public class ModelMapper {
 
 		//Read from json file and convert content to json string 
 		Resource resource = resourceSet.createResource(URI.createFileURI(xmiPath));
-		//Resource resource2 = resourceSet.createResource(URI.createFileURI(xmiSubset));
-		
 	
         resource.getContents().add(organization); 
-        //resource2.getContents().add(organization);
-
 		
 			try {
 				System.out.println("Saved data to xmi file.");

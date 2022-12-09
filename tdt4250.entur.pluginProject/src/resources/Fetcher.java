@@ -24,14 +24,13 @@ public class Fetcher  {
 		printToFile(filename1, outputLinesData);
 		
 		//2. data fetch + write to file
-		String querySpecificLinesData = "{line(id: \\\"ATB:Line:2_311\\\") {id journeyPatterns{ name id line { quays {stopPlace { name }} journeyPatterns{ name directionType} operator{id name}}}}}";
+		String querySpecificLinesData = "{line(id: \\\"SKY:Line:1030\\\") {id journeyPatterns{ name id line { quays {stopPlace { name }} journeyPatterns{ name directionType} operator{id name}}}}}";
 		String outputSpecificLinesData = jsonFetcher(url, querySpecificLinesData);
 		
 		String filename2 = "OutputRoutesInLine.json";
 		printToFile(filename2, outputSpecificLinesData);
 		
 		//3. data fetch + write to file
-		String queryATBOperatorData = "{operator(id: \\\"ATB:Operator:267\\\") { id url lines{name}}}";
 		String queryAllOperatorsData = "{operators { id name url phone lines{id name}}}";
 		
 		String outputAllOperatorsData = jsonFetcher(url, queryAllOperatorsData);
