@@ -35,6 +35,7 @@ import transportModel.stopPlace;
  *   <li>{@link transportModel.impl.routeImpl#getJourneyPatterns <em>Journey Patterns</em>}</li>
  *   <li>{@link transportModel.impl.routeImpl#getId <em>Id</em>}</li>
  *   <li>{@link transportModel.impl.routeImpl#getName <em>Name</em>}</li>
+ *   <li>{@link transportModel.impl.routeImpl#getLineID <em>Line ID</em>}</li>
  * </ul>
  *
  * @generated
@@ -99,6 +100,26 @@ public class routeImpl extends MinimalEObjectImpl.Container implements route {
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getLineID() <em>Line ID</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLineID()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String LINE_ID_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getLineID() <em>Line ID</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLineID()
+	 * @generated
+	 * @ordered
+	 */
+	protected String lineID = LINE_ID_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -190,6 +211,27 @@ public class routeImpl extends MinimalEObjectImpl.Container implements route {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getLineID() {
+		return lineID;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLineID(String newLineID) {
+		String oldLineID = lineID;
+		lineID = newLineID;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, TransportModelPackage.ROUTE__LINE_ID, oldLineID, lineID));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -217,6 +259,8 @@ public class routeImpl extends MinimalEObjectImpl.Container implements route {
 				return getId();
 			case TransportModelPackage.ROUTE__NAME:
 				return getName();
+			case TransportModelPackage.ROUTE__LINE_ID:
+				return getLineID();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -244,6 +288,9 @@ public class routeImpl extends MinimalEObjectImpl.Container implements route {
 			case TransportModelPackage.ROUTE__NAME:
 				setName((String)newValue);
 				return;
+			case TransportModelPackage.ROUTE__LINE_ID:
+				setLineID((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -268,6 +315,9 @@ public class routeImpl extends MinimalEObjectImpl.Container implements route {
 			case TransportModelPackage.ROUTE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
+			case TransportModelPackage.ROUTE__LINE_ID:
+				setLineID(LINE_ID_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -288,6 +338,8 @@ public class routeImpl extends MinimalEObjectImpl.Container implements route {
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case TransportModelPackage.ROUTE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case TransportModelPackage.ROUTE__LINE_ID:
+				return LINE_ID_EDEFAULT == null ? lineID != null : !LINE_ID_EDEFAULT.equals(lineID);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -306,6 +358,8 @@ public class routeImpl extends MinimalEObjectImpl.Container implements route {
 		result.append(id);
 		result.append(", name: ");
 		result.append(name);
+		result.append(", lineID: ");
+		result.append(lineID);
 		result.append(')');
 		return result.toString();
 	}

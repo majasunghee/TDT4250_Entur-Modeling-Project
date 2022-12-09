@@ -275,7 +275,7 @@ public class linesImpl extends MinimalEObjectImpl.Container implements lines {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@SuppressWarnings("unchecked")
 	@Override

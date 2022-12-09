@@ -8,6 +8,7 @@ import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
+import org.eclipse.emf.ecore.EValidator;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import transportModel.DirectionType;
@@ -20,6 +21,7 @@ import transportModel.operator;
 import transportModel.route;
 import transportModel.stopPlace;
 import transportModel.transportOrg;
+import transportModel.util.TransportModelValidator;
 
 /**
  * <!-- begin-user-doc -->
@@ -135,6 +137,15 @@ public class TransportModelPackageImpl extends EPackageImpl implements Transport
 
 		// Initialize created meta-data
 		theTransportModelPackage.initializePackageContents();
+
+		// Register package validator
+		EValidator.Registry.INSTANCE.put
+			(theTransportModelPackage,
+			 new EValidator.Descriptor() {
+				 public EValidator getEValidator() {
+					 return TransportModelValidator.INSTANCE;
+				 }
+			 });
 
 		// Mark meta-data to indicate it can't be changed
 		theTransportModelPackage.freeze();
@@ -329,6 +340,15 @@ public class TransportModelPackageImpl extends EPackageImpl implements Transport
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getroute_LineID() {
+		return (EAttribute)routeEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getjourneyPatterns() {
 		return journeyPatternsEClass;
 	}
@@ -438,6 +458,7 @@ public class TransportModelPackageImpl extends EPackageImpl implements Transport
 		createEReference(routeEClass, ROUTE__JOURNEY_PATTERNS);
 		createEAttribute(routeEClass, ROUTE__ID);
 		createEAttribute(routeEClass, ROUTE__NAME);
+		createEAttribute(routeEClass, ROUTE__LINE_ID);
 
 		journeyPatternsEClass = createEClass(JOURNEY_PATTERNS);
 		createEAttribute(journeyPatternsEClass, JOURNEY_PATTERNS__NAME);
@@ -482,28 +503,29 @@ public class TransportModelPackageImpl extends EPackageImpl implements Transport
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(transportOrgEClass, transportOrg.class, "transportOrg", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(gettransportOrg_Name(), ecorePackage.getEString(), "name", null, 0, 1, transportOrg.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(gettransportOrg_Name(), ecorePackage.getEString(), "name", null, 1, 1, transportOrg.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(gettransportOrg_HasOperator(), this.getoperator(), null, "hasOperator", null, 1, -1, transportOrg.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(operatorEClass, operator.class, "operator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getoperator_HasLines(), this.getlines(), null, "hasLines", null, 1, -1, operator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getoperator_Id(), ecorePackage.getEString(), "id", null, 0, 1, operator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getoperator_Name(), ecorePackage.getEString(), "name", null, 0, 1, operator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getoperator_Phone(), ecorePackage.getEString(), "phone", null, 1, 1, operator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getoperator_Url(), ecorePackage.getEString(), "url", null, 1, 1, operator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getoperator_HasLines(), this.getlines(), null, "hasLines", null, 0, -1, operator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getoperator_Id(), ecorePackage.getEString(), "id", null, 1, 1, operator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getoperator_Name(), ecorePackage.getEString(), "name", null, 1, 1, operator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getoperator_Phone(), ecorePackage.getEString(), "phone", null, 0, 1, operator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getoperator_Url(), ecorePackage.getEString(), "url", null, 0, 1, operator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(linesEClass, lines.class, "lines", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getlines_Routes(), this.getroute(), null, "routes", null, 1, -1, lines.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getlines_Id(), ecorePackage.getEString(), "id", null, 0, 1, lines.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getlines_Name(), ecorePackage.getEString(), "name", null, 0, 1, lines.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getlines_TransportMode(), this.getTransportModeType(), "transportMode", null, 0, 1, lines.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getlines_BikesAllowed(), ecorePackage.getEBooleanObject(), "bikesAllowed", null, 0, 1, lines.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getlines_Routes(), this.getroute(), null, "routes", null, 0, -1, lines.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getlines_Id(), ecorePackage.getEString(), "id", null, 1, 1, lines.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getlines_Name(), ecorePackage.getEString(), "name", null, 1, 1, lines.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getlines_TransportMode(), this.getTransportModeType(), "transportMode", null, 1, 1, lines.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getlines_BikesAllowed(), ecorePackage.getEBooleanObject(), "bikesAllowed", null, 1, 1, lines.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(routeEClass, route.class, "route", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getroute_StopPlaces(), this.getstopPlace(), null, "stopPlaces", null, 1, -1, route.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getroute_JourneyPatterns(), this.getjourneyPatterns(), null, "journeyPatterns", null, 1, -1, route.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getroute_JourneyPatterns(), this.getjourneyPatterns(), null, "journeyPatterns", null, 0, -1, route.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getroute_Id(), ecorePackage.getEString(), "id", null, 1, 1, route.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getroute_Name(), ecorePackage.getEString(), "name", null, 1, 1, route.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getroute_LineID(), ecorePackage.getEString(), "lineID", null, 1, 1, route.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(journeyPatternsEClass, journeyPatterns.class, "journeyPatterns", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getjourneyPatterns_Name(), ecorePackage.getEString(), "name", null, 1, 1, journeyPatterns.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -526,6 +548,62 @@ public class TransportModelPackageImpl extends EPackageImpl implements Transport
 
 		// Create resource
 		createResource(eNS_URI);
+
+		// Create annotations
+		// http://www.eclipse.org/emf/2002/Ecore
+		createEcoreAnnotations();
+		// http://www.eclipse.org/emf/2002/Ecore/OCL
+		createOCLAnnotations();
+	}
+
+	/**
+	 * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/Ecore</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createEcoreAnnotations() {
+		String source = "http://www.eclipse.org/emf/2002/Ecore";
+		addAnnotation
+		  (this,
+		   source,
+		   new String[] {
+			   "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL"
+		   });
+		addAnnotation
+		  (transportOrgEClass,
+		   source,
+		   new String[] {
+			   "constraints", "hasNameCheck"
+		   });
+		addAnnotation
+		  (operatorEClass,
+		   source,
+		   new String[] {
+			   "constraints", "hasIdCheck"
+		   });
+	}
+
+	/**
+	 * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/Ecore/OCL</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createOCLAnnotations() {
+		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL";
+		addAnnotation
+		  (transportOrgEClass,
+		   source,
+		   new String[] {
+			   "hasNameCheck", "self.name.size()>0"
+		   });
+		addAnnotation
+		  (operatorEClass,
+		   source,
+		   new String[] {
+			   "hasIdCheck", "self.id.size()>0"
+		   });
 	}
 
 } //TransportModelPackageImpl

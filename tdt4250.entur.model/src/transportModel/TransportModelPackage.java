@@ -22,6 +22,7 @@ import org.eclipse.emf.ecore.EReference;
  * <!-- end-user-doc -->
  * @see transportModel.TransportModelFactory
  * @model kind="package"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore validationDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL'"
  * @generated
  */
 public interface TransportModelPackage extends EPackage {
@@ -296,13 +297,22 @@ public interface TransportModelPackage extends EPackage {
 	int ROUTE__NAME = 3;
 
 	/**
+	 * The feature id for the '<em><b>Line ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROUTE__LINE_ID = 4;
+
+	/**
 	 * The number of structural features of the '<em>route</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROUTE_FEATURE_COUNT = 4;
+	int ROUTE_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>route</em>' class.
@@ -634,6 +644,17 @@ public interface TransportModelPackage extends EPackage {
 	EAttribute getroute_Name();
 
 	/**
+	 * Returns the meta object for the attribute '{@link transportModel.route#getLineID <em>Line ID</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Line ID</em>'.
+	 * @see transportModel.route#getLineID()
+	 * @see #getroute()
+	 * @generated
+	 */
+	EAttribute getroute_LineID();
+
+	/**
 	 * Returns the meta object for class '{@link transportModel.journeyPatterns <em>journey Patterns</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -896,6 +917,14 @@ public interface TransportModelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ROUTE__NAME = eINSTANCE.getroute_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Line ID</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ROUTE__LINE_ID = eINSTANCE.getroute_LineID();
 
 		/**
 		 * The meta object literal for the '{@link transportModel.impl.journeyPatternsImpl <em>journey Patterns</em>}' class.

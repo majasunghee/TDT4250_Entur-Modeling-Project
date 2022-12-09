@@ -66,7 +66,7 @@ public class ModelMapper {
 			line.setName(lines.getName());
 			line.setTransportMode(lines.getTransportMode());
 			line.setBikesAllowed(lines.getBikesAllowed());
-			if(line.getId().toString().equals(routes.get(0).getId())) {
+			if(line.getId().toString().equals(routes.get(0).getLineID())) {
 				line.getRoutes().addAll(routes);
 			}
 			mappedLines.add(line);
@@ -81,7 +81,8 @@ public class ModelMapper {
 		List<route> listOfRoutes = new ArrayList<>();
 		for (String routeId: routes.getRoutesInLine().keySet() ) {
 			route routeInstance = FACTORY.createroute();
-			routeInstance.setId(routes.getLineId());
+			routeInstance.setLineID(routes.getLineId());
+			routeInstance.setId(routeId);
 			routeInstance.setName(routeId);
 			for (String stopplace: routes.getRoutesInLine().get(routeId)) {
 				stopPlace sp = FACTORY.createstopPlace();
